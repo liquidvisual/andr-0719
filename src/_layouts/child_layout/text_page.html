@@ -1,0 +1,26 @@
+---
+layout: base__page
+---
+
+<!-- BASIC TEXT SECTION -->
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 pr-lg-5">
+				<div class="pr-xl-5">
+
+					<!-- LEAD -->
+					<p class="lead mb-4">
+						{{ page.lead }}
+					</p>
+
+					<!-- WYSIWYG -->
+					<div class="wysiwyg mb-5">
+						{{ content | markdownify }}
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,312 @@
+/*
+    OFF-CANVAS.CSS
+
+    - Last updated: 06.02.19
+    - liquidvisual.com
+
+    - latest update removes 'off-canvas' effect and transforms.
+      Runs jankier, but will handle deep menus
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$body-bg: white !default;
+$menu-bg-color: $secondary;
+$menu-width-xs: 267px;
+$menu-width-sm: 320px; // NEW
+$menu-width-md: 350px;
+$hamburger-width: 28px;
+$hamburger-height: $hamburger-width - $hamburger-width/5;
+$hamburger-slit-height: 3px;
+
+//-----------------------------------------------------------------
+// OFF CANVAS
+//-----------------------------------------------------------------
+
+.lv-off-canvas {
+	position: fixed;
+	top: -200%; // fix chrome on touch scroll
+	right: -10%; //-$menu-width-xs;
+	background: $menu-bg-color;
+	width: $menu-width-xs;
+	height: 100%;
+	transition: opacity ease 230ms, right cubic-bezier(0.250, 0.460, 0.450, 0.940) 230ms;
+	will-change: right;
+	z-index: 9999;
+
+	@include media-breakpoint-up(sm) {
+	    width: $menu-width-sm;
+	}
+
+	@include media-breakpoint-up(md) {
+	    width: $menu-width-md;
+	}
+}
+
+//-----------------------------------------------------------------
+// ULS
+//-----------------------------------------------------------------
+
+.lv-off-canvas ul {
+	list-style: none;
+	height: 100%;
+	padding: 0 0 50px 0;
+	margin: 0;
+	font-size: rem-calc(16);
+	overflow: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	&:first-child {
+		padding-top: 10px;
+	}
+}
+
+//-----------------------------------------------------------------
+// DROPDOWNS
+//-----------------------------------------------------------------
+
+.lv-off-canvas .dropdown {
+	position: fixed;
+	top: 0;
+	right: -90%;
+	color: rgba(white, 0.4);
+	// color: white;
+	// color: #686868;
+	width: $menu-width-xs; // [required]
+	height: 100%;
+	background: $menu-bg-color;
+	// transform: translateX(100%);
+	// transition: transform 300ms ease;
+	transition: right cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms;
+	z-index: 10000;
+
+	@include media-breakpoint-up(sm) {
+	    width: $menu-width-sm;
+	}
+
+	@include media-breakpoint-up(md) {
+	    width: $menu-width-md; // [required]
+	}
+
+	//=========================================
+	// EXPANDER TRIGGER
+	//=========================================
+
+	// &::before,
+	// &::after {
+	// 	content: "\f104";
+	// 	display: block;
+	// 	position: absolute;
+	// 	top: -9px;
+	// 	width: auto;
+	// 	padding: 26px 20px 15px 20px;
+	// 	font-family: "FontAwesome";
+	// 	font-size: 25px;
+	// 	text-transform: uppercase;
+	// }
+
+	//=========================================
+	// BACK TO PREV MENU
+	//=========================================
+
+	// &::before {
+	// 	content: attr(data-parent);
+	// 	position: -webkit-sticky;
+	// 	position: sticky; //- glitchy - is useless
+	// 	top: 0;
+	// 	// position: static;
+	// 	padding-left: 40px;
+	// 	background: darken($menu-bg-color, 5%);
+	// 	font-family: inherit;
+	// 	font-size: inherit;
+	// 	z-index: 2;
+	// 	// opacity: 0.2;
+	// }
+
+	// &:after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 0;
+	// 	width: 100%;
+	// 	height: 62px; // magic
+	// 	background: rgba(darken($menu-bg-color, 5%), 0.6);
+	// 	z-index: 1000;
+	// }
+
+	//=========================================
+	// BACK BUTTON
+	// http://fatopng.com/fontawesome-to-base64
+	//=========================================
+
+	&:before {
+		content: attr(data-parent);
+		display: block;
+		position: -webkit-sticky;
+		position: sticky; //- glitchy - is useless
+		top: 0;
+		padding: 26px 20px 15px 40px;
+		color: rgba(black, 0.4);
+		background: darken($menu-bg-color, 5%) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADRklEQVR4nO3dP08UQRjH8e/sYWEDR+efxkJ7SjUxUpCIHe/A8xVoQgzttSQc8R2Ina2NuUsoaIiWZ2+IFhwlEBP+BLmxIAtBIODtM7vzPLO/8pKbffLJZG5vdmbHkWhevrvznGH21jv6fxr771cXt3dDXs+FbDzWzM7f++Cca51+4NkZeqZ7y5vfQ10zOegLyHkCYycFfSVynoDYyUBfi5wnEHYS0DdGzhMA2zz0fyPn8ew4hlNfOlu/JOrIJBqJNSMjAziaxz5rStUyJtVQbCmEDIDv95YHYkOHyR5dHBmG0Jap5iTmerQEsve0ep3BZ6GSAGM/hlLI3c7mR6GSTmMGOmZkMAIdOzIYgNaADMqhtSCDYmhNyKAUWhsyKITWiAzKoLUigyJozcigBFo7MiiAtoAMkUNbQYaIoS0hQ6TQ1pAhQmiLyBDZxL8IMr7d7QyiQoaIerRMT/Yr3c7gtVBJookC2joyRACdAjJUDJ0KMlQInRIyVASdGjJUAJ0iMpQMnSoylAidMjKUBJ06MpQAXSOfJCh0jXyWYNA18vkEga6RL0Ycuka+PKIr/l/M331TI18eUeiMrF3k+1aRQRB6ZmFyAkfBXUxuTaSYCNOQamhj/eDw0dPxJvB41DacY+7hk/GfP77+Drb5vaqIDh1Hjb02+H6RNpxjZXb+/iuhkqKJ+F3HzMLkxK3j22vgpoq0E+OT7CIJch9dY19MsH+GNfb5BJ3rqLHPEnz2rsY+SSnz0TV2iU9YUscu9ZlhytilPwVPFbuSdR0pYle2Uik17ErX3qWEXflq0lSwK4eGNLCjgAY57CF+rrck+z4kiUQDDULYJbw5d5REBQ12saODBpvYUUKDPexoocEWdtTQYAc7emiwga0CGvRjq4EG3diqoEEvtjpo0ImtEhr0YauFBl3YqqFBD7Z6aNCBbQIa4sc2Aw1xY5uChnixzZ3Dsrq4vXvU2J8utPPA0cycb4sVhcEenUeiZx819ppSJ3ea69F5ivds35c8HtUsNBTDlj7CyTQ0jIbtPS3pJQtmx+h/c9Mxuz7CSSDXYddHOAnmKuzQy8nEtihrycb6weGDZ2OfMj924Lyb8o5vzh23uktbQZeR/QVa6+byTLlOUgAAAABJRU5ErkJggg==') no-repeat 15px 29px;
+		background-size: 13px;
+		// font-size: 16px; // [LOCKED]
+		text-transform: uppercase;
+		z-index: 1000;
+	}
+}
+
+//-----------------------------------------------------------------
+// NO SCROLLBARS
+//-----------------------------------------------------------------
+
+.lv-off-canvas .dropdown::-webkit-scrollbar,
+.lv-off-canvas ul::-webkit-scrollbar {
+	display: none;
+}
+
+//-----------------------------------------------------------------
+// LISTS
+//-----------------------------------------------------------------
+
+.lv-off-canvas ul {
+
+	li {
+		border-bottom: 1px solid rgba(black, 0.1);
+		margin-left: 20px;
+	}
+
+	// li.active > a {
+		// color: $primary;
+	// }
+
+	//=========================================
+	// LIST SPECIAL
+	//=========================================
+
+	li.is-special {
+		border: 0;
+
+		ul {
+			position: static;
+			padding: 0;
+
+			li {
+				margin-left: 0;
+				border: 0;
+			}
+		}
+	}
+
+	//=========================================
+	// NEXT ARROW .has-dropdown > a > .text::after
+	//=========================================
+
+	.has-dropdown > a > .submenu-trigger {
+		content: "\f105";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 44px;
+		height: 100%;
+		border-left: 1px solid rgba(black, 0.1);
+		// background: $menu-bg-color;
+		font-family: "FontAwesome";
+		font-size: 25px;
+		font-weight: normal;
+		// color: rgba(white, 0.4);
+		// color: rgba(black, 0.4);
+		text-align: center;
+		cursor: pointer;
+	}
+}
+
+//-----------------------------------------------------------------
+// ANCHORS
+//-----------------------------------------------------------------
+
+.lv-off-canvas a {
+	position: relative;
+	display: block;
+	color: white;
+	padding: 0 40px 0 0;
+	height: 44px;
+	line-height: 44px;
+
+	//=========================================
+	// TRUNCATE TEXT
+	//=========================================
+
+	.text {
+		display: inline-block;
+		width: $menu-width-xs - 80px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+
+		@include media-breakpoint-up(sm) {
+		    width: $menu-width-sm - 80px;
+		}
+
+		@include media-breakpoint-up(md) {
+		    width: $menu-width-md - 80px;
+		}
+	}
+}
+
+//*****************************************************************
+// HAS OPEN MENU - STATE
+//*****************************************************************
+
+.has-open-menu {
+	overflow: hidden; // [LOCK HTML SCROLL]
+
+	.lv-off-canvas,
+	.lv-off-canvas .dropdown.is-open {
+		// transform: translateX(0);
+		top: 0;
+		right: 0;
+		opacity: 1;
+	}
+}
+
+//-----------------------------------------------------------------
+// HAS MENU OPEN - STATE
+//-----------------------------------------------------------------
+
+.has-open-menu {
+	.mobile-icon-menu {
+		position: fixed;
+		top: 0;
+		left: -20px;
+		width: 100%;
+		height: 130vh; // savior
+		background: black;
+		opacity: 0.6;
+		z-index: 1;
+		transition: none;
+
+		i {
+			display: none;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// BTN
+//-----------------------------------------------------------------
+
+.lv-off-canvas {
+
+	.phone {
+		font-size: rem-calc(22);
+		font-weight: $font-weight-normal;
+	}
+
+	.btn-primary {
+		background: none;
+		border-color: white;
+		width: calc(100% - 18px);
+	}
+}
+

@@ -1,0 +1,121 @@
+---
+layout: base__page
+---
+
+<script>
+	var staffList = [
+	   { name: 'Nestoras Alexandropoulos', position: 'Solicitor', location: '', image: '/assets/img/content/people/nestoras-alexandropoulos@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Julia Arena', position: 'Solicitor', location: '', image: '/assets/img/content/people/julia-arena@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Cassandra Attwood', position: 'Solicitor', location: '', image: '/assets/img/content/people/cassandra-attwood@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Eva Bailey', position: 'Partner', location: '', image: '/assets/img/content/people/eva-bailey@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Carly Bayly', position: 'Solicitor', location: '', image: '/assets/img/content/people/carly-bayly@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Bill Connelly', position: 'Partner', location: '', image: '/assets/img/content/people/bill-connelly@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'John Cronshaw', position: 'Associate', location: '', image: '/assets/img/content/people/john-cronshaw@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Francisco De Sousa', position: 'In-house Consultant', location: '', image: '/assets/img/content/people/francisco-de-sousa@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Matthew Fuss', position: 'Partner', location: '', image: '/assets/img/content/people/matthew-fuss@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Keryn Hickmann', position: 'Solicitor', location: '', image: '/assets/img/content/people/keryn-hickmann@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Alexander Hicks', position: 'Solicitor', location: '', image: '/assets/img/content/people/alexander-hicks@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Felix Hoelscher', position: 'Partner', location: '', image: '/assets/img/content/people/felix-hoelscher@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Megan Horsell', position: 'Associate', location: '', image: '/assets/img/content/people/megan-horsell@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Margaret Kaukas', position: 'Special Counsel', location: '', image: '/assets/img/content/people/margaret-kaukas@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Kate Keough', position: 'Senior Associate', location: '', image: '/assets/img/content/people/kate-keough@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Rebecca Lucas', position: 'Associate', location: '', image: '/assets/img/content/people/rebecca-lucas@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Dion McCaffrie', position: 'Partner', location: '', image: '/assets/img/content/people/dion-mcCaffrie@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Camille McDonald', position: 'Senior Associate', location: '', image: '/assets/img/content/people/camille-mcdonald@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Madelaina Mestroni', position: 'Associate', location: '', image: '/assets/img/content/people/madelaina-mestroni@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Toni Monteleone', position: 'Senior Solicitor', location: '', image: '/assets/img/content/people/toni-monteleone@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Garry Palasis', position: 'Partner', location: '', image: '/assets/img/content/people/garry-palasis@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Lynn Pham', position: 'Associate', location: '', image: '/assets/img/content/people/lynn-pham@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Suzanne Pinyon', position: 'Partner', location: '', image: '/assets/img/content/people/suzanne-pinyon@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Simon Ridley', position: 'Associate', location: '', image: '/assets/img/content/people/simon-ridley@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Arthur Siow', position: 'Partner', location: '', image: '/assets/img/content/people/arthur-siow@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Ryan Thomas', position: 'Partner', location: '', image: '/assets/img/content/people/ryan-thomas@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Jeff Widera', position: 'Associate', location: '', image: '/assets/img/content/people/jeff-widera@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Richard Wills', position: 'In-house Consultant', location: '', image: '/assets/img/content/people/richard-wills@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Melissa Tredrea', position: 'Senior Associate', location: '', image: '/assets/img/content/people/melissa-tredrea@2x.jpg', url: '/our-people/our-people-item/' },
+	   { name: 'Alexandra Stephens', position: 'Solicitor', location: '', image: '/assets/img/content/people/alexandra-stephens@2x.jpg', url: '/our-people/our-people-item/' },
+	];
+</script>
+
+<!-- SECTION -->
+<section id="vue-staff-app" class="section">
+	<div class="container">
+		<div class="row align-items-end">
+			<div class="col-md-8 pr-md-4">
+
+				<!-- LEAD -->
+				<p class="lead mb-4">
+					{{ page.lead }}
+				</p>
+
+				<!-- WYSIWYG -->
+				<div class="wysiwyg mb-4 mb-md-0">
+					{{ content | markdownify }}
+				</div>
+
+			</div>
+			<div class="col-md-4 pl-md-5">
+
+				<!-- FORM SORT SELECT -->
+				<div class="form-sort-select d-flex align-items-center ml-xxl-5">
+					<span class="text">Sort by:</span>
+					<sort-select
+						v-model="sortOrder"
+						:sort-options="sortOptions">
+					</sort-select>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- SPACER -->
+		<div class="spacer mb-3 mb-md-5"></div>
+
+		<!-- STAFF LIST -->
+		<transition-group
+			v-cloak
+			name="staffTransition"
+			tag="ul"
+			class="block-grid-xs-2 block-grid-lg-4 block-grid-xl-5 is-condensed mb-5"
+		>
+			<li
+				v-for="(item, index) in sort(sortOrder)"
+				:key="item.name"
+			>
+
+				<!-- CARD -->
+				<div class="card is-flat">
+
+					<!-- IMAGE -->
+					<a class="btn-tile" :href="item.url">
+						<img width="100%" class="card-img-top" src="/assets/img/ui/no-face.png" :alt="item.name">
+						<span v-if="!item.image" class="btn-tile-bg" style="background-image: url('/assets/img/ui/no-face.png');"></span>
+						<span v-if="item.image" class="btn-tile-bg" :style="{ backgroundImage: 'url(' + item.image +')' }" style="background-position: top center;"></span>
+					</a>
+
+					<!-- CARD BODY -->
+					<div class="card-body d-flex flex-column">
+
+						<!-- TITLE -->
+						<a :href="item.url">
+							<h3 class="h5 text-uppercase card-title mb-1" v-text="item.name"></h3>
+						</a>
+
+						<!-- POSITION + LOCATION -->
+						<p class="text-muted h6 font-weight-normal">
+							<span v-text="item.position"></span>
+						</p>
+
+					</div>
+				</div>
+			</li>
+		</transition>
+
+	</div>
+</section>
+
+<style>
+	.staffTransition-move {
+		transition: transform 600ms ease;
+	}
+</style>

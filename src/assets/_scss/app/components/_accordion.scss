@@ -1,0 +1,56 @@
+/*
+    ACCORDION.CSS
+
+    - Last updated: 03.07.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// ACCORDION
+//-----------------------------------------------------------------
+
+.accordion {
+
+	.card {
+		border: 0;
+		margin-bottom: rem-calc(10);
+		box-shadow: none; // [LOCKED]
+		border-radius: $border-radius !important;
+
+		.card-header {
+			padding: 0; // [LOCKED]
+			background: none; // [LOCKED]
+
+			.btn {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				padding: rem-calc(8 15);
+				background: #ebebeb;
+				font-weight: $font-weight-bold;
+				text-align: left;
+				white-space: normal;
+			}
+
+			.fa {
+				font-size: rem-calc(34);
+				margin-left: auto;
+				padding-left: rem-calc(50);
+			}
+		}
+
+		.card-body {
+			padding-top: $spacer * 1.5;
+		}
+	}
+
+	.collapsed .fa:before {
+		content: "\f107";
+	}
+}
+
+//=========================================
+//
+//=========================================

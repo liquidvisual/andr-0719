@@ -1,0 +1,54 @@
+{% assign settings = site.data.settings %}
+{% assign au_office = settings.offices['aus'][0] %}
+{% assign bg_image = include.bg_image | default: '' %}
+{% assign parallax_enabled = include.parallax_enabled | default: false %}
+
+<!-- LAWTALK BLOG SECTION -->
+<section
+	class="section section-blog is-secondary is-dark"
+	style="background-image: url({{ bg_image }})">
+
+	{% if parallax_enabled %}
+		<!-- PARALLAX (OPTIONAL) -->
+		{% include components/hero/hero__parallax_plugin.html image=bg_image %}
+	{% endif %}
+
+	<div class="container">
+
+		<!-- HEADING -->
+		<div class="d-flex align-items-center">
+			<h2 class="mb-2">
+				<i class="fa fa-comment mr-1"></i> LawTalk <span class="font-weight-normal">Blog</span>
+			</h2>
+
+			<!-- MORE BLOG POSTS -->
+			<a class="text-uppercase ml-auto" href="/blog/">More blog posts <i class="fa fa-angle-right"></i></a>
+		</div>
+
+		<hr class="mb-5">
+
+		<div class="row spec-spacious">
+			{% for item in posts limit: 3 %}
+				<div class="col-md-4 col-lg-4 mb-4">
+
+					<!-- HEADING -->
+					<h3 class="h4 mb-2">
+						{{ item.title }}
+					</h3>
+
+					<!-- DATE -->
+					<p class="h6 font-weight-normal text-muted mb-3 pb-2">
+					    <i class="fa fa-calendar-o mr-1"></i>
+					    <time datetime="{{ item.date | date_to_xmlschema }}">
+					        {{ item.date | date: "%A %B %d, %Y" }}
+					    </time>
+					</p>
+
+					<!-- TEXT -->
+					{{ item.body | truncate: 150 }}
+
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

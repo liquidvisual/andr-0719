@@ -1,0 +1,87 @@
+- title: Home
+  url: /
+
+- title: About
+  url: /about/
+
+- title: Our People
+  url: /our-people/
+  include_children_in_nav: true
+  children:
+    - title: Camille McDonald
+      url: /our-people/our-people-item/
+
+- title: Practice Areas
+  url: /practice-areas/
+  include_children_in_nav: true
+  children:
+    - title: Commercial Law and Business Law
+      url: /practice-areas/practice-areas-item/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-15@2x.jpg
+      description: After an injury, compensation paid swiftly and fairly can really help your recovery.
+      include_children_in_nav: true
+      children:
+        - title: Workplace Injury
+          url: /practice-areas/practice-areas-item/practice-areas-item/
+        - title: Motor Vehicle Accidents
+          url: /practice-areas/practice-areas-item/practice-areas-item/
+        - title: Medical Negligence
+          url: /practice-areas/practice-areas-item/practice-areas-item/
+        - title: Asbestosis, Black Lung & Dust Diseases
+          url: /practice-areas/practice-areas-item/practice-areas-item/
+        - title: Public Liability (Slips and Falls)
+          url: /practice-areas/practice-areas-item/practice-areas-item/
+        - title: Other Injury Claims
+          url: /practice-areas/practice-areas-item/practice-areas-item/
+        - title: Institutional Abuse
+          url: /practice-areas/practice-areas-item/practice-areas-item/
+
+    - title: Conveyancing Services
+      url: /practice-areas/industrial-and-employment-law/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-13@2x.jpg
+      description: We’re committed to protecting your rights at work and securing fair outcomes in all disputes.
+
+    - title: Criminal and Police Matters
+      url: /practice-areas/practice-areas-item/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-07@2x.jpg
+      description: We’re committed to equality, and protecting your right to live free from discrimination of any kind.
+
+    - title: Elder Law
+      url: /practice-areas/superannuation-and-insurance/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-04@2x.jpg
+      description: If you can’t work we can help you access your life, superannuation or disability insurance.
+
+    - title: Employment and Industrial Law
+      url: /practice-areas/practice-areas-item/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-17@2x.jpg
+      description: Avoid extra stress by getting the right advice for you and your family.
+
+    - title: Family Law
+      url: /practice-areas/practice-areas-item/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-16@2x.jpg
+      description: We support those looking to live and work in Australia with expert legal advice.
+
+    - title: Personal Injury
+      url: /practice-areas/practice-areas-item/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-01@2x.jpg
+      description: We’ll help you draft a will and organise your estate, bringing you and your family peace of mind.
+
+    - title: Wills and Estates
+      url: /practice-areas/practice-areas-item/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-10@2x.jpg
+      description: The right legal advice and support is crucial at every stage of criminal law.
+
+    - title: Other Legal Services
+      url: /practice-areas/practice-areas-item/
+      image: /assets/img/content/area-of-practice-thumbs/thumb-21@2x.jpg
+      description: Text still to come.
+
+- title: Lawtalk Blog
+  url: /blog/
+  include_children_in_nav: true
+  children:
+    - title: Blog Post
+      url: /blog/blog-item/
+
+- title: Contact
+  url: /contact/

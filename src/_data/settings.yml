@@ -1,0 +1,81 @@
+# GLOBAL SETTINGS
+cname: hallpayne.yourwebvisual.com
+allow_robots: false
+
+# META
+title: Andersons Solicitors
+title_homepage: Andersons Solicitors, Adelaide Lawyers
+company: Andersons Solicitors
+description:
+
+# DEVELOPER
+github_repo_owner: liquidvisual
+github_repo_path: https://github.com/liquidvisual/andr-0719
+github_repo_name: andr-0719
+jekyll_version: 3.7.0
+
+offices:
+  aus:
+    - city: All
+      phone: 08 8238 6666
+      fax: 08 8238 6600
+      email: contact@andersons.com.au
+
+  sa:
+    - city: Adelaide
+      email:
+      phone: 08 8238 6666
+      fax: 08 8238 6600
+      address: 69 Franklin Street<br> Adelaide, South Australia  5000
+      po_box:
+      head_office: true
+
+    - city: Morphett Vale
+      email:
+      phone: 08 8384 3990
+      fax: 08 8238 6604
+      address: Southgate Square, Cnr Sherriffs and Hillier Roads<br> Morphett Vale, South Australia 5162
+      po_box:
+      head_office: false
+
+    - city: Murray Bridge
+      email:
+      phone: 08 8532 3141
+      fax: 08 8532 6765
+      address: 11A Seventh Street<br> Murray Bridge, South Australia  5253
+      po_box:
+      head_office: false
+
+    - city: Port Adelaide
+      email:
+      phone: 08 8447 4911
+      fax: 08 8447 6284
+      address: 113 Lipson Street<br> Port Adelaide, South Australia  5015
+      po_box:
+      head_office: false
+
+    - city: Victoria Square
+      email:
+      phone: 08 8125 7000
+      fax: 08 8125 7001
+      address: Level 7, 185 Victoria Square<br> Adelaide, SA  5000
+      po_box:
+      head_office: false
+
+    - city: Salibury
+      email:
+      phone: 08 8281 2300
+      fax: 08 8281 4880
+      address: 42 Commercial Road<br> Salisbury, SA  5108
+      po_box:
+      head_office: false
+
+# GOOGLE
+google_analytics: #UA-XXXXXXXX-X
+
+# AUTHOR
+author:
+  title: Much Media
+  url: https://www.muchmedia.com.au
+  logo: /assets/img/ui/much-media-logo.svg
+  description: Website by Much Media

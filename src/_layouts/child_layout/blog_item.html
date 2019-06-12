@@ -1,0 +1,157 @@
+---
+layout: base__page_sidebar_9x3_bgless
+---
+
+{% assign categories = site.categories | sort %}
+{% assign blog_posts = site.data.lorem_ipsum %}
+{% assign item = blog_posts[0] %}
+
+<!-- BLOG POST -->
+<section class="section">
+
+    <!-- TITLE -->
+    <h1 class="h2 text-dark mb-4">
+        {{ item.title }}
+    </h1>
+
+    <!-- DATE + DOWNLOADS -->
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- DATE -->
+            <p class="h5 font-weight-normal text-muted mb-4 pb-2">
+                <i class="fa fa-calendar-o mr-1"></i>
+                <time datetime="{{ item.date | date_to_xmlschema }}">
+                    {{ item.date | date: "%A %B %d, %Y" }}
+                </time>
+            </p>
+
+        </div>
+        <div class="col-md-6 mb-3 text-md-right">
+
+            <!-- DOWNLOAD LINK(S) -->
+            <p>
+                <a href="#" class="btn btn-download text-dark">
+                    <i class="fa fa-file-pdf-o mr-2"></i> Download as PDF
+                </a>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- IMAGE -->
+    <p class="img-right">
+        <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-1.jpg" alt="...">
+    </p>
+
+    <!-- WYSIWYG -->
+    <div class="wysiwyg mb-5">
+        {{ content | markdownify }}
+    </div>
+
+    <hr class="mb-4 pb-1">
+
+    <!-- AUTHOR MEDIA -->
+    <div class="media">
+
+        <!-- MEDIA IMAGE -->
+        <p>
+            <img class="mr-4" style="max-width: 90px" src="/assets/img/ui/no-face.png" alt="Cameron Hall">
+        </p>
+
+        <!-- MEDIA BODY -->
+        <div class="media-body">
+            <p>
+                <strong>Get in touch with today's blog writer:</strong><br>
+                <a href="/our-people/our-people-item/">John Smith <i class="fa fa-angle-right"></i></a>
+            </p>
+
+            <small>
+                Senior Associate in <a href="#">Elder Law</a> and <a href="#">Commercial Law and Business Law</a>
+                and <a href="#">Wills and Estates</a>
+            </small>
+        </div>
+    </div>
+
+    <hr class="mb-4 pb-2">
+
+    <!-- PREV + NEXT -->
+    <p>
+        <a class="float-left" href="#prev"><i class="fa fa-angle-left"></i> Previous Blog Post</a>
+        <a class="float-right" href="#next">Next Blog Post <i class="fa fa-angle-right"></i></a>
+    </p>
+
+</section>
+
+{% contentfor sidebar %}
+
+    <!-- SECTION -->
+    <section class="section">
+
+        <!-- AUTHOR -->
+        <a href="/our-people/our-people-item/">
+            <div class="author-box mb-4">
+
+                <!-- HEADING -->
+                <h3 class="author-box-header font-weight-bold text-dark h5">
+                    Get in touch with the author
+                </h3>
+
+                <!-- AUTHOR BODY -->
+                <div class="author-box-body">
+                    <div class="media">
+                        <p><img class="mr-3" style="max-width: 90px" src="/assets/img/ui/no-face.png" alt="Cameron Hall"></p>
+                        <div class="media-body">
+                            <p><small>Senior Associate in Elder Law and Commercial Law and Business Law and Wills and Estates</small></p>
+                            <span>John Smith <i class="fa fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- OTHER POSTS BY AUTHOR -->
+        <div class="mb-5">
+
+            <!-- HEADING -->
+            <h3 class="sidebox-header h5 text-dark font-weight-bold mb-4">
+                Other blog posts by Errol...
+            </h3>
+
+            <!-- POST LIST -->
+            {% for item in blog_posts limit: 3 %}
+                <hr>
+                <a class="d-block mb-3" href="{{ item.url }}">
+                    <h4 class="h6 text-dark font-weight-bold mb-0">{{ item.title }}</h4>
+                    <small class="text-muted">
+                        <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%A %B %d, %Y" }}</time>
+                    </small>
+                </a>
+            {% endfor %}
+
+            <!-- MORE BUTTON -->
+            <a href="#" class="btn btn-primary side-btn btn-block text-left">See more posts by John<i class="ml-auto fa fa-angle-right"></i></a>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="sidebox mb-4">
+
+            <!-- HEADING -->
+            <h3 class="sidebox-header h5 text-uppercase mb-4">
+                <i class="fa fa-align-left mr-1"></i>
+                Categories
+            </h3>
+
+            <!-- CAT LIST -->
+            <div class="sidebox-body mb-2">
+                <ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-1">
+                    {% for item in site.data.blog_categories %}
+                        <li><a href="#">{{ item.title }}&nbsp;<i class="fa fa-angle-right d-inline"></i></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+{% endcontentfor %}

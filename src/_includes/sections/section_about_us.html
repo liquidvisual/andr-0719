@@ -1,0 +1,35 @@
+{% assign settings = site.data.settings %}
+{% assign au_office = settings.offices['aus'][0] %}
+{% assign bg_image = include.bg_image | default: '/assets/img/content/backgrounds/about-us-bg.jpg' %}
+{% assign parallax_enabled = include.parallax_enabled | default: true %}
+
+<!-- CONTACT SECTION -->
+<section
+	class="section section-about-us is-dark has-image-bg is-tinted is-parallax"
+	style="background-image: url({{ bg_image }})">
+
+	{% if parallax_enabled %}
+		<!-- PARALLAX (OPTIONAL) -->
+		{% include components/hero/hero__parallax_plugin.html image=bg_image %}
+	{% endif %}
+
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-7 mx-auto">
+
+				<!-- HEADER -->
+				<h2 class="text-uppercase mb-4">
+					About <span class="font-weight-normal">Us</span>
+				</h2>
+
+				<!-- WYSIWYG -->
+				<div class="wysiwyg">
+					<p>Andersons Solicitors has provided legal service to tens and thousands of South Australians for over 50 years.</p>
+					<p>Originally based in Port Adelaide, Andersons has significantly expanded over the 50 years with full time office locations in the Adelaide CBD, Morphett Vale, Port Adelaide and Murray Bridge over 50 staff.</p>
+					<p>Wherever you may be based in South Australia or throughout the country, we are able to easily and professionally provide services via email and phone.</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,31 @@
+/*
+    THEMES.CSS
+
+    - updated: 25.03.19
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// THEME-NO-HERO (used for blog-item)
+//-----------------------------------------------------------------
+
+.theme-no-hero {
+	.lv-breadcrumb-wrapper {
+		top: rem-calc(8); // hardcoded
+
+		.breadcrumb-item {
+			font-size: rem-calc(20); // hardcoded
+	    	color: $yiq-text-dark !important;
+
+	    	@include media-breakpoint-up(md) {
+	    	    font-size: rem-calc(25); // hardcoded
+	    	}
+		}
+	}
+}
+
+//=========================================
+//
+//=========================================

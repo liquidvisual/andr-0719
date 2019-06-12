@@ -1,0 +1,84 @@
+---
+layout: base__page_sidebar_9x3_bgless
+---
+
+<!-- SECTION -->
+<section class="section">
+    <div class="row">
+        {% for item in site.data.lorem_ipsum limit: 9 %}
+            <div class="col-md-6 col-xl-4 mb-5">
+
+                <!-- CARD -->
+                <div class="card h-100 is-flat">
+
+                    <!-- IMAGE -->
+                    <a class="btn-tile" href="{{ item.url }}">
+                        <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--480x288.svg" alt="{{ item.title }}">
+                        <span class="btn-tile-bg" style="background-image: url({{ item.image }})"></span>
+                    </a>
+
+                    <!-- CARD BODY -->
+                    <div class="card-body d-flex flex-column">
+
+                        <!-- TITLE -->
+                        <a class="text-dark" href="{{ item.url }}">
+                            <h3 class="h4 card-title text-primary">{{ item.title }}</h3>
+                        </a>
+
+                        <!-- DATE -->
+                        <small class="mb-3">
+                            <time class="text-uppercase mr-1" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date }}</time>
+                        </small>
+
+                        <!-- TEXT -->
+                        <div class="card-text mb-2">
+                            {{ item.body | truncate: 150 }}
+                        </div>
+
+                        <!-- BUTTON -->
+                        <p>
+                            <a href="{{ item.url }}" class="text-uppercase text-link">
+                                Read more <i class="fa fa-angle-right"></i>
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include components/navigation/pagination.html %}
+</section>
+
+{% contentfor sidebar %}
+
+    <!-- SECTION -->
+    <section class="section">
+
+        <!-- WYSIWYG -->
+        <div class="wysiwyg mb-3 pb-1">
+            {{ content }}
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="sidebox mb-4">
+
+            <!-- HEADING -->
+            <h3 class="sidebox-header h5 text-uppercase mb-4">
+                <i class="fa fa-align-left mr-1"></i>
+                Categories
+            </h3>
+
+            <!-- CAT LIST -->
+            <div class="sidebox-body mb-2">
+                <ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-1">
+                    {% for item in site.data.blog_categories %}
+                        <li><a href="#">{{ item.title }}&nbsp;<i class="fa fa-angle-right d-inline"></i></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endcontentfor %}

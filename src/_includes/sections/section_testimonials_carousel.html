@@ -1,0 +1,86 @@
+{% assign settings = site.data.settings %}
+{% assign au_office = settings.offices['aus'][0] %}
+{% assign bg_image = include.bg_image | default: '' %}
+{% assign parallax_enabled = include.parallax_enabled | default: false %}
+
+<!-- CONTACT SECTION -->
+<section
+	class="section section-testimonials-carousel is-secondary"
+	style="background-image: url({{ bg_image }})">
+
+	{% if parallax_enabled %}
+		<!-- PARALLAX (OPTIONAL) -->
+		{% include components/hero/hero__parallax_plugin.html image=bg_image %}
+	{% endif %}
+
+	<div class="container text-center py-3">
+
+		<!-- HEADER -->
+		<h2 class="h1 text-uppercase mb-4 pb-3">
+			Client <span class="font-weight-normal">Testimonials</span>
+		</h2>
+
+		<!-- SLIDER -->
+		<div class="slider slider-stats" data-slider>
+			<div data-flickity='
+				{
+			        "adaptiveHeight": false,
+			        "autoPlay": false,
+			        "cellAlign": "left",
+			        "contain": true,
+			        "draggable": ">1",
+			        "dragThreshold": 40,
+			        "freeScroll": false,
+			        "freeScrollFriction": 0.075,
+			        "friction": 0.28,
+			        "groupCells": true,
+			        "imagesLoaded": true,
+			        "pageDots": false,
+			        "prevNextButtons": false,
+			        "pauseAutoPlayOnHover": false,
+			        "selectedAttraction": 0.025,
+			        "watchCSS": false,
+			        "wrapAround": true
+			    }'>
+
+				<!-- SLIDES -->
+				{% for i in (1..2) %}
+
+					<!-- SLIDE -->
+					<div class="w-100">
+						<div class="text-center mx-auto" style="max-width: 1140px">
+
+							<!-- STATS -->
+							<div class="row">
+								<div class="col-md-5 mx-auto">
+
+									<!-- QUOTE -->
+									<blockquote class="blockquote">
+										<div class="blockquote-box">
+											<p class="h4 font-weight-normal mb-0">
+												<em>
+													Lynn, Thank you so much for finalizing my mothers estate. It was such a pleasure to deal with you, and how easy you finally made the job of being Executor.
+												</em>
+											</p>
+										</div>
+										<cite>- Sharyn, Port Adelaide</cite>
+									</blockquote>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+
+			<!-- SLIDER CONTROLS -->
+			<div class="slider-controls">
+			    <button class="slider-prev-btn"><i class="fa fa-angle-left"></i></button>
+			    <button class="slider-next-btn"><i class="fa fa-angle-right"></i></button>
+			</div>
+
+		</div>
+
+	</div>
+</section>

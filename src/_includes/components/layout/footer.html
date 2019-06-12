@@ -1,0 +1,69 @@
+{% assign settings = site.data.settings %}
+{% assign au_office = settings.offices['aus'][0] %}
+{% assign sitemap = site.data.sitemap %}
+{% assign logo = page.logo | default: "/assets/img/content/logo.svg" %}
+
+<!-- FOOTER BOTTOM -->
+<section class="global-footer-bottom">
+    <div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-8">
+				<div class="mb-4 mb-md-0 pr-2">
+
+					<!-- PRIVACY POLICY -->
+					<small class="d-inline-block mb-1 mr-4 text-uppercase">
+						<a href="#">Privacy</a>
+					</small>
+
+					<!-- REFUND POLICY -->
+					<small class="d-inline-block mb-1 mr-4 text-uppercase">
+						<a href="#">Disclaimer</a>
+					</small>
+
+					<!-- SITEMAP (OPTIONAL) -->
+					<small class="d-inline-block mb-1 mr-4 text-uppercase">
+						<a href="/site-map/">Site Map</a>
+					</small>
+
+					<br>
+
+					{% comment %}
+					<!-- LEGAL TEXT -->
+					<small class="legal-text">
+						<!-- (optional) -->
+						&copy; <date class="mr-1"><script>document.write(new Date().getFullYear())</script></date>
+						Legal text
+					</small>
+					{% endcomment %}
+
+				</div>
+			</div>
+			<div class="col-md-4 d-flex align-items-end justify-content-md-end">
+
+				<!-- AUTHOR -->
+				<!-- <small>
+					<a class="author-logo" target="_blank" href="{{ settings.author.url }}">
+				    	<span class="text text-uppercase mr-1">{{ settings.author.description }}</span>
+				    	<img width="20" height="20" src="{{ settings.author.logo }}" alt="Powered by {{ settings.author.title }}">
+					</a>
+				</small> -->
+
+				{% include components/widgets/social_media.html %}
+
+			</div>
+		</div>
+    </div> <!-- /.container -->
+
+    <!-- BACK TO TOP -->
+    <div class="text-center text-md-right">
+    	<button data-back-top class="btn-back-top">
+    		<div>
+    			<i class="d-block fa fa-angle-up"></i>
+    			<span class="text">TOP</span>
+    		</div>
+    	</button>
+    </div>
+
+
+
+</section>

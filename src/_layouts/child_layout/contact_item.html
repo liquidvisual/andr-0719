@@ -1,0 +1,26 @@
+---
+layout: base__page_sidebar_8x4_form
+---
+
+{% assign offices = site.data.settings.offices['sa'] %}
+
+<!-- SECTION -->
+<section class="section section-map pb-0 mb-3 mb-md-5">
+    {% for item in offices %}
+        {% if item.city == 'Adelaide' %}
+            {% include components/content/contact_box.html po_box=true %}
+        {% endif %}
+    {% endfor %}
+</section>
+
+<!-- MOBILE ONLY MAP -->
+<div class="hidden-md-up">
+    {% include components/widgets/google_map.html %}
+</div>
+
+{% contentfor content_additional %}
+    <!-- MD UP MAP -->
+    <div class="hidden-sm-down">
+        {% include components/widgets/google_map.html %}
+    </div>
+{% endcontentfor %}

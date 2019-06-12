@@ -1,0 +1,122 @@
+{% comment %}
+<!--
+    HERO DEFAULT
+
+    - Updated: 06.02.19
+    - Complete functionality incl. youtube video, commonly used on homepages
+-->
+{% endcomment %}
+
+{% assign id = include.id %}
+{% assign options = include.options | default: 'is-default' %}
+{% assign slides = include.data %}
+{% assign youtube_script_included_once = false %}
+{% assign html5_video_script_included_once = false %}
+
+<!-- HERO WRAPPER -->
+<section id="{{ id }}" class="lv-hero-wrapper">
+
+    <!-- HERO -->
+    <div class="lv-hero {{ options }}">
+
+        <!-- HERO ITEMS -->
+        {% for item in slides | limit: 1 %}
+            <div class="lv-hero-item {{ item.options }}">
+
+                <!-- HERO SLIDER (OVERLAY BEHIND) -->
+                <div class="lv-hero-item-slider-wrapper has-fade-transition" data-hero-slider>
+                    <div class="lv-hero-item-slider"
+
+                        {% if slides.size > 1 %}
+                            data-flickity='
+                            {
+                                "adaptiveHeight": true,
+                                "autoPlay": 8000,
+                                "cellAlign": "left",
+                                "contain": true,
+                                "draggable": false,
+                                "dragThreshold": 40,
+                                "freeScroll": false,
+                                "freeScrollFriction": 0.075,
+                                "friction": 0.28,
+                                "groupCells": false,
+                                "imagesLoaded": true,
+                                "pageDots": false,
+                                "pauseAutoPlayOnHover": true,
+                                "prevNextButtons": false,
+                                "selectedAttraction": 0.025,
+                                "watchCSS": false,
+                                "wrapAround": true
+                            }'
+                        {% endif %}
+                        >
+
+                        {% for item in slides %}
+                            <div class="lv-hero-item-slide" style="background-image: url('{{ item.image }}')">
+
+                                {% if item.scroll_prompt %}
+                                    <!-- SCROLL PROMPT -->
+                                    <a class="lv-hero-scroll-prompt hidden-lg-down"><i class="fa fa-angle-down"></i></a>
+                                {% endif %}
+
+                                {% if item.youtube_id %}
+                                    {% include components/hero/hero__youtube_plugin.html %}
+                                {% elsif item.vimeo_id %}
+                                    {% include components/hero/hero__vimeo_plugin.html %}
+                                {% elsif item.video %}
+                                    {% include components/hero/hero__html5_video_plugin.html %}
+                                {% endif %}
+
+                                {% comment %}
+                                <!-- PARALLAX (OPTIONAL) -->
+                                {% unless item.youtube_id or item.vimeo_id  %}
+                                    {% if item.image %}
+                                        {% include components/hero/hero__parallax_plugin.html image=item.image %}
+                                    {% endif %}
+                                {% endunless  %}
+                                {% endcomment %}
+
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div> <!-- /.hero-item-slider-wrapper -->
+
+                <div class="container">
+                    <div class="row h-100">
+                        <div class="col-md-6 col-lg-5 col-xl-5 ml-md-auto">
+
+                            <!-- HERO CAPTION -->
+                            <div class="lv-hero-item-caption animated fadeInLeftSubtle">
+
+                                <!-- HEADER -->
+                                <h1 class="display-1 text-uppercase mb-3">
+                                    South Australian <span class="font-weight-normal">Law Firm</span>
+                                </h1>
+
+                                <!-- LEAD -->
+                                <p class="h4 font-weight-normal">
+                                    Providing over 50 years of legal service to tens of thousands of South Australians.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+
+    </div> <!-- /.lv-hero -->
+
+    {% comment %}
+    {% if slides.size > 1 %}
+        <!-- SLIDER CONTROLS -->
+        <div class="lv-hero-slider-controls hidden-lg-down">
+            <span class="lv-hero-slider-prev-btn"><i class="fa fa-angle-left"></i></span>
+            <span class="lv-hero-slider-next-btn"><i class="fa fa-angle-right"></i></span>
+        </div>
+    {% endif %}
+    {% endcomment %}
+
+</section> <!-- /.lv-hero-wrapper -->

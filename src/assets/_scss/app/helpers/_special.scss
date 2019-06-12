@@ -1,0 +1,113 @@
+/*
+    SPECIAL.CSS
+
+    - updated: 16.01.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// PAYPAL FORM - REFACTOR
+//-----------------------------------------------------------------
+
+[v-cloak] {
+    visibility: hidden;
+}
+
+.contact-form .btn[disabled="disabled"] {
+    /*opacity: 1;*/
+    cursor: not-allowed;
+}
+
+.or-text {
+    position: relative;
+    top: -12px;
+}
+
+.disabled-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-event: none;
+    z-index: 200;
+}
+
+.spec-small {
+	font-size: 80%; // used only in sidebox heading /contact
+}
+
+//-----------------------------------------------------------------
+// BIZARRE - used on why switch page
+//-----------------------------------------------------------------
+
+.spec-spacious {
+	@include media-breakpoint-up(xxl) {
+	    justify-content: space-between;
+	}
+
+	[class*='col'] {
+		@include media-breakpoint-up(xxl) {
+			// padding: 0;
+		    max-width: rem-calc(450);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// SPECIAL
+//-----------------------------------------------------------------
+
+.fas,
+.fal,
+.far,
+.fab {
+	font-style: normal;
+}
+
+//=========================================
+//
+//=========================================
+//-----------------------------------------------------------------
+// OVERRIDING ANIMATE (looks better)
+//-----------------------------------------------------------------
+
+.animated {
+	animation-fill-mode: both;
+	animation-duration: 1.5s;
+}
+
+.fadeInLeftSubtle {
+	animation-name: fadeInLeftSubtle;
+}
+
+.fadeInUpSubtle {
+	animation-name: fadeInUpSubtle;
+}
+
+@keyframes fadeInLeftSubtle {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInUpSubtle {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
