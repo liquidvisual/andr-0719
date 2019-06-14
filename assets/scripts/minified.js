@@ -5615,28 +5615,20 @@ function launchSlider() {
 }launchModal(), function (e) {
   "use strict";
   var t = e("html"),
-      n = e(".lv-off-canvas .dropdown"),
-      i = e(".lv-page"),
-      o = e(".lv-off-canvas"),
-      r = e("a", o),
-      s = e('a[href*="#"]:not([href="#"])', o),
-      a = e('<span class="submenu-trigger"><i class="fa fa-angle-right"></i></span>');e("[data-menu-toggle]").on("click", function (n) {
-    n.preventDefault(), e(".has-open-menu").length || (t.removeClass("has-closed-menu").addClass("has-open-menu"), setTimeout(function () {
-      i.on("click", function (n) {
-        n.stopPropagation(), e(".has-open-menu").length && (t.removeClass("has-open-menu").addClass("has-closed-menu"), e(this).unbind("click"));
-      });
-    }, 10));
-  }), s.on("click", function (e) {
-    e.preventDefault(), e.stopPropagation(), t.removeClass("has-open-menu").addClass("has-closed-menu"), i.unbind("click");
-  }), a.on("click", function (t) {
-    t.preventDefault(), t.stopPropagation(), e(this).parent().next(".dropdown").addClass("is-open");
-  }), n.on("click", function (t) {
-    e(this).removeClass("is-open"), t.stopPropagation();
+      n = (e(".lv-page"), e(".lv-off-canvas")),
+      i = e(".dropdown", n),
+      o = e("li:not(.has-dropdown) > a", i),
+      r = e(".submenu-arrow");e("[data-menu-toggle]").on("click", function (e) {
+    e.preventDefault(), t.toggleClass("has-open-menu");
   }), r.on("click", function (t) {
-    t.preventDefault();var n = e(this).attr("href");setTimeout(function () {
-      window.location = n;
-    }.bind(n), 200);
-  }), e(".lv-off-canvas .has-dropdown > a").append(a);
+    t.preventDefault(), t.stopPropagation(), e(this).parent().next(".dropdown").addClass("is-open");
+  }), o.click(function (n) {
+    n.preventDefault();var i = e(this).attr("href");t.removeClass("has-open-menu").addClass("has-closed-menu"), setTimeout(function () {
+      window.location = i;
+    }.bind(i), 200);
+  }), i.on("click", function (t) {
+    e(this).removeClass("is-open"), t.stopPropagation();
+  });
 }(jQuery), $("[data-search-trigger]").click(function (e) {
   return $("[data-global-search]").addClass("active"), $("[data-global-search] input").focus(), !1;
 }), $("[data-global-search]").on("mousedown", function () {
