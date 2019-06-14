@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Commercial Law and Business Law
+permalink: /practice-areas/commercial-law-and-business-law/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Commercial Law and Business Law'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:

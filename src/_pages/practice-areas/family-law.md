@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Family Law
+permalink: /practice-areas/family-law/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Family Law'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:

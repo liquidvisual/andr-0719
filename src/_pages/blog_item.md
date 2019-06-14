@@ -2,14 +2,13 @@
 layout: child_layout/blog_item
 title: The Trick to Creating Delicious Meals on the Go
 title_override: ''
-permalink: /blog/blog-item/
+permalink: /lawtalk-blog/lawtalk-blog-item/
 hero_image:
 hero_options: is-gray-minimal-short
 breadcrumbs: true
 theme: theme-no-hero
+lead:
 ---
-
-<p class="lead">In Australia, there are two courts your family law matter can be filed or heard in; the Family Court of Australia and the Federal Circuit Court.</p>
 
 In an early blog post we explained [what you needed to know before moving into a retirement village](#). This article provides more detail about the rights you have and need to be aware of before signing a retirement village contract.
 

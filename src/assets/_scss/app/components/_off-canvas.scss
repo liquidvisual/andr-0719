@@ -1,9 +1,11 @@
 /*
     OFF-CANVAS.CSS
 
-    - Last updated: 06.02.19
+    - Last updated: 28.03.19, 04.03.19, 16.04.18
     - liquidvisual.com
 
+	- slightly improved from Swellnet, (workskil)
+	- empty hrefs act as whole link
     - latest update removes 'off-canvas' effect and transforms.
       Runs jankier, but will handle deep menus
 */
@@ -12,10 +14,12 @@
 //-----------------------------------------------------------------
 
 $body-bg: white !default;
-$menu-bg-color: $secondary;
+$menu-bg-color: darken($secondary, 0%); //darken(#3e3e4b, 15%);
+
 $menu-width-xs: 267px;
 $menu-width-sm: 320px; // NEW
 $menu-width-md: 350px;
+
 $hamburger-width: 28px;
 $hamburger-height: $hamburger-width - $hamburger-width/5;
 $hamburger-slit-height: 3px;
@@ -40,7 +44,7 @@ $hamburger-slit-height: 3px;
 	}
 
 	@include media-breakpoint-up(md) {
-	    width: $menu-width-md;
+	    width: $menu-width-md; // [required]
 	}
 }
 
@@ -147,9 +151,8 @@ $hamburger-slit-height: 3px;
 		position: sticky; //- glitchy - is useless
 		top: 0;
 		padding: 26px 20px 15px 40px;
-		color: rgba(black, 0.4);
-		background: darken($menu-bg-color, 5%) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADRklEQVR4nO3dP08UQRjH8e/sYWEDR+efxkJ7SjUxUpCIHe/A8xVoQgzttSQc8R2Ina2NuUsoaIiWZ2+IFhwlEBP+BLmxIAtBIODtM7vzPLO/8pKbffLJZG5vdmbHkWhevrvznGH21jv6fxr771cXt3dDXs+FbDzWzM7f++Cca51+4NkZeqZ7y5vfQ10zOegLyHkCYycFfSVynoDYyUBfi5wnEHYS0DdGzhMA2zz0fyPn8ew4hlNfOlu/JOrIJBqJNSMjAziaxz5rStUyJtVQbCmEDIDv95YHYkOHyR5dHBmG0Jap5iTmerQEsve0ep3BZ6GSAGM/hlLI3c7mR6GSTmMGOmZkMAIdOzIYgNaADMqhtSCDYmhNyKAUWhsyKITWiAzKoLUigyJozcigBFo7MiiAtoAMkUNbQYaIoS0hQ6TQ1pAhQmiLyBDZxL8IMr7d7QyiQoaIerRMT/Yr3c7gtVBJookC2joyRACdAjJUDJ0KMlQInRIyVASdGjJUAJ0iMpQMnSoylAidMjKUBJ06MpQAXSOfJCh0jXyWYNA18vkEga6RL0Ycuka+PKIr/l/M331TI18eUeiMrF3k+1aRQRB6ZmFyAkfBXUxuTaSYCNOQamhj/eDw0dPxJvB41DacY+7hk/GfP77+Drb5vaqIDh1Hjb02+H6RNpxjZXb+/iuhkqKJ+F3HzMLkxK3j22vgpoq0E+OT7CIJch9dY19MsH+GNfb5BJ3rqLHPEnz2rsY+SSnz0TV2iU9YUscu9ZlhytilPwVPFbuSdR0pYle2Uik17ErX3qWEXflq0lSwK4eGNLCjgAY57CF+rrck+z4kiUQDDULYJbw5d5REBQ12saODBpvYUUKDPexoocEWdtTQYAc7emiwga0CGvRjq4EG3diqoEEvtjpo0ImtEhr0YauFBl3YqqFBD7Z6aNCBbQIa4sc2Aw1xY5uChnixzZ3Dsrq4vXvU2J8utPPA0cycb4sVhcEenUeiZx819ppSJ3ea69F5ivds35c8HtUsNBTDlj7CyTQ0jIbtPS3pJQtmx+h/c9Mxuz7CSSDXYddHOAnmKuzQy8nEtihrycb6weGDZ2OfMj924Lyb8o5vzh23uktbQZeR/QVa6+byTLlOUgAAAABJRU5ErkJggg==') no-repeat 15px 29px;
-		background-size: 13px;
+		background: darken($menu-bg-color, 5%) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAACiUlEQVR4nO3cT2oUQRSA8S8iIh4gRxCPIIIwIrhR8Aziwi7EY7jxAtVkYXCZXSK4cWXAE4grjyDiUtzFhWnIOCZM91Cv3r9vOfTA40d1MV0DvXfGGVn7rvUeIEoJLVRCC5XQQiW0UAktVEILldBCJbRQCS3U9d4DtK4MZR94B9wD3gMv6lh/Sc+x5/ms4xz5FLhz4eNPwGNpbLdbxyXIACvgQxnKLcl5XEJfgTy1QhjbHfQWyFMroDYf6DxX0DOQp540HGctN9ALkAE+NxpnIxfQC5G/AM/aTLSZeegdkB/Wsf5sM9VmpqF3RP7RZqr/ZxbaEjIYhbaGDAahLSKDsbOOhchfgQc9kcHQiraMDEagrSODAWgPyKAc2gsyKIb2hAxKob0hg0Joj8igDNorMiiC9owMSqC9I4MC6AjI0Bk6CjJ0hI6EDJ2goyFDB+iIyCAMHRUZBKEjI4MQdHRkkFvRhwRGBjnouzOvf+UJGeSgj2def1SGMucOUJ8U9Evg44zr94FTT9gi0HWsv4GnBMYW+3kXHVv0gSUytvgjeFTsLodKEbG7HZNGw+568B8Ju/tfWVGwu0NDDGwV0OAfWw00+MZWBQ1+sdVBg09sldDgD1stNPjCVg0NfrDVQ4MPbBPQYB/bDDTYxjYFDXaxzUGDTWyT0GAP2yw02MI29XaDyypDuQmcAI9mfO07cL+O9VubqdYzvaKndljZh20m2swFNCzGvt1onI3cQMMi7IOG46zlYo/+ty337Ld1rM+FRvK1oqe2WNmiyOAUGq7EFkcGp1vHxcpQbgCv+ftG9JM61jc95nAPrSW3W4e2ElqohBYqoYVKaKESWqiEFiqhhUpooRJaqIQW6g/MUoF549GZugAAAABJRU5ErkJggg==) no-repeat 15px 27px;
+		background-size: 18px;
 		// font-size: 16px; // [LOCKED]
 		text-transform: uppercase;
 		z-index: 1000;
@@ -172,7 +175,7 @@ $hamburger-slit-height: 3px;
 .lv-off-canvas ul {
 
 	li {
-		border-bottom: 1px solid rgba(black, 0.1);
+		border-bottom: 1px solid rgba(white, 0.1);
 		margin-left: 20px;
 	}
 
@@ -202,22 +205,29 @@ $hamburger-slit-height: 3px;
 	// NEXT ARROW .has-dropdown > a > .text::after
 	//=========================================
 
-	.has-dropdown > a > .submenu-trigger {
+	.has-dropdown > a > .submenu-arrow {
 		content: "\f105";
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 44px;
 		height: 100%;
-		border-left: 1px solid rgba(black, 0.1);
+		border-left: 1px solid rgba(white, 0.1);
 		// background: $menu-bg-color;
 		font-family: "FontAwesome";
 		font-size: 25px;
 		font-weight: normal;
-		// color: rgba(white, 0.4);
-		// color: rgba(black, 0.4);
+		color: rgba(white, 0.4);
 		text-align: center;
 		cursor: pointer;
+	}
+
+	.has-dropdown > a[href=''] > .submenu-arrow {
+		left: -21px;// fix border glitch
+		width: calc(100% + 20px);
+		padding-right: 18px;
+		text-align: right;
+		// background: aqua;
 	}
 }
 
@@ -239,18 +249,10 @@ $hamburger-slit-height: 3px;
 
 	.text {
 		display: inline-block;
-		width: $menu-width-xs - 80px;
+		width: 95%;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;
-
-		@include media-breakpoint-up(sm) {
-		    width: $menu-width-sm - 80px;
-		}
-
-		@include media-breakpoint-up(md) {
-		    width: $menu-width-md - 80px;
-		}
 	}
 }
 
@@ -271,42 +273,80 @@ $hamburger-slit-height: 3px;
 }
 
 //-----------------------------------------------------------------
+// HAMBURGER TRIGGER
+//-----------------------------------------------------------------
+
+// .lv-hamburger {
+// 	position: relative;
+// 	width: $hamburger-width;
+// 	height: $hamburger-height;
+// 	cursor: pointer;
+// 	// background: aqua;
+
+// 	.lv-hamburger-top,
+// 	.lv-hamburger-middle,
+// 	.lv-hamburger-bottom {
+// 		position: absolute;
+// 		left: 0;
+// 		width: 100%;
+// 		height: $hamburger-slit-height;
+// 		background-color: #222;
+// 	}
+
+// 	.lv-hamburger-middle {
+// 		top: calc(50% - #{$hamburger-slit-height}/2);
+// 	}
+
+// 	.lv-hamburger-bottom {
+// 		bottom: 0;
+// 	}
+// }
+
+//=========================================
 // HAS MENU OPEN - STATE
+//=========================================
+
+// .has-open-menu {
+// 	.lv-hamburger-top,
+// 	.lv-hamburger-middle,
+// 	.lv-hamburger-bottom {
+// 		transition: transform ease 300ms 300ms;
+// 	}
+
+// 	.lv-hamburger-top {
+// 		transform: rotate(45deg);
+// 		top: calc(50% - #{$hamburger-slit-height/2});
+// 	}
+
+// 	.lv-hamburger-bottom {
+// 		transform: rotate(-45deg);
+// 		top: calc(50% - #{$hamburger-slit-height/2});
+// 	}
+
+// 	.lv-hamburger-middle {
+// 		background: rgba(black, 0.8) !important; // [LOCKED] - override theming
+// 		position: fixed;
+// 		top: 0;
+// 		left: -20px;
+// 		width: 100%;
+// 		height: 130vh; // savior
+// 		z-index: 1;
+// 	}
+// }
+
+//-----------------------------------------------------------------
+// CONTEXT
 //-----------------------------------------------------------------
 
-.has-open-menu {
-	.mobile-icon-menu {
-		position: fixed;
-		top: 0;
-		left: -20px;
-		width: 100%;
-		height: 130vh; // savior
-		background: black;
-		opacity: 0.6;
-		z-index: 1;
-		transition: none;
-
-		i {
-			display: none;
-		}
-	}
+.lv-off-canvas .is-nav-only {
+	display: none; // to hide 'Home' from appearing twice. Remove if client changes this.
 }
 
-//-----------------------------------------------------------------
-// BTN
-//-----------------------------------------------------------------
-
-.lv-off-canvas {
-
-	.phone {
-		font-size: rem-calc(22);
-		font-weight: $font-weight-normal;
-	}
-
-	.btn-primary {
-		background: none;
-		border-color: white;
-		width: calc(100% - 18px);
-	}
+.is-off-canvas-only {
+    display: none;
 }
 
+.lv-off-canvas .is-off-canvas-only {
+    display: block;
+    border: 0;
+}

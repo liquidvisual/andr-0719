@@ -1,5 +1,5 @@
 ---
-layout: base__page_sidebar_9x3_bgless
+layout: base__page_sidebar_8x4
 ---
 
 {% assign categories = site.categories | sort %}
@@ -43,6 +43,13 @@ layout: base__page_sidebar_9x3_bgless
     <p class="img-right">
         <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-1.jpg" alt="...">
     </p>
+
+    {% if page.lead %}
+        <!-- LEAD -->
+        <p class="lead">
+            {{ page.lead }}
+        </p>
+    {% endif %}
 
     <!-- WYSIWYG -->
     <div class="wysiwyg mb-5">

@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Conveyancing Services
+permalink: /practice-areas/conveyancing-services/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Conveyancing Services'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:

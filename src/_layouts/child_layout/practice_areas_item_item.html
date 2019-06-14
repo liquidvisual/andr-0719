@@ -1,17 +1,18 @@
 ---
-layout: base__page_sidebar_7x5
+layout: base__page_sidebar_8x4_nav
 ---
 
 {% assign law_team = site.data.staff %}
-{% assign nav_items = site.data.sitemap[3].children[0].children %}
 
 <!-- SECTION -->
 <section class="section">
 
-	<!-- LEAD -->
-	<p class="lead mb-4">
-		{{ page.lead }}
-	</p>
+	<h2 class="text-danger">** Under construction **</h2>
+
+	<!-- TITLE -->
+	<h1 class="h2 text-dark mb-4">
+	    {{ item.title }}
+	</h1>
 
 	<!-- WYSIWYG -->
 	<div class="wysiwyg mb-5">
@@ -36,7 +37,9 @@ layout: base__page_sidebar_7x5
 
 </section>
 
+{% comment %}
 {% contentfor sidebar %}
+
 	<!-- SECTION -->
 	<section class="section">
 
@@ -61,6 +64,7 @@ layout: base__page_sidebar_7x5
 		</nav>
 	</section>
 {% endcontentfor %}
+{% endcomment %}
 
 {% contentfor content_additional %}
 	<!-- BLOG POSTS -->

@@ -59,88 +59,88 @@
 // SIDE NAV
 //-----------------------------------------------------------------
 
-.side-nav {
-    width: calc(100% + #{$container-gutter/1.5}*2);
-    margin-bottom: rem-calc(-16); // make it neat at the bottom
-    margin-left: -$container-gutter/1.5; // same as global.scss
+// .side-nav {
+//     width: calc(100% + #{$container-gutter/1.5}*2);
+//     margin-bottom: rem-calc(-16); // make it neat at the bottom
+//     margin-left: -$container-gutter/1.5; // same as global.scss
 
-    @include media-breakpoint-up(md) {
-        width: calc(100% + #{$container-gutter}*2);
-        margin-left: -$container-gutter; // same as global.scss
-    }
+//     @include media-breakpoint-up(md) {
+//         width: calc(100% + #{$container-gutter}*2);
+//         margin-left: -$container-gutter; // same as global.scss
+//     }
 
-    @include media-breakpoint-up(lg) {
-        width: auto;
-        margin: 0;
-    }
+//     @include media-breakpoint-up(lg) {
+//         width: auto;
+//         margin: 0;
+//     }
 
-    li {
-        border-bottom: 1px solid rgba(black, 0.15);
-    }
+//     li {
+//         border-bottom: 1px solid rgba(black, 0.15);
+//     }
 
-    a,
-    .anchor {
-        display: flex;
-        align-items: center;
-        padding: rem-calc(20 25 20 22);
-        font-size: rem-calc(16);
-        font-weight: $font-weight-bolder;
-        color: white;
+//     a,
+//     .anchor {
+//         display: flex;
+//         align-items: center;
+//         padding: rem-calc(20 25 20 22);
+//         font-size: rem-calc(16);
+//         font-weight: $font-weight-bolder;
+//         color: white;
 
-        @include media-breakpoint-up(md) {
-            padding: rem-calc(20 25 20 34); // curated
-            font-size: rem-calc(20);
-        }
+//         @include media-breakpoint-up(md) {
+//             padding: rem-calc(20 25 20 34); // curated
+//             font-size: rem-calc(20);
+//         }
 
-        @include media-breakpoint-up(lg) {
-            padding: rem-calc(20 22 20 44);
-        }
+//         @include media-breakpoint-up(lg) {
+//             padding: rem-calc(20 22 20 44);
+//         }
 
-        .fa-angle-right {
-            margin-left: auto;
-            font-size: rem-calc(34);
-            line-height: 0;
-        }
-    }
+//         .fa-angle-right {
+//             margin-left: auto;
+//             font-size: rem-calc(34);
+//             line-height: 0;
+//         }
+//     }
 
-    .active {
-        border-bottom: 1px solid rgba(black, 0.05);
-        background: rgba(black, 0.1);
-    }
+//     .active {
+//         border-bottom: 1px solid rgba(black, 0.05);
+//         background: rgba(black, 0.1);
+//     }
 
-    .side-nav-header {
-        border-top: 1px solid rgba(black, 0.15);
+//     .side-nav-header {
+//         border-top: 1px solid rgba(black, 0.15);
 
-        a,
-        .anchor {
-            font-size: rem-calc(23);
-            padding: rem-calc(30 22 30 22);
+//         a,
+//         .anchor {
+//             font-size: rem-calc(23);
+//             padding: rem-calc(30 22 30 22);
 
-            @include media-breakpoint-up(md) {
-                padding: rem-calc(20 25 20 34); // curated
-            }
+//             @include media-breakpoint-up(md) {
+//                 padding: rem-calc(20 25 20 34); // curated
+//             }
 
-            @include media-breakpoint-up(lg) {
-                padding: rem-calc(30 22 30 44);
-            }
+//             @include media-breakpoint-up(lg) {
+//                 padding: rem-calc(30 22 30 44);
+//             }
 
-            .fa-align-left {
-                margin-right: rem-calc(15);
-                font-size: rem-calc(45);
-                color: rgba(white, 0.3);
-                line-height: 0;
-            }
-        }
-    }
+//             .fa-align-left {
+//                 margin-right: rem-calc(15);
+//                 font-size: rem-calc(45);
+//                 color: rgba(white, 0.3);
+//                 line-height: 0;
+//             }
+//         }
+//     }
 
-    .side-nav-header.active {
-        border-top: 1px solid rgba(black, 0.05);
-    }
+//     .side-nav-header.active {
+//         border-top: 1px solid rgba(black, 0.05);
+//     }
 
-    a:hover {
-        background: rgba(black, 0.02);
-    }
-}
+//     a:hover {
+//         background: rgba(black, 0.02);
+//     }
+// }
 
 //-----------------------------------------------------------------
 // SIDEBAR TEAM
@@ -166,7 +166,7 @@
 .sidebox {
     padding: rem-calc(22);
     // margin-bottom: 2px;
-    background-color: #f0f0f1; //#e7e7e7;
+    background-color: #e3e3e5; //#f0f0f1; //#e7e7e7;
     color: $yiq-text-dark; //#393939;
 
     @include media-breakpoint-up(xl) {

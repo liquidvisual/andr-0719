@@ -2,6 +2,9 @@
 layout: base
 ---
 
+{% assign level_1 = page.subpage_path[0] %}
+{% assign subpages = site.data.sitemap_NEW[level_1].children %}
+
 <!-- MAIN BODY -->
 <main class="main-body">
 	<div class="container">
@@ -11,6 +14,13 @@ layout: base
 	        </div>
 	        <div class="col-lg-4">
 				<aside class="sidebar ml-auto" style="max-width: 390px">
+
+					<!-- SIDE NAV  -->
+					<section class="section">
+						<div class="side-nav mb-4">
+							{% include components/nav.html data=subpages %}
+						</div>
+					</section>
 
 					{% contentblock sidebar no-convert %}
 				</aside>

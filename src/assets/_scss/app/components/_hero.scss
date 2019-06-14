@@ -10,6 +10,12 @@
 //-----------------------------------------------------------------
 
 $hero-height-presets: (
+    is-home: (
+        xs: auto,
+        md: auto, //rem-calc(800),
+        lg: auto, //rem-calc(846), // [LOCKED] - 576 maintain aspect ratio?
+        // xl: rem-calc(660),
+    ),
     is-default: (
         xs: auto,
         md: auto, //rem-calc(800),
@@ -174,59 +180,14 @@ $hero-height-presets: (
 
 .lv-hero-item-caption {
     position: relative;
-    // max-width: rem-calc(680); // [LOCKED] - psd
-    padding: rem-calc(20);
-    background: rgba($primary, 0.82);
     font-size: rem-calc(17);
     color: white;
     z-index: 1; // [LOCKED] - above tint
-
-    @include media-breakpoint-down(sm) {
-        left: -20px;
-        width: calc(100% + 40px);
-        padding: rem-calc(15);
-        margin-top: 100px;
-        margin-bottom: rem-calc(-50);
-    }
-
-    @include media-breakpoint-up(xl) {
-        max-width: rem-calc(680); // [LOCKED] - psd
-    }
-
     // overflow-wrap: break-word;
     // word-wrap: break-word;
     // word-break: break-word;
     // hyphens: auto;
     // -webkit-hyphens: auto;
-
-    @include media-breakpoint-up(md) {
-        padding: rem-calc(35 130 35 56);
-    }
-
-    h1,
-    .display-1 {
-        max-width: rem-calc(600); // [LOCKED] - psd thing
-
-    }
-
-    .h2 {
-        @include media-breakpoint-down(md) {
-            font-size: $h3-font-size;
-        }
-
-        @include media-breakpoint-down(sm) {
-            font-size: rem-calc(24); // kinda specific
-        }
-    }
-
-    .wysiwyg p {
-        font-size: rem-calc(17);
-    }
-
-    a:hover {
-        color: white;
-        opacity: 0.7;
-    }
 
     .fa-angle-right {
         line-height: 0;
@@ -235,6 +196,11 @@ $hero-height-presets: (
         @include media-breakpoint-up(md) {
             font-size: rem-calc(38);
         }
+    }
+
+    a:hover {
+        color: white;
+        opacity: 0.7;
     }
 }
 
@@ -246,6 +212,32 @@ $hero-height-presets: (
     height: 200vh;
     background: rgba(#09243a, 0.67);
     pointer-events: none;
+}
+
+//----------------------------------------------------------------- *****
+// HERO CAPTION - DEFAULT (CAROUSEL)
+//----------------------------------------------------------------- *****
+
+.is-home .lv-hero-item-caption {
+    padding: rem-calc(20);
+    background: rgba($primary, 0.82);
+
+    @include media-breakpoint-down(sm) {
+        left: -20px;
+        width: calc(100% + 40px);
+        // max-width: rem-calc(680); // [LOCKED] - psd
+        padding: rem-calc(15);
+        margin-top: 100px;
+        margin-bottom: rem-calc(-50);
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: rem-calc(35 130 35 56);
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: rem-calc(680); // [LOCKED] - psd
+    }
 }
 
 //-----------------------------------------------------------------

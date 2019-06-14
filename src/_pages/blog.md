@@ -1,7 +1,7 @@
 ---
 layout: child_layout/blog
 title: Lawtalk <span class="font-weight-normal">Blog</span>
-permalink: /blog/
+permalink: /lawtalk-blog/
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options: is-gray-minimal
 ---

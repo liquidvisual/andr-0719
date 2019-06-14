@@ -2,28 +2,37 @@
 layout: base__page
 ---
 
-{% assign practice_areas = site.data.sitemap[3].children %}
+{% assign practice_areas = site.data.sitemap_NEW['Practice Areas'].children %}
 
 {% contentfor hero_caption %}
 
-    <!-- HEADING -->
-	<h1 class="display-1 text-white text-uppercase mb-4">
-        {{ page.title }}
-    </h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
 
-    <!-- LEAD -->
-    <p class="display-3 mb-4 pb-1">
-        {{ page.lead }}
-    </p>
+            <!-- HEADING -->
+        	<h1 class="display-1 text-white text-uppercase mb-4">
+                {{ page.title }}
+            </h1>
 
-    <!-- WYSIWYG -->
-    <div class="wysiwyg">
-        {{ content }}
+            <!-- LEAD -->
+            <p class="display-3 mb-4 pb-1">
+                {{ page.lead }}
+            </p>
+
+            <!-- WYSIWYG -->
+            <div class="wysiwyg h4 font-weight-normal">
+                {{ content }}
+            </div>
+
+            <!-- CTAS -->
+            <!-- <div><a href="#" class="btn btn-hero btn-block btn-secondary">Download our "what we do" brochure for an overview of all our practice areas <i class="fa fa-angle-right"></i></a></div> -->
+
+        </div>
     </div>
 
 {% endcontentfor %}
 
-<!-- AREAS OF PRACTICE -->
+<!-- PRACTICE AREAS -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -34,9 +43,9 @@ layout: base__page
                     <div class="card h-100 is-flat">
 
                         <!-- IMAGE -->
-                        <a class="btn-tile" href="{{ item.url }}">
-                            <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="{{ item.title }}">
-                            <span class="btn-tile-bg" style="background-image: url({{ item.image }})"></span>
+                        <a class="btn-tile" href="{{ item[1].url }}">
+                            <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="{{ item[0] }}">
+                            <span class="btn-tile-bg" style="background-image: url({{ item[1].image }})"></span>
                         </a>
 
                         <!-- CARD BODY -->
@@ -44,12 +53,12 @@ layout: base__page
 
                             <!-- TITLE -->
                             <a class="mb-1" href="{{ item.url }}">
-                                <h3 class="h4 card-title text-uppercase text-primary">{{ item.title }}&nbsp;<i class="fa fa-angle-right"></i></h3>
+                                <h3 class="h4 card-title text-uppercase text-primary">{{ item[0] }}&nbsp;<i class="fa fa-angle-right"></i></h3>
                             </a>
 
                             <!-- TEXT -->
                             <div class="card-text mb-2">
-                                {{ item.description | markdownify }}
+                                {{ item[1].description | markdownify }}
                             </div>
 
                         </div>

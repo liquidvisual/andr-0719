@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Wills and Estates
+permalink: /practice-areas/wills-and-estates/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Wills and Estates'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:

@@ -1,7 +1,12 @@
 ---
 layout: child_layout/practice_areas_item_item
 title: Workplace Injury
-permalink: /practice-areas/practice-areas-item/practice-areas-item/
+permalink: /practice-areas/personal-injury/superannuation-insurance-claims/
+subpage_path:
+  - 'Practice Areas'
+  - 'Personal Injury'
+  - 'Superannuation Insurance Claims'
+
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:
 hero_caption_align: left

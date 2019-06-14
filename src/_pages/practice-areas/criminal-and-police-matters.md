@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Criminal and Police Matters
+permalink: /practice-areas/criminal-and-police-matters/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Criminal and Police Matters'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:

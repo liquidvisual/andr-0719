@@ -1,0 +1,151 @@
+/*
+    SIDE-NAV.CSS
+
+    - Last updated: 13.06.19, 25.03.19, 18.11.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SIDE NAV
+//-----------------------------------------------------------------
+
+.side-nav {
+
+    @include media-breakpoint-up(xl) {
+        min-width: 109%;
+    }
+
+    //-----------------------------------------------------------------
+    // ALL ULS
+    //-----------------------------------------------------------------
+
+    ul {
+        list-style: none;
+        padding: 0; // [RESET]
+    }
+
+    //-----------------------------------------------------------------
+    // TOP PARENT URL
+    //-----------------------------------------------------------------
+
+    > ul {
+        position: relative;
+        // padding: rem-calc(10 0);
+        font-family: $font-family-sans-serif;
+        background: $primary;
+
+        // &:before,
+        // &:after {
+        //     content: "";
+        //     position: absolute;
+        //     top: rem-calc(10);
+        //     width: 100%;
+        //     height: 1px;
+        //     background: rgba(white, 0.1);
+        //     z-index: 1;
+        // }
+
+        // &:after {
+        //     top: auto;
+        //     bottom: rem-calc(10);
+        // }
+    }
+
+    // nested ULs
+    ul ul {
+        display: none;
+    }
+
+    // active ULs
+    li.active-parent > ul {
+        display: block;
+    }
+
+    //-----------------------------------------------------------------
+    // LI + ARROW
+    //-----------------------------------------------------------------
+
+    li {
+        padding: 0; // [RESET]
+        border-top: 1px solid white; //rgba(black, 0.13); //0.13
+    }
+
+    //-----------------------------------------------------------------
+    // ANCHORS
+    //-----------------------------------------------------------------
+
+    li > a {
+        padding: rem-calc(15 20);
+        font-size: rem-calc(17);
+    }
+
+    ul ul > li > a {
+        content: "-";
+        padding: rem-calc(15 34); // indent?
+        background: #484445; //#0c4062;
+
+        &:before {
+            content: "-";
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    //-----------------------------------------------------------------
+    // GENERAL ACTIVE ANCHORS
+    //-----------------------------------------------------------------
+
+    a {
+        display: block;
+        font-size: rem-calc(16);
+        font-weight: $font-weight-bold;
+        color: white;
+
+        &:hover {
+            color: rgba(white, 0.9);
+        }
+    }
+
+    //-----------------------------------------------------------------
+    // ACTIVE
+    //-----------------------------------------------------------------
+
+    .active-parent > a {
+        background-color: #0c4062;
+    }
+
+    .active > a,
+    .has-dropdown.active > a {
+        background-color: #2e2b2c;
+    }
+
+    li.active {
+        position: relative;
+        // background: #024f83;
+
+        &:after {
+            content: "\f105";
+            position: absolute;
+            top: rem-calc(8);
+            right: rem-calc(15);
+            font-family: "FontAwesome";
+            font-size: rem-calc(24);
+            font-weight: $font-weight-bold;
+            color: white;
+        }
+    }
+
+    //-----------------------------------------------------------------
+    // HIDE ALL SUBMENU ARROWS
+    //-----------------------------------------------------------------
+
+    // hide all arrows from markup
+    a > .submenu-arrow {
+        display: none;
+    }
+}
+
+//=========================================
+//
+//=========================================

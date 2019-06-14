@@ -75,7 +75,7 @@ layout: base__page_sidebar_9x3_bgless
             <div class="sidebox-body mb-2">
                 <ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-1">
                     {% for item in site.data.blog_categories %}
-                        <li><a href="#">{{ item.title }}&nbsp;<i class="fa fa-angle-right d-inline"></i></a></li>
+                        <li><a href="#">{{- item.title -}}&nbsp;<i class="fa fa-angle-right d-inline"></i></a></li>
                     {% endfor %}
                 </ul>
             </div>

@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Employment and Industrial Law
+permalink: /practice-areas/employment-and-industrial-law/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Employment and Industrial Law'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:

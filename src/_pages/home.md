@@ -3,7 +3,7 @@ layout: base__homepage
 title: South Australian Law Firm
 permalink: /
 regenerate: true
-hero_options: is-default
+hero_options: is-home
 hero_slides:
   - title: Hero 1
     image: /assets/video/video-1.jpg

@@ -1,7 +1,7 @@
 /*
-    TOPBAR.CSS
+    TOPBAR.CSS *NEW*
 
-    - updated: 16.04.18
+    - updated: 14.06.19, 16.04.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,13 +12,8 @@
 //-----------------------------------------------------------------
 
 .global-navigation {
-    display: inline-flex;
     position: relative; // [LOCKED]
     top: rem-calc(27);
-    padding: rem-calc(10 0);
-    margin-left: auto;
-    margin-right: rem-calc(-16);
-    // z-index: 9999;
 }
 
 //-----------------------------------------------------------------
@@ -31,6 +26,7 @@
     list-style: none; // [RESET]
     font-family: $headings-font-family;
     font-size: rem-calc(16);
+    font-weight: $font-weight-bold;
 }
 
 //=========================================
@@ -53,55 +49,78 @@
 .lv-topbar a {
     display: block; // [LOCKED]
     text-decoration: none; // [LOCKED]
-    font-weight: $font-weight-bold; // [LOCKED]
+    // font-weight: $font-weight-bold; // [LOCKED]
+
+    .submenu-arrow {
+        display: none;
+    }
 }
 
 //-----------------------------------------------------------------
-// TOP PARENT ANCHORS (NAV)
+// TOP PARENT ANCHORS
 //-----------------------------------------------------------------
 
-.lv-topbar .top-parent-anchor {
+.lv-topbar > ul > li > a {
     display: block; // [LOCKED]
+    position: relative; // for triangle - if present
     padding: rem-calc(0 18);
-
     font-size: rem-calc(15);
     text-transform: uppercase;
-
     line-height: 44px; // [LOCKED]
     color: $body-color; // [THEMABLE]
-    transition: background 150ms ease;
+    text-transform: uppercase;
 }
 
-//=========================================
+//-----------------------------------------------------------------
 // HOVER, ACTIVE
-//=========================================
+//-----------------------------------------------------------------
 
-.lv-topbar .top-parent-anchor:hover {
+// ANCHOR HOVER
+.lv-topbar > ul > li > a:hover {
     background: rgba(black, 0.08); // [THEMEABLE]
+    // color: lighten($primary, 20%);
 }
 
-.lv-topbar .active .top-parent-anchor {
-    // background: rgba(white, 0.15);
+// ANCHOR ACTIVE
+.lv-topbar > ul > li.active-parent > a,
+.lv-topbar > ul > li.active > a  {
+    // background: rgba(black, 0.08); // [THEMEABLE]
     color: $primary;
-
-    .text {
-        padding-bottom: 5px;
-        border-bottom: 2px solid white; // [THEMEABLE]
-    }
 }
 
-.lv-topbar .top-parent-anchor:hover {
-    .text {
-        border-bottom: 0;
-        border-color: transparent;
-    }
+// DEEP DROPDOWNS ALWAYS HIDDEN
+.lv-topbar .dropdown .dropdown {
+    display: none;
 }
 
 //-----------------------------------------------------------------
 // DROPDOWN ANCHOR HOVERS
 //-----------------------------------------------------------------
 
-.lv-topbar .has-dropdown:hover > .top-parent-anchor {
+.lv-topbar li.has-dropdown:hover > a {
+    background: rgba(black, 0.1);
+
+    .text {
+        border-color: transparent; // [LOCKED]
+    }
+}
+
+//-----------------------------------------------------------------
+
+// SHOW DROPDOWN
+// .lv-topbar > ul > li.active > .dropdown {
+//     visibility: visible;
+//     transform: translateY(0);
+//     transition: none;
+//     display: flex;
+//     z-index: 1; // [LOCKED] - fixes glitch
+// }
+
+//-----------------------------------------------------------------
+// DROPDOWN ANCHOR HOVERS
+//-----------------------------------------------------------------
+
+.lv-topbar > ul > li.has-dropdown:hover > a {
     background: rgba(black, 0.1);
 
     .text {
@@ -123,7 +142,6 @@
 //-----------------------------------------------------------------
 
 .lv-topbar .dropdown {
-    display: none; // [OPT IN DESIGN / OFF CANVAS ETC]
     position: absolute;
     left: 0;
     width: rem-calc(280);
@@ -135,10 +153,16 @@
     visibility: hidden;
     transform: translateY(10px);
     transition: transform 200ms ease;
+
+    // [OPT IN DESIGN / OFF CANVAS ETC]
+    &.is-excluded-from-nav,
+    &.is-excluded-from-nav .dropdown {
+        display: none; // is-excluded-from-nav
+    }
 }
 
 //-----------------------------------------------------------------
-// DROPDOWNS
+// DROPDOWN ALIGN
 //-----------------------------------------------------------------
 
 // Prevent far-right dropdown from exceeding page width
@@ -202,6 +226,10 @@
     display: block;
     border: 0;
 }
+
+//=========================================
+//
+//=========================================
 
 //=========================================
 //

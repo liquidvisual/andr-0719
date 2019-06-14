@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Elder Law
+permalink: /practice-areas/elder-law/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Elder Law'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:

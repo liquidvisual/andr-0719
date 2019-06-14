@@ -67,6 +67,11 @@ $font-family-serif: inherit !default;
 
 .wysiwyg {
 
+	// contact item one off
+	&.text-white * {
+		color: white !important;
+	}
+
 	p, ul, ol, hr {
 		margin-bottom: rem-calc(20);
 	}

@@ -1,0 +1,152 @@
+{
+    "Home": {
+        "url": "/",
+    },
+    "About": {
+        "alias": "about-us",
+        "url": "/about/"
+    },
+    "Our People": {
+        "url": "/our-people/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Camille McDonald": {
+                "url": "/our-people/our-people-item/",
+            }
+        }
+    },
+    "Practice Areas": {
+        "url": "/practice-areas/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Commercial Law and Business Law": {
+                "url": "/practice-areas/commercial-law-and-business-law/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-15@2x.jpg",
+                "description": "We’re committed to protecting your rights at work and securing fair outcomes in all disputes.",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Conveyancing Services": {
+                "url": "/practice-areas/conveyancing-services/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-13@2x.jpg",
+                "description": "We’ll help you draft a will and organise your estate, bringing you and your family peace of mind.",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Criminal and Police Matters": {
+                "url": "/practice-areas/criminal-and-police-matters/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-07@2x.jpg",
+                "description": "The right legal advice and support is crucial at every stage of criminal law.",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Elder Law": {
+                "url": "/practice-areas/elder-law/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-04@2x.jpg",
+                "description": "Elder Law refers to a specialised sub-set of legal services directed at the needs of seniors and their families.",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Employment and Industrial Law": {
+                "url": "/practice-areas/employment-and-industrial-law/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-17@2x.jpg",
+                "description": "We’re committed to protecting your rights at work and securing fair outcomes in all disputes.",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Family Law": {
+                "url": "/practice-areas/family-law/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-16@2x.jpg",
+                "description": "Avoid extra stress by getting the right advice for you and your family.",
+                "children_excluded_from_nav": false,
+                "children": {
+                    "Divorce": {
+                        "url": "/practice-areas/family-law/divorce/"
+                    },
+                    "Family Law Property Settlement": {
+                        "url": "/practice-areas/family-law/family-law-property-settlement/"
+                    },
+                    "Glossary of Common Family Law Terms": {
+                        "url": "/practice-areas/family-law/glossary-of-common-family-law-terms/"
+                    },
+                    "Intervention Orders": {
+                        "url": "/practice-areas/family-law/intervention-orders/"
+                    },
+                    "Living Arrangements of Children": {
+                        "url": "/practice-areas/family-law/arrangements-of-children"
+                    },
+                    "Pre Nuptial Agreements": {
+                        "url": "/practice-areas/family-law/pre-nuptial-agreements/"
+                    },
+                    "Separation from your Spouse or Domestic Partner": {
+                        "url": "/practice-areas/family-law/separation-from-your-spouse-or-domestic-partner/"
+                    },
+                    "Superannuation and Family Law": {
+                        "url": "/practice-areas/family-law/superannuation-and-family-law/"
+                    }
+                }
+            },
+            "Personal Injury": {
+                "url": "/practice-areas/personal-injury/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-01@2x.jpg",
+                "description": "After an injury, compensation paid swiftly and fairly can really help your recovery.",
+                "children_excluded_from_nav": false,
+                "children": {
+                    "Asbestos and Dust Diseases": {
+                        "url": "/practice-areas/personal-injury/superannuation-insurance-claims/"
+                    },
+                    "Medical Negligence": {
+                        "url": "/practice-areas/personal-injury/superannuation-insurance-claims/"
+                    },
+                    "Moto Vehicle Accidents": {
+                        "url": "/practice-areas/personal-injury/superannuation-insurance-claims/"
+                    },
+                    "Public Liability": {
+                        "url": "/practice-areas/personal-injury/superannuation-insurance-claims/"
+                    },
+                    "Superannuation Insurance Claims": {
+                        "url": "/practice-areas/personal-injury/superannuation-insurance-claims/"
+                    },
+                    "Work Place Accidents": {
+                        "url": "/practice-areas/personal-injury/superannuation-insurance-claims/"
+                    }
+                }
+            },
+            "Wills and Estates": {
+                "url": "/practice-areas/wills-and-estates/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-10@2x.jpg",
+                "description": "Text still to come.",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Other Legal Services": {
+                "url": "/practice-areas/other-legal-services/",
+                "image": "/assets/img/content/area-of-practice-thumbs/thumb-21@2x.jpg",
+                "description": "Text still to come.",
+                "children_excluded_from_nav": false,
+                "children": {}
+            }
+        }
+    },
+    "Lawtalk Blog": {
+        "url": "/lawtalk-blog/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "LawTalk Blog Post": {
+                "url": "/lawtalk-blog/lawtalk-blog-item/"
+            }
+        }
+    },
+    "Contact": {
+        "url": "/contact/",
+        "children_excluded_from_nav": true,
+        "children": {
+            "Adelaide Office": {
+                "url": "/contact/contact-item/"
+            }
+        }
+    },
+    #"Search": {
+    #    "url": "#/search/"
+    #}
+}

@@ -2,7 +2,7 @@
 {% assign au_office = settings.offices['aus'][0] %}
 {% assign bg_image = include.bg_image | default: '' %}
 {% assign parallax_enabled = include.parallax_enabled | default: false %}
-{% assign practice_areas = site.data.sitemap[3].children %}
+{% assign practice_areas = site.data.sitemap_NEW['Practice Areas'].children %}
 
 <!-- PRACTICE AREAS SECTION -->
 <section
@@ -37,9 +37,9 @@
 				<ul class="list-squares block-grid-xs-1 block-grid-md-2">
 					{% for item in practice_areas %}
 						<li>
-			                <a class="" href="{{ item.url }}">
+			                <a class="" href="/practice-areas/personal-injury/">
 			                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
-			                    	{{ item.title }}
+			                    	{{ item[0] }}
 			                    </h3>
 			                </a>
 						</li>

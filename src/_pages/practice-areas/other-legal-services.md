@@ -1,10 +1,10 @@
 ---
 layout: child_layout/practice_areas_item
-title: Personal Injury
-permalink: /practice-areas/personal-injury/
+title: Other Legal Services
+permalink: /practice-areas/other-legal-services/
 subpage_path:
   - 'Practice Areas'
-  - 'Personal Injury'
+  - 'Other Legal Services'
 
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:
