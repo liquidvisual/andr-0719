@@ -23,7 +23,7 @@
 -->
 {% endcomment %}
 
-{% assign data = include.data | default: site.data.sitemap %}
+{% assign data = include.data %}
 
 {%- capture ul_classes -%}
     {% if forloop %} dropdown {% endif %}
@@ -88,7 +88,7 @@
 
             {% if children %}
                 <!-- DROPDOWN -->
-                {% include components/nav.html data=children %}
+                {% include components/navigation/nav.html data=children %}
             {% endif %}
 
         </li>

@@ -3,7 +3,7 @@ layout: base
 ---
 
 {% assign level_1 = page.subpage_path[0] %}
-{% assign subpages = site.data.sitemap_NEW[level_1].children %}
+{% assign subpages = site.data.sitemap[level_1].children %}
 
 <!-- MAIN BODY -->
 <main class="main-body">
@@ -18,7 +18,7 @@ layout: base
 					<!-- SIDE NAV  -->
 					<section class="section">
 						<div class="side-nav mb-4">
-							{% include components/nav.html data=subpages %}
+							{% include components/navigation/nav.html data=subpages %}
 						</div>
 					</section>
 

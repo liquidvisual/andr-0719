@@ -1,32 +1,213 @@
 [
-	{ name: 'Nestoras Alexandropoulos', position: 'Solicitor', location: '', image: '/assets/img/content/people/nestoras-alexandropoulos@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Julia Arena', position: 'Solicitor', location: '', image: '/assets/img/content/people/julia-arena@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Cassandra Attwood', position: 'Solicitor', location: '', image: '/assets/img/content/people/cassandra-attwood@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Eva Bailey', position: 'Partner', location: '', image: '/assets/img/content/people/eva-bailey@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Carly Bayly', position: 'Solicitor', location: '', image: '/assets/img/content/people/carly-bayly@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Bill Connelly', position: 'Partner', location: '', image: '/assets/img/content/people/bill-connelly@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'John Cronshaw', position: 'Associate', location: '', image: '/assets/img/content/people/john-cronshaw@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Francisco De Sousa', position: 'In-house Consultant', location: '', image: '/assets/img/content/people/francisco-de-sousa@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Matthew Fuss', position: 'Partner', location: '', image: '/assets/img/content/people/matthew-fuss@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Keryn Hickmann', position: 'Solicitor', location: '', image: '/assets/img/content/people/keryn-hickmann@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Alexander Hicks', position: 'Solicitor', location: '', image: '/assets/img/content/people/alexander-hicks@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Felix Hoelscher', position: 'Partner', location: '', image: '/assets/img/content/people/felix-hoelscher@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Megan Horsell', position: 'Associate', location: '', image: '/assets/img/content/people/megan-horsell@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Margaret Kaukas', position: 'Special Counsel', location: '', image: '/assets/img/content/people/margaret-kaukas@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Kate Keough', position: 'Senior Associate', location: '', image: '/assets/img/content/people/kate-keough@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Rebecca Lucas', position: 'Associate', location: '', image: '/assets/img/content/people/rebecca-lucas@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Dion McCaffrie', position: 'Partner', location: '', image: '/assets/img/content/people/dion-mcCaffrie@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Camille McDonald', position: 'Senior Associate', location: '', image: '/assets/img/content/people/camille-mcdonald@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Madelaina Mestroni', position: 'Associate', location: '', image: '/assets/img/content/people/madelaina-mestroni@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Toni Monteleone', position: 'Senior Solicitor', location: '', image: '/assets/img/content/people/toni-monteleone@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Garry Palasis', position: 'Partner', location: '', image: '/assets/img/content/people/garry-palasis@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Lynn Pham', position: 'Associate', location: '', image: '/assets/img/content/people/lynn-pham@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Suzanne Pinyon', position: 'Partner', location: '', image: '/assets/img/content/people/suzanne-pinyon@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Simon Ridley', position: 'Associate', location: '', image: '/assets/img/content/people/simon-ridley@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Arthur Siow', position: 'Partner', location: '', image: '/assets/img/content/people/arthur-siow@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Ryan Thomas', position: 'Partner', location: '', image: '/assets/img/content/people/ryan-thomas@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Jeff Widera', position: 'Associate', location: '', image: '/assets/img/content/people/jeff-widera@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Richard Wills', position: 'In-house Consultant', location: '', image: '/assets/img/content/people/richard-wills@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Melissa Tredrea', position: 'Senior Associate', location: '', image: '/assets/img/content/people/melissa-tredrea@2x.jpg', url: '/our-people/our-people-item/' },
-	{ name: 'Alexandra Stephens', position: 'Solicitor', location: '', image: '/assets/img/content/people/alexandra-stephens@2x.jpg', url: '/our-people/our-people-item/' }
+	{
+		name: 'Nestoras Alexandropoulos',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/nestoras-alexandropoulos@2x.jpg',
+		url: '/our-people/our-people-item/'
+
+	},
+	{
+		name: 'Julia Arena',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/julia-arena@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Cassandra Attwood',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/cassandra-attwood@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Eva Bailey',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/eva-bailey@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Carly Bayly',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/carly-bayly@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Bill Connelly',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/bill-connelly@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'John Cronshaw',
+		position: 'Associate',
+		location: '',
+		image: '/assets/img/content/people/john-cronshaw@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Francisco De Sousa',
+		position: 'In-house Consultant',
+		location: '',
+		image: '/assets/img/content/people/francisco-de-sousa@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Matthew Fuss',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/matthew-fuss@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Keryn Hickmann',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/keryn-hickmann@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Alexander Hicks',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/alexander-hicks@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Felix Hoelscher',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/felix-hoelscher@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Megan Horsell',
+		position: 'Associate',
+		location: '',
+		image: '/assets/img/content/people/megan-horsell@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Margaret Kaukas',
+		position: 'Special Counsel',
+		location: '',
+		image: '/assets/img/content/people/margaret-kaukas@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Kate Keough',
+		position: 'Senior Associate',
+		location: '',
+		image: '/assets/img/content/people/kate-keough@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Rebecca Lucas',
+		position: 'Associate',
+		location: '',
+		image: '/assets/img/content/people/rebecca-lucas@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Dion McCaffrie',
+		 position: 'Partner',
+		 location: '',
+		 image: '/assets/img/content/people/dion-mcCaffrie@2x.jpg',
+		 url: '/our-people/our-people-item/'
+		},
+	{
+		name: 'Camille McDonald',
+		position: 'Senior Associate',
+		location: '',
+		image: '/assets/img/content/people/camille-mcdonald@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Madelaina Mestroni',
+		position: 'Associate',
+		location: '',
+		image: '/assets/img/content/people/madelaina-mestroni@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Toni Monteleone',
+		position: 'Senior Solicitor',
+		location: '',
+		image: '/assets/img/content/people/toni-monteleone@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Garry Palasis',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/garry-palasis@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Lynn Pham',
+		position: 'Associate',
+		location: '',
+		image: '/assets/img/content/people/lynn-pham@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Suzanne Pinyon',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/suzanne-pinyon@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Simon Ridley',
+		position: 'Associate',
+		location: '',
+		image: '/assets/img/content/people/simon-ridley@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Arthur Siow',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/arthur-siow@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Ryan Thomas',
+		position: 'Partner',
+		location: '',
+		image: '/assets/img/content/people/ryan-thomas@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Jeff Widera',
+		position: 'Associate',
+		location: '',
+		image: '/assets/img/content/people/jeff-widera@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Richard Wills',
+		position: 'In-house Consultant',
+		location: '',
+		image: '/assets/img/content/people/richard-wills@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Melissa Tredrea',
+		position: 'Senior Associate',
+		location: '',
+		image: '/assets/img/content/people/melissa-tredrea@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Alexandra Stephens',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/alexandra-stephens@2x.jpg',
+		url: '/our-people/our-people-item/'
+	}
 ]
