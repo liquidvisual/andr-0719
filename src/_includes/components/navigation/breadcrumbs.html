@@ -2,7 +2,7 @@
 <!--
     BREADCRUMBS
 
-    updated: 13.06.19, 22.01.19
+    updated: 16.06.19, 22.01.19
     liquidvisual.com
 -->
 {% endcomment %}
@@ -12,9 +12,7 @@
 <!-- BREADCRUMBS -->
 <section class="lv-breadcrumb-wrapper {{ include.theme }}">
     <div class="container">
-        <nav class="breadcrumb px-0">
-
-            <!-- CRUMBS -->
+        <nav class="breadcrumb">
             {% for crumb in crumbs offset: 1 %}
                 {% assign previous_path = forloop.length | minus: 1 %}
                 {% if forloop.index == previous_path %}

@@ -33,6 +33,10 @@
                             {% endifhascontent %}
                             {% ifnothascontent hero_caption %}
 
+                                {% if page.breadcrumbs %}
+                                    {% include components/navigation/breadcrumbs.html %}
+                                {% endif %}
+
                                 <!-- HEADER -->
                                 {% if page.title_override %}
                                     <h2 class="display-1 text-white text-uppercase mb-0">{{ page.title_override }}</h2>

@@ -25,6 +25,12 @@
 						<a href="/site-map/">Site Map</a>
 					</small>
 
+					<!-- SITEMAP -->
+					<!-- <a href="#sitemap" data-sitemap-trigger>
+						<i class="fa fa-angle-up fa-angle-down"></i>
+						Site Map
+					</a> -->
+
 					<br>
 
 					{% comment %}
@@ -64,6 +70,45 @@
     	</button>
     </div>
 
+    {% comment %}
+	<!-- FOOTER SITEMAP -->
+	<section id="sitemap" class="global-footer-sitemap is-collapsed" data-sitemap>
+		<div class="container">
+			<ul class="block-grid-xs-1 block-grid-lg-5">
 
+				{% for item in site.data.sitemap['Practice Areas'].children %}
+
+
+						<li>
+							<a href="{{ item[1].url }}">
+								<h5>{{ item[0] }}</h5>
+							</a>
+							{% if item[1].children %}
+								<ul class="list-unstyled">
+									{% for item in item[1].children %}
+										<li>
+											<a href="{{ item[1].url }}">{{ item[0] }}</a>
+											{% if item[1].children %}
+												<ul class="">
+													{% for item in item[1].children %}
+														<li>
+															<a href="{{ item[1].url }}">{{ item[0] }}</a>
+														</li>
+													{% endfor %}
+												</ul>
+											{% endif %}
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</li>
+
+
+				{% endfor %}
+
+			</ul>
+		</div>
+	</section>
+	{% endcomment %}
 
 </section>

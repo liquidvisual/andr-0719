@@ -1,7 +1,7 @@
 /*
     BREADCRUMBS.CSS
 
-    - Last updated: 11.04.18
+    - Last updated: 16.06.19
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,21 +12,22 @@
 //-----------------------------------------------------------------
 
 .lv-breadcrumb-wrapper {
-	position: absolute;
-	// top: rem-calc(15);
-    top: rem-calc(220);
-	left: 0;
-	width: 100%;
-    // background: #f7f7f9;
-    // border-bottom: 1px solid #e5e5e5;
 
-    text-transform: uppercase;
-    z-index: 100;
+    > .container {
+        padding: 0;
+    }
+
+    .breadcrumb {
+        padding: 0;
+    }
 
     .breadcrumb-item {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
     	font-size: rem-calc(15);
     	font-weight: 700;
-    	color: rgba(white, 0.7); //$body-color;
+    	color: rgba(white, 0.7);
 
     	&:hover {
     		opacity: 0.8;
