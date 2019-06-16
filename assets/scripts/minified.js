@@ -5670,7 +5670,16 @@ function launchSlider() {
       getLastName: function getLastName(e) {
         return String(e.split(" ").splice(-1, 1));
       } } });
-}var headroom = null,
+}function launchGallery() {
+  $("[data-lightbox-group]").each(function () {
+    var e = $(this),
+        t = e.attr("data-lightbox-group");e.magnificPopup({ delegate: "a", type: "image", tLoading: "Loading image #%curr%...", mainClass: "mfp-img-mobile", gallery: { enabled: !0, navigateByImgClick: !0, preload: [0, 1] }, image: { tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', titleSrc: function titleSrc(e) {
+          return '<div class="mb-1">' + e.el.attr("title") + "</div><small>" + t + "</small>";
+        } }, callbacks: { elementParse: function elementParse(e) {
+          (-1 != e.src.indexOf("youtube") || -1 != e.src.indexOf("vimeo") || -1 != e.src.indexOf("maps")) && (e.type = "iframe");
+        } } });
+  });
+}launchGallery();var headroom = null,
     lvPage = document.querySelector(".lv-page"),
     resizeTimer;function initHeadroom() {
   var _ref;
