@@ -2,17 +2,11 @@
 layout: base__page_sidebar_8x4_nav
 ---
 
-{% assign law_team = site.data.staff %}
+{% assign people = site.data.staff %}
+{% assign accordion = page.accordion %}
 
 <!-- SECTION -->
 <section class="section">
-
-	<h2 class="text-danger">** Under construction **</h2>
-
-	<!-- TITLE -->
-	<h1 class="h2 text-dark mb-4">
-	    {{ item.title }}
-	</h1>
 
 	<!-- WYSIWYG -->
 	<div class="wysiwyg mb-5">
@@ -21,14 +15,54 @@ layout: base__page_sidebar_8x4_nav
 
 	<hr class="mb-4 pb-1">
 
+	<!-- ACCORDION STARTS HERE -->
+	<h3 class="mb-4">
+		Accordion Component
+	</h3>
+
+	<!-- 1/2. ACCORDION CONTENTS NAV -->
+	<nav class="mb-5">
+		{% for item in accordion %}
+
+			<!-- CONTENTS ANCHOR -->
+			<div id="contents-{{ item.title | slugify }}">
+				<a href="#{{ item.title | slugify }}" class="btn btn-hero btn-block btn-hero btn-accordion">
+					<span>{{ item.title }}</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+			</div>
+		{% endfor %}
+	</nav>
+
+	<!-- 2/2. ACCORDION CONTENTS -->
+	{% for item in accordion %}
+		<section id="{{ item.title | slugify }}" class="wysiwyg mb-1 pb-1">
+
+			<!-- HEADING -->
+			<h2 class="d-flex mb-3">
+				<span>{{ item.title }}</span>
+
+				<!-- BACK UP -->
+				<a href="#contents-{{ item.title | slugify }}" class="btn-up ml-auto">
+					<i class="fa fa-angle-up"></i>
+				</a>
+			</h2>
+
+			<!-- BODY -->
+			{{ item.body | markdownify }}
+		</section>
+	{% endfor %}
+
+	<hr class="mb-4 pb-1">
+
 	<!-- HEADING -->
 	<h4 class="mb-4 pb-1">
 		Our Personal Compensation Law Team
 	</h4>
 
-	<!-- LAW TEAM -->
+	<!-- PEOPLE -->
 	<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-2 block-grid-xxl-3 is-condensed-more">
-		{% for item in law_team %}
+		{% for item in people limit: 6 %}
 			<li>
 				{% include components/media/media_btn.html %}
 			</li>
@@ -37,43 +71,14 @@ layout: base__page_sidebar_8x4_nav
 
 </section>
 
-{% comment %}
-{% contentfor sidebar %}
-
-	<!-- SECTION -->
-	<section class="section">
-
-		<!-- SIDE NAV -->
-		<nav class="side-nav">
-			<ul class="list-unstyled">
-				<li class="side-nav-header">
-					<a href="/practice-areas/practice-areas-item/">
-						<i class="fa fa-align-left"></i>
-						<span class="text">Personal Compensation Law</span>
-					</a>
-				</li>
-				{% for item in nav_items %}
-					<li class="{% if forloop.index == 1 %}active{% endif %}">
-						<a href="{{ item.url }}">
-							<span class="text">{{ item.title }}</span>
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</nav>
-	</section>
-{% endcontentfor %}
-{% endcomment %}
-
 {% contentfor content_additional %}
 	<!-- BLOG POSTS -->
-	<section class="section is-primary">
+	<section class="section is-secondary">
 		<div class="container">
 			<h2 class="text-white text-uppercase text-center mb-5">Blog Posts - Personal Compensation Law</h2>
 			{% include components/cards/cards.html flat="true" columns=4 %}
 			<p class="text-center mb-0">
-				<a href="#" class="btn btn-secondary">More Blog Articles &nbsp;<i class="fa fa-angle-right"></i></a>
+				<a href="/lawtalk-blog/" class="btn btn-primary">More Blog Articles &nbsp;<i class="fa fa-angle-right"></i></a>
 			</p>
 		</div>
 	</section>

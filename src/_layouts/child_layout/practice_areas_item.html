@@ -4,9 +4,34 @@ layout: base__page_sidebar_8x4_nav
 
 {% assign people = site.data.staff %}
 {% assign accordion = page.accordion %}
+{% assign practice_areas = site.data.sitemap['Practice Areas'].children['Personal Injury'].children %}
 
 <!-- SECTION -->
-<section class="section">
+<section class="section pb-0">
+
+	<!-- LINKS TEMPLATE (OPTIONAL) -->
+	<div class="mb-4 pb-1">
+		<p class="mb-1">
+			<a class="btn btn-block side-btn text-left" href="/practice-areas/practice-areas-item/practice-areas-item/">
+				<i class="fa fa-file-pdf-o icon mr-2"></i>
+				<span class="text">
+					<strong>Personal Injury Guide</strong>
+					<br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				</span>
+				<i class="ml-auto fa fa-angle-right"></i>
+			</a>
+		</p>
+		<p class="mb-1">
+			<a class="btn btn-block side-btn text-left" href="/practice-areas/practice-areas-item/practice-areas-item/">
+				<i class="fa fa-file-pdf-o icon mr-2"></i>
+				<span class="text">
+					<strong>Infographic - Personal Injury</strong>
+				</span>
+				<i class="ml-auto fa fa-angle-right"></i>
+			</a>
+		</p>
+	</div>
 
 	<!-- IMAGE -->
 	<p class="img-right">
@@ -18,47 +43,24 @@ layout: base__page_sidebar_8x4_nav
 		{{ content | markdownify }}
 	</div>
 
-	<hr class="mb-4 pb-1">
-
-	<!-- ACCORDION STARTS HERE -->
-	<h3 class="mb-4">
-		Accordion Component
-	</h3>
-
-	<!-- 1/2. ACCORDION CONTENTS NAV -->
-	<nav class="mb-5">
-		{% for item in accordion %}
-
-			<!-- CONTENTS ANCHOR -->
-			<div id="contents-{{ item.title | slugify }}">
-				<a href="#{{ item.title | slugify }}" class="btn btn-hero btn-block btn-hero btn-accordion">
-					<span>{{ item.title }}</span>
-					<i class="fa fa-angle-down"></i>
-				</a>
-			</div>
-		{% endfor %}
-	</nav>
-
-	<!-- 2/2. ACCORDION CONTENTS -->
-	{% for item in accordion %}
-		<section id="{{ item.title | slugify }}" class="wysiwyg mb-1 pb-1">
-
-			<!-- HEADING -->
-			<h2 class="d-flex mb-3">
-				<span>{{ item.title }}</span>
-
-				<!-- BACK UP -->
-				<a href="#contents-{{ item.title | slugify }}" class="btn-up ml-auto">
-					<i class="fa fa-angle-up"></i>
-				</a>
-			</h2>
-
-			<!-- BODY -->
-			{{ item.body | markdownify }}
-		</section>
+	<!-- PRACTICE AREAS -->
+	{% for item in practice_areas %}
+		<p class="mb-1">
+			<a class="btn btn-block side-btn text-left" href="/practice-areas/practice-areas-item/practice-areas-item/">
+				<span class="text">
+					<strong>{{ item[0] }}</strong>
+					<br>
+					{{ item[1].description }}
+				</span>
+				<i class="ml-auto fa fa-angle-right"></i>
+			</a>
+		</p>
 	{% endfor %}
 
-	<hr class="mb-4 pb-1">
+</section>
+
+<!-- PEOPLE -->
+<section class="section">
 
 	<!-- HEADING -->
 	<h4 class="mb-4 pb-1">
@@ -67,42 +69,13 @@ layout: base__page_sidebar_8x4_nav
 
 	<!-- PEOPLE -->
 	<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-2 block-grid-xxl-3 is-condensed-more">
-		{% for item in people %}
+		{% for item in people limit: 6 %}
 			<li>
 				{% include components/media/media_btn.html %}
 			</li>
 		{% endfor %}
 	</ul>
-
 </section>
-
-{% comment %}
-{% contentfor sidebar %}
-	<!-- SECTION -->
-	<section class="section">
-
-		<!-- SIDE NAV -->
-		<nav class="side-nav">
-			<ul class="list-unstyled">
-				<!-- <li class="side-nav-header active">
-					<div class="anchor">
-						<i class="fa fa-align-left"></i>
-						<span class="text">In this section</span>
-					</div>
-				</li> -->
-				{% for item in nav_items %}
-					<li>
-						<a href="{{ item.url }}">
-							<span class="text">{{ item.title }}</span>
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</nav>
-	</section>
-{% endcontentfor %}
-{% endcomment %}
 
 {% contentfor content_additional %}
 	<!-- BLOG POSTS -->
@@ -111,7 +84,7 @@ layout: base__page_sidebar_8x4_nav
 			<h2 class="text-white text-uppercase text-center mb-5">Blog Posts - Personal Compensation Law</h2>
 			{% include components/cards/cards.html flat="true" columns=4 %}
 			<p class="text-center mb-0">
-				<a href="#" class="btn btn-primary">More Blog Articles &nbsp;<i class="fa fa-angle-right"></i></a>
+				<a href="/lawtalk-blog/" class="btn btn-primary">More Blog Articles &nbsp;<i class="fa fa-angle-right"></i></a>
 			</p>
 		</div>
 	</section>

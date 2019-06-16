@@ -36,7 +36,6 @@
         {% assign item = node[1] %}
         {% assign children = item.children %}
         {% assign name = node[0] %}
-        {% assign alias = item.alias | default: name | slugify %}
 
         {%- capture li_classes -%}
 
@@ -67,7 +66,7 @@
             {% endif %}
         {%- endcapture -%}
 
-        <li class="{{ li_classes }}" data-alias="{{ alias }}">
+        <li class="{{ li_classes }}" data-hook="{{ name | slugify }}">
 
             <!-- ANCHOR -->
             <a href="{{ item.url }}">

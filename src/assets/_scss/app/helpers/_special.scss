@@ -11,6 +11,78 @@
 // PAYPAL FORM - REFACTOR
 //-----------------------------------------------------------------
 
+.media-thumb {
+    position: relative !important;
+    margin: 0 0 2.875rem;
+    cursor: pointer;
+    background: #484445
+}
+
+.media-thumb a {
+    display: block
+}
+
+.media-thumb .img {
+    opacity: .92;
+    transition: opacity ease 300ms
+}
+
+.media-thumb .media-thumb-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: .9375rem 1.25rem;
+    font-weight: 700;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    cursor: pointer;
+    pointer-events: none
+}
+
+.media-thumb:hover .img {
+    opacity: 1
+}
+
+.media-thumb-play .fa-youtube-play {
+    position: absolute;
+    top: calc(50% - 70px / 2 - 10px);
+    width: 100%;
+    text-align: center;
+    font-size: 4.375rem;
+    color: #F72842;
+    z-index: 1;
+    transition: color 300ms ease
+}
+
+// @media only screen and (min-width:64em) and (max-width:70.563em) {
+//     .media-thumb-play .fa-youtube-play {
+//         top: 5px
+//     }
+// }
+
+.media-thumb-play .fa-youtube-play:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 100%;
+    z-index: -1
+}
+
+
+
+
+
+
+
+
+
+
+
 [v-cloak] {
     visibility: hidden;
 }

@@ -14,7 +14,7 @@
 .side-nav {
 
     @include media-breakpoint-up(xl) {
-        min-width: 109%;
+        // min-width: 109%;
     }
 
     //-----------------------------------------------------------------
@@ -112,7 +112,7 @@
     //-----------------------------------------------------------------
 
     .active-parent > a {
-        background-color: #0c4062;
+        background-color: #484445;
     }
 
     .active > a,

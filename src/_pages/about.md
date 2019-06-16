@@ -4,7 +4,6 @@ title: About <span class="font-weight-normal">Andersons</span>
 permalink: /about/
 hero_image: /assets/img/content/backgrounds/about-bg.jpg
 hero_options: is-default
-hero_caption_align: left
 lead: |
   Andersons Solicitors has provided legal service to tens and thousands of South Australians for over 50 years.
 ---
