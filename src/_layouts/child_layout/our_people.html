@@ -2,45 +2,18 @@
 layout: base__page
 ---
 
+{% comment %}
 <script>
-	var staffList = [
-	   { name: 'Nestoras Alexandropoulos', position: 'Solicitor', location: '', image: '/assets/img/content/people/nestoras-alexandropoulos@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Julia Arena', position: 'Solicitor', location: '', image: '/assets/img/content/people/julia-arena@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Cassandra Attwood', position: 'Solicitor', location: '', image: '/assets/img/content/people/cassandra-attwood@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Eva Bailey', position: 'Partner', location: '', image: '/assets/img/content/people/eva-bailey@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Carly Bayly', position: 'Solicitor', location: '', image: '/assets/img/content/people/carly-bayly@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Bill Connelly', position: 'Partner', location: '', image: '/assets/img/content/people/bill-connelly@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'John Cronshaw', position: 'Associate', location: '', image: '/assets/img/content/people/john-cronshaw@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Francisco De Sousa', position: 'In-house Consultant', location: '', image: '/assets/img/content/people/francisco-de-sousa@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Matthew Fuss', position: 'Partner', location: '', image: '/assets/img/content/people/matthew-fuss@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Keryn Hickmann', position: 'Solicitor', location: '', image: '/assets/img/content/people/keryn-hickmann@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Alexander Hicks', position: 'Solicitor', location: '', image: '/assets/img/content/people/alexander-hicks@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Felix Hoelscher', position: 'Partner', location: '', image: '/assets/img/content/people/felix-hoelscher@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Megan Horsell', position: 'Associate', location: '', image: '/assets/img/content/people/megan-horsell@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Margaret Kaukas', position: 'Special Counsel', location: '', image: '/assets/img/content/people/margaret-kaukas@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Kate Keough', position: 'Senior Associate', location: '', image: '/assets/img/content/people/kate-keough@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Rebecca Lucas', position: 'Associate', location: '', image: '/assets/img/content/people/rebecca-lucas@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Dion McCaffrie', position: 'Partner', location: '', image: '/assets/img/content/people/dion-mccaffrie@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Camille McDonald', position: 'Senior Associate', location: '', image: '/assets/img/content/people/camille-mcdonald@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Madelaina Mestroni', position: 'Associate', location: '', image: '/assets/img/content/people/madelaina-mestroni@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Toni Monteleone', position: 'Senior Solicitor', location: '', image: '/assets/img/content/people/toni-monteleone@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Garry Palasis', position: 'Partner', location: '', image: '/assets/img/content/people/garry-palasis@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Lynn Pham', position: 'Associate', location: '', image: '/assets/img/content/people/lynn-pham@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Suzanne Pinyon', position: 'Partner', location: '', image: '/assets/img/content/people/suzanne-pinyon@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Simon Ridley', position: 'Associate', location: '', image: '/assets/img/content/people/simon-ridley@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Arthur Siow', position: 'Partner', location: '', image: '/assets/img/content/people/arthur-siow@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Ryan Thomas', position: 'Partner', location: '', image: '/assets/img/content/people/ryan-thomas@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Jeff Widera', position: 'Associate', location: '', image: '/assets/img/content/people/jeff-widera@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Richard Wills', position: 'In-house Consultant', location: '', image: '/assets/img/content/people/richard-wills@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Melissa Tredrea', position: 'Senior Associate', location: '', image: '/assets/img/content/people/melissa-tredrea@2x.jpg', url: '/our-people/our-people-item/' },
-	   { name: 'Alexandra Stephens', position: 'Solicitor', location: '', image: '/assets/img/content/people/alexandra-stephens@2x.jpg', url: '/our-people/our-people-item/' },
-	];
+	var staffList = {{ site.data.staff_by_group }};
 </script>
+{% endcomment %}
 
 <!-- SECTION -->
 <section id="vue-staff-app" class="section">
 	<div class="container">
 		<div class="row align-items-end">
+
+			{% comment %}
 			<div class="col-md-8 pr-md-4">
 
 				<!-- LEAD -->
@@ -53,11 +26,30 @@ layout: base__page
 					{{ content | markdownify }}
 				</div>
 
-				<h2 class="text-danger">* Under construction - not final *</h2>
-
 			</div>
-			<div class="col-md-4 pl-md-5">
+			{% endcomment %}
 
+			<div class="col-md-6 ml-auto">
+
+				<!-- TABS -->
+				<nav class="btn-tabs nav mb-4 d-inline-flex align-items-center float-right mb-4 mb-md-0" role="tablist">
+
+					<!-- VIEW BY -->
+					<span class="mr-3">View by:</span>
+
+					<!-- POSITION -->
+					<a href="#view-mode-1" class="btn-tab active" data-toggle="tab" role="tab">
+						Position
+					</a>
+
+					<!-- ALPHABETICAL LIST -->
+					<a href="#view-mode-2" class="btn-tab" data-toggle="tab" role="tab">
+						Surname (A-Z)
+					</a>
+
+				</nav>
+
+				{% comment %}
 				<!-- FORM SORT SELECT -->
 				<div class="form-sort-select d-flex align-items-center ml-xxl-5">
 					<span class="text">Sort by:</span>
@@ -66,12 +58,133 @@ layout: base__page
 						:sort-options="sortOptions">
 					</sort-select>
 				</div>
+				{% endcomment %}
 
 			</div>
 		</div>
 
 		<!-- SPACER -->
-		<div class="spacer mb-3 mb-md-5"></div>
+		<!-- <div class="spacer mb-3 mb-md-5"></div> -->
+
+		{% capture view_mode_1 %}
+			{% for item in site.data.staff_by_group %}
+
+				<!-- GROUP HEADER -->
+				<h2 class="mb-2">
+					{{ item[0] }}
+				</h2>
+
+				<!-- DIVIDER -->
+				<hr class="mb-5">
+
+				<!-- PEOPLE -->
+				<ul class="block-grid-xs-2 block-grid-lg-4 block-grid-xl-5 is-condensed mb-5">
+					{% for item in item[1] %}
+						<li>
+							<!-- CARD -->
+							<div class="card is-flat">
+
+								<!-- IMAGE -->
+								<a class="btn-tile" href="{{ item.url }}">
+									<img width="100%" class="card-img-top" src="/assets/img/ui/no-face.png" alt="{{ item.name }}">
+									<span class="btn-tile-bg" style="background-image: url({{ item.image }}); background-position: top center;"></span>
+								</a>
+
+								<!-- CARD BODY -->
+								<div class="card-body d-flex flex-column">
+
+									<!-- TITLE -->
+									<a href="{{ item.url }}">
+										<h3 class="h5 text-uppercase card-title mb-4">
+											{{ item.name }}
+										</h3>
+									</a>
+
+									{% comment %}
+									<!-- POSITION -->
+									<p class="text-muted h6 font-weight-normal">
+										{{ item.position }}
+									</p>
+									{% endcomment %}
+
+								</div>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endfor %}
+		{% endcapture %}
+
+		{% capture view_mode_2 %}
+
+			<!-- GROUP HEADER -->
+			<h2 class="mb-2">
+				People by Surname
+			</h2>
+
+			<!-- DIVIDER -->
+			<hr class="mb-5">
+
+			<!-- PEOPLE -->
+			<ul class="block-grid-xs-2 block-grid-lg-4 block-grid-xl-5 is-condensed mb-5">
+				{% for item in site.data.staff %}
+					<li>
+						<!-- CARD -->
+						<div class="card is-flat">
+
+							<!-- IMAGE -->
+							<a class="btn-tile" href="{{ item.url }}">
+								<img width="100%" class="card-img-top" src="/assets/img/ui/no-face.png" alt="{{ item.name }}">
+								<span class="btn-tile-bg" style="background-image: url({{ item.image }}); background-position: top center;"></span>
+							</a>
+
+							<!-- CARD BODY -->
+							<div class="card-body d-flex flex-column">
+
+								<!-- TITLE -->
+								<a href="{{ item.url }}">
+									<h3 class="h5 text-uppercase card-title mb-1">
+										{{ item.name }}
+									</h3>
+								</a>
+
+								<!-- POSITION -->
+								<p class="text-muted h6 font-weight-normal mb-2">
+									{{ item.position }}
+								</p>
+
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endcapture %}
+
+		<!-- TAB CONTENT -->
+		<div class="tab-content mb-4">
+
+			<!-- VIEW MODE #1 -->
+			<div id="view-mode-1" class="tab-pane fade active show" role="tabpanel">
+				{{ view_mode_1 }}
+			</div>
+
+			<!-- VIEW MODE #2 -->
+			<div id="view-mode-2" class="tab-pane fade" role="tabpanel">
+				{{ view_mode_2 }}
+			</div>
+
+		</div>
+
+		{% comment %}
+		<div
+			v-for="(item, propertyName, index) in teamByPositionAscending"
+			:key="propertyName"
+		>
+			<h2 v-text="propertyName"></h2>
+
+			<div v-for="(item, index) in item" v-text="item.name">
+			</div>
+		</div>
 
 		<!-- STAFF LIST -->
 		<transition-group
@@ -82,7 +195,7 @@ layout: base__page
 		>
 			<li
 				v-for="(item, index) in sort(sortOrder)"
-				:key="item.name"
+				:key="index"
 			>
 				<!-- CARD -->
 				<div class="card is-flat">
@@ -110,13 +223,16 @@ layout: base__page
 					</div>
 				</div>
 			</li>
-		</transition>
+		</transition-group>
+		{% endcomment %}
 
 	</div>
 </section>
 
+{% comment %}
 <style>
 	.staffTransition-move {
 		transition: transform 600ms ease;
 	}
 </style>
+{% endcomment %}

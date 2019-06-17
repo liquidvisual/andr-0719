@@ -19,6 +19,8 @@
     <script src="/node_modules/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>
     <!-- endbuild -->
 
+    <script>Vue.config.productionTip = false;</script>
+
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->

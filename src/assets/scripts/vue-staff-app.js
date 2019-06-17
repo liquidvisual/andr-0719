@@ -46,7 +46,8 @@ function initStaffApp() {
         },
         data() {
             return {
-                sortOrder: 'Position' // need this to init with
+                sortOrder: 'Position', // need this to init with
+                teamByPositionAscending: {}
             }
         }
      });
@@ -56,11 +57,11 @@ function initStaffApp() {
     //-----------------------------------------------------------------
 
     new Vue({
-        el: "#vue-staff-app",
+        el: '#vue-staff-app',
         data() {
             return {
                 list: null,
-                sortOrder: "Position",
+                sortOrder: 'Position',
             }
         },
         computed: {
@@ -79,12 +80,39 @@ function initStaffApp() {
                     //    });
                     // },
                     'Position': () => {
-                       return this.list.slice().sort(function(a, b) {
-                          if (a.position === b.position) {
-                             return a['lastName'].localeCompare(b['lastName']);
-                          }
-                          return a['position'].localeCompare(b['position']);
-                       });
+
+                        // var result = this.list.filter((item, index, arr) => arr.indexOf(item.position) === item.position);
+                        var result = this.list.map((item, arr) => {
+                            return item.position;
+                        });
+
+                        result = result.filter((item, index) => result.indexOf(item) === index);
+                        // result = [...new Set(result)];
+
+
+                        var finalObj = {};
+
+                        result.forEach((item) => {
+                            finalObj.shit = [];
+                        })
+
+                        console.log(result);
+
+
+                        var finalObj = [];
+
+                        result.forEach((item) => {
+
+                        })
+
+                        console.log(finalObj)
+
+                       // return this.list.slice().sort(function(a, b) {
+                       //    if (a.position === b.position) {
+                       //       return a['lastName'].localeCompare(b['lastName']);
+                       //    }
+                       //    return a['position'].localeCompare(b['position']);
+                       // });
                     },
                     'Surname': () => {
                         // Set slice() to avoid to generate an infinite loop!
@@ -97,12 +125,13 @@ function initStaffApp() {
         },
         created() {
             // roll through list and create 'last name' prop
-            for (var i=0; i<staffList.length; i++) {
+            for (var i = 0; i < staffList.length; i++) {
                 var obj = staffList[i];
                 obj.lastName = this.getLastName(obj.name);
             }
             // init
             this.list = staffList;
+            // this.teamByPositionAscending = teamByPositionAscending;
         },
         methods: {
             sort(sortOrder){

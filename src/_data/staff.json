@@ -5,7 +5,6 @@
 		location: '',
 		image: '/assets/img/content/people/nestoras-alexandropoulos@2x.jpg',
 		url: '/our-people/our-people-item/'
-
 	},
 	{
 		name: 'Julia Arena',
@@ -176,10 +175,24 @@
 		url: '/our-people/our-people-item/'
 	},
 	{
+		name: 'Alexandra Stephens',
+		position: 'Solicitor',
+		location: '',
+		image: '/assets/img/content/people/alexandra-stephens@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
 		name: 'Ryan Thomas',
 		position: 'Partner',
 		location: '',
 		image: '/assets/img/content/people/ryan-thomas@2x.jpg',
+		url: '/our-people/our-people-item/'
+	},
+	{
+		name: 'Melissa Tredrea',
+		position: 'Senior Associate',
+		location: '',
+		image: '/assets/img/content/people/melissa-tredrea@2x.jpg',
 		url: '/our-people/our-people-item/'
 	},
 	{
@@ -194,20 +207,6 @@
 		position: 'In-house Consultant',
 		location: '',
 		image: '/assets/img/content/people/richard-wills@2x.jpg',
-		url: '/our-people/our-people-item/'
-	},
-	{
-		name: 'Melissa Tredrea',
-		position: 'Senior Associate',
-		location: '',
-		image: '/assets/img/content/people/melissa-tredrea@2x.jpg',
-		url: '/our-people/our-people-item/'
-	},
-	{
-		name: 'Alexandra Stephens',
-		position: 'Solicitor',
-		location: '',
-		image: '/assets/img/content/people/alexandra-stephens@2x.jpg',
 		url: '/our-people/our-people-item/'
 	}
 ]
