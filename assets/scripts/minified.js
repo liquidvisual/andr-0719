@@ -5641,7 +5641,7 @@ function launchSlider() {
   staffList && initStaffApp();
 } catch (e) {}function initStaffApp() {
   Vue.component("sort-select", { template: '\n            <select\n                class="custom-select"\n                :sort-order="sortOrder"\n                v-model="sortOrder"\n                @change="$emit(\'input\', sortOrder)"\n            >\n                <option\n                    v-for="sortKey in Object.keys(sortOptions)"\n                    v-text="sortKey"\n                    :value="sortKey">\n                </option>\n            </select>\n        ', props: { sortOptions: Object }, data: function data() {
-      return { sortOrder: "Position" };
+      return { sortOrder: "Position", teamByPositionAscending: {} };
     } }), new Vue({ el: "#vue-staff-app", data: function data() {
       return { list: null, sortOrder: "Position" };
     }, computed: {
@@ -5649,9 +5649,14 @@ function launchSlider() {
         var _this = this;
 
         return { Position: function Position() {
-            return _this.list.slice().sort(function (e, t) {
-              return e.position === t.position ? e.lastName.localeCompare(t.lastName) : e.position.localeCompare(t.position);
-            });
+            var e = _this.list.map(function (e, t) {
+              return e.position;
+            }),
+                t = {};(e = e.filter(function (t, n) {
+              return e.indexOf(t) === n;
+            })).forEach(function (e) {
+              t.shit = [];
+            }), console.log(e);t = [];e.forEach(function (e) {}), console.log(t);
           }, Surname: function Surname() {
             return _this.list.slice().sort(function (e, t) {
               return e.lastName.localeCompare(t.lastName);
