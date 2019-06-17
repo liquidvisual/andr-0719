@@ -6,6 +6,7 @@ hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:
 hero_caption_align: left
 breadcrumbs: true
+breadcrumbs_text: Personal Injury
 locational: true
 theme: theme-show-modal
 lead:

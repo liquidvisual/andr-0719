@@ -19,7 +19,11 @@
                     <a class="breadcrumb-item"
                         href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">
                         <i class="fa fa-angle-left"></i>&nbsp;
-                        {{ crumb | capitalize | replace: '-', ' ' }}
+                        {% if page.breadcrumbs_text %}
+                            {{ page.breadcrumbs_text }}
+                        {% else %}
+                            {{ crumb | capitalize | replace: '-', ' ' }}
+                        {% endif %}
                     </a>
                 {% endif %}
             {% endfor %}

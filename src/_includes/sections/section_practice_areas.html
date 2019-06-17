@@ -35,15 +35,90 @@
 
 				<!-- PRACTICE AREAS -->
 				<ul class="list-squares block-grid-xs-1 block-grid-md-2">
+
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Family Law
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Wills and Estates
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Workplace Injury
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Elder Law
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Personal Injury
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Employment and Industrial
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Criminal and Police Matters
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Commercial and Business
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Conveyancing
+		                    </h3>
+		                </a>
+					</li>
+					<li>
+		                <a href="/practice-areas/practice-areas-item/">
+		                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
+		                    	Other Legal Services
+		                    </h3>
+		                </a>
+					</li>
+
+					{% comment %}
 					{% for item in practice_areas %}
 						<li>
-			                <a class="" href="/practice-areas/personal-injury/">
+			                <a class="" href="{{ item[1].url }}">
 			                    <h3 class="h4 font-weight-normal text-uppercase text-body mb-0">
 			                    	{{ item[0] }}
 			                    </h3>
 			                </a>
 						</li>
 					{% endfor %}
+					{% endcomment %}
+
 				</ul>
 
 			</div>

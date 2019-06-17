@@ -1,12 +1,13 @@
 ---
 layout: child_layout/blog_item
 title: The Trick to Creating Delicious Meals on the Go
-title_override: ''
+title_override: 'LawTalk Blog'
 permalink: /lawtalk-blog/lawtalk-blog-item/
-hero_image:
-hero_options: is-gray-minimal-short
+hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
+hero_options: is-gray-minimal
 breadcrumbs: true
-theme: theme-no-hero
+breadcrumbs_text: Back
+theme: theme-no-heroX
 lead:
 ---
 
