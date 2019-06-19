@@ -493,90 +493,88 @@
 <!-- MAIN BODY --><main class="main-body">
 
                 <!-- CONTACT SECTION -->
-                <section class="section section-contact is-light has-image-bg" style="background-image: url(/assets/img/content/backgrounds/contact-bg.jpg)">
+                <section class="section section-contact is-light has-image-bg" style="background-image: url()">
                     <div class="container">
-                        <div class="row h-100 justify-content-end">
+
+                        <!-- BG FILL -->
+                        <div class="bg-fill is-white"></div>
+                        <div class="row h-100 justify-content-center">
                             <div class="col-md-8 col-lg-7 col-xl-6">
-                                <div class="ml-xl-4x">
 
-                                    <!-- BG FILL -->
-                                    <div class="bg-fill is-white"></div>
+                                <!-- HEADER -->
+                                <h2 class="text-uppercase text-center mb-4">Contact
+                                    <span class="font-weight-normal">Us</span>
+                                </h2>
+                                <div class="spacer mb-3"></div>
 
-                                    <!-- HEADER -->
-                                    <h2 class="text-uppercase text-center text-md-left mb-4">Contact
-                                        <span class="font-weight-normal">Us</span>
-                                    </h2>
-                                    <div class="spacer mb-3"></div>
+                                <!-- TEXT -->
+                                <p class="h4 font-weight-normal">For any general inquiries, please fill in the following contact form</p>
+                                <br>
 
-                                    <!-- TEXT -->
-                                    <p class="h4 font-weight-normal">For any general inquiries, please fill in the following contact form</p>
-                                    <br>
+                                <!-- IF SUCCESS (HIDDEN) -->
+                                <div class="alert alert-success alert-dismissible fade show mb-4" role="alert" hidden>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>Success!</strong>
+                                    <br>Thanks for that. Your message has been received.</div>
 
-                                    <!-- IF SUCCESS (HIDDEN) -->
-                                    <div class="alert alert-success alert-dismissible fade show mb-4" role="alert" hidden>
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <strong>Success!</strong>
-                                        <br>Thanks for that. Your message has been received.</div>
+                                <!-- IF FAILURE (HIDDEN) -->
+                                <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert" hidden>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>Oops!</strong>
+                                    <br>Something went wrong. Please try again.</div>
 
-                                    <!-- IF FAILURE (HIDDEN) -->
-                                    <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert" hidden>
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <strong>Oops!</strong>
-                                        <br>Something went wrong. Please try again.</div>
+                                <!-- FORM CONTACT -->
+                                <form id="form-contact" class="form-contact-centered" name="Contact Form" action="/" data-toggle="validator" novalidate>
+                                    <fieldset class="mb-2">
 
-                                    <!-- FORM CONTACT -->
-                                    <form id="form-contact" class="form-contact-centered" name="Contact Form" action="/" data-toggle="validator" novalidate>
-                                        <fieldset class="mb-2">
+                                        <!-- NAME* -->
+                                        <label class="form-group d-block">
 
-                                            <!-- NAME* -->
-                                            <label class="form-group d-block">
+                                            <!-- <p class="mb-2">Name<small class="asterisk">*</small></p> -->
+                                            <input class="form-control" name="Name" type="text" placeholder="NAME*" required>
+                                            <small class="error shake animated">
+                                                <i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
+                                        </label>
 
-                                                <!-- <p class="mb-2">Name<small class="asterisk">*</small></p> -->
-                                                <input class="form-control" name="Name" type="text" placeholder="NAME*" required>
-                                                <small class="error shake animated">
-                                                    <i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
-                                            </label>
+                                        <!-- EMAIL* -->
+                                        <label class="form-group d-block">
 
-                                            <!-- EMAIL* -->
-                                            <label class="form-group d-block">
+                                            <!-- <p class="mb-2">Email<small class="asterisk">*</small></p> -->
+                                            <input class="form-control" name="Email" type="email" placeholder="EMAIL*" required>
+                                            <small class="error shake animated">
+                                                <i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
+                                        </label>
 
-                                                <!-- <p class="mb-2">Email<small class="asterisk">*</small></p> -->
-                                                <input class="form-control" name="Email" type="email" placeholder="EMAIL*" required>
-                                                <small class="error shake animated">
-                                                    <i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
-                                            </label>
+                                        <!-- PHONE -->
+                                        <label class="form-group d-block">
 
-                                            <!-- PHONE -->
-                                            <label class="form-group d-block">
+                                            <!-- <p class="mb-2">Phone</p> -->
+                                            <input class="form-control" name="Phone" type="text" placeholder="PHONE">
+                                        </label>
 
-                                                <!-- <p class="mb-2">Phone</p> -->
-                                                <input class="form-control" name="Phone" type="text" placeholder="PHONE">
-                                            </label>
+                                        <!-- MESSAGE* -->
+                                        <label class="form-group d-block">
 
-                                            <!-- MESSAGE* -->
-                                            <label class="form-group d-block">
+                                            <!-- <p class="mb-3">Message<small class="asterisk">*</small></p> -->
+                                            <textarea class="form-control" name="Message" rows="6" placeholder="MESSAGE*" required></textarea>
+                                            <small class="error shake animated">
+                                                <i class="fa fa-warning"></i>&nbsp; Please write your message.</small>
+                                        </label>
+                                    </fieldset>
 
-                                                <!-- <p class="mb-3">Message<small class="asterisk">*</small></p> -->
-                                                <textarea class="form-control" name="Message" rows="6" placeholder="MESSAGE*" required></textarea>
-                                                <small class="error shake animated">
-                                                    <i class="fa fa-warning"></i>&nbsp; Please write your message.</small>
-                                            </label>
-                                        </fieldset>
-
-                                        <!-- * REQUIRED -->
-                                        
+                                    <!-- * REQUIRED -->
+                                    
 <!-- <p class="float-right"><small class="asterisk">*</small>
         <small class="text-muted" style="position: relative; top: -5px;">required</small>
     </p> -->
 
-                                        <!-- SUBMIT -->
-                                        <button type="submit" class="btn btn-primary float-right">Send</button>
-                                    </form>
-                                </div>
+                                    <!-- SUBMIT -->
+                                    <button type="submit" class="btn btn-primary float-right">Send</button>
+                                </form>
                             </div>
                         </div>
                     </div>
