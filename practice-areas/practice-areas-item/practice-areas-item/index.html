@@ -8,13 +8,9 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap">
-    <script src="/assets/scripts/vue.js"></script>
-    <script>
-    Vue.config.productionTip = false;
-    </script>
     <link rel="stylesheet" href="/assets/css/minified.css">
 </head>
-<body class="theme-show-modal" data-location>
+<body class="">
 
     <!-- PAGE LOADER -->
     <div id="lv-page-loader" class="lv-page-loader">
@@ -1277,7 +1273,7 @@
 
             <!-- *** FOR WEBVISUAL.COM DEMO PURPOSES ONLY - DELETE ME *** -->
             <script>
-            if (window.location.hostname === 'andersons.yourwebvisual.com' || window.location.hostname === '10.0.1.3') {
+            if (window.location.hostname === 'andersons.yourwebvisual.com' || window.location === 'localhost' || window.location.hostname === '10.0.1.3') {
                 var li = document.querySelectorAll('.side-nav > ul li');
                 li.forEach(function(item) {
                     if (window.location.pathname === '/practice-areas/practice-areas-item/' && item.dataset.hook !== 'personal-injury') item.classList.remove('active', 'active-parent');

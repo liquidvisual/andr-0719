@@ -8,13 +8,9 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap">
-    <script src="/assets/scripts/vue.js"></script>
-    <script>
-    Vue.config.productionTip = false;
-    </script>
     <link rel="stylesheet" href="/assets/css/minified.css">
 </head>
-<body class="" data-location>
+<body class="">
 
     <!-- PAGE LOADER -->
     <div id="lv-page-loader" class="lv-page-loader">
@@ -471,9 +467,7 @@
                                         </section>
 
                                         <!-- HEADER -->
-                                        <h2 class="display-1 text-white text-uppercase mb-0">Our
-                                            <span class="font-weight-normal">People</span>
-                                        </h2>
+                                        <h2 class="display-1 text-white text-uppercase mb-0">Our People</h2>
                                     </div>
                                 </div>
                             </div>
@@ -492,38 +486,9 @@
                 <section class="section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4">
-
-                                <!-- PHOTO -->
-                                <p class="mb-1">
-                                    <img width="100%" src="/assets/img/content/people/camille-mcdonald@2x.jpg" alt="Camille McDonald">
-                                </p>
-
-                                <!-- KEY SERVICE AREAS -->
-                                <div class="sidebox mb-1">
-                                    <h3 class="sidebox-header h5 text-uppercase mb-3">Camille's Practice Areas</h3>
-                                    <div class="sidebox-body">
-                                        <ul class="block-grid-xs-1">
-                                            <li>Children's issues</li>
-                                            <li>Property settlement</li>
-                                            <li>Divorce</li>
-                                            <li>Consent Orders</li>
-                                            <li>Mediation and Negotiation</li>
-                                            <li>Recovery and relocation</li>
-                                            <li>Child abuse matters</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <!-- SEE BLOG POSTS -->
-                                <a href="/blog/" class="btn btn-primary side-btn btn-block text-left">
-                                    <i class="fa fa-comment icon mr-2"></i> See Blog Posts by Camille
-                                    <i class="ml-auto fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-8">
+                            <div class="col-md-8 order-md-last">
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-xl-9">
 
                                         <!-- HEADER -->
                                         <header class="text-uppercase mb-4 pb-1">
@@ -531,22 +496,27 @@
                                             <h3 class="h4 text-muted">Senior Associate</h3>
                                         </header>
 
+                                        <!-- PHOTO (MOBILE ONLY) -->
+                                        <p class="mb-4 hidden-md-up">
+                                            <img width="100%" src="/assets/img/content/people/camille-mcdonald@2x.jpg" alt="Camille McDonald">
+                                        </p>
+
                                         <!-- EMAIL -->
-                                        <a class="d-inline-flex align-items-center" href="mailto:vanessa@hallpayne.com.au" data-toggle="modal" data-target="#contact-modal">
+                                        <a class="d-inline-flex align-items-center mb-2 mb-md-0" href="mailto:camille@email.com" data-toggle="modal" data-target="#contact-modal">
                                             <i class="fa fa-envelope mr-2 text-dark"></i>
                                             <span class="text">Send an email</span>
                                         </a>
                                         <span class="mx-2">|</span>
 
                                         <!-- PHONE -->
-                                        <a class="d-inline-flex align-items-center" href="tel:0732810322">
+                                        <a class="d-inline-flex align-items-center mb-2 mb-md-0" href="tel:0884474911">
                                             <i class="fa fa-phone mr-2 text-dark"></i>
                                             <span class="text">(08) 8447 4911</span>
                                         </a>
-                                        <span class="mx-2">|</span>
+                                        <span class="mx-2 hidden-sm-down">|</span>
 
                                         <!-- FAX -->
-                                        <a class="d-inline-flex align-items-center" href="#/LINK-HERE">
+                                        <a class="d-block d-md-inline-flex align-items-center mb-2 mb-md-0" href="#/LINK-HERE">
                                             <i class="fa fa-fax mr-2 text-dark"></i>
                                             <span class="text">(08) 8238 6600</span>
                                         </a>
@@ -587,6 +557,39 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-4">
+
+                                <!-- PHOTO (DESKTOP) -->
+                                <p class="mb-1 hidden-sm-down">
+                                    <img width="100%" src="/assets/img/content/people/camille-mcdonald@2x.jpg" alt="Camille McDonald">
+                                </p>
+
+                                <!-- AREAS OF EXPERTISE -->
+                                <div class="sidebox mb-1">
+
+                                    <!-- HEADING -->
+                                    <h3 class="sidebox-header h5 text-uppercase mb-3">Camille's Areas of Expertise</h3>
+
+                                    <!-- LIST -->
+                                    <div class="sidebox-body">
+                                        <ul class="block-grid-xs-1">
+                                            <li>Children's issues</li>
+                                            <li>Property settlement</li>
+                                            <li>Divorce</li>
+                                            <li>Consent Orders</li>
+                                            <li>Mediation and Negotiation</li>
+                                            <li>Recovery and relocation</li>
+                                            <li>Child abuse matters</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- SEE BLOG POSTS (OPTIONAL) -->
+                                <a href="/blog/" class="btn btn-primary side-btn btn-block text-left">
+                                    <i class="fa fa-comment icon mr-2"></i> See Blog Posts by Camille
+                                    <i class="ml-auto fa fa-angle-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -595,22 +598,32 @@
                 <section class="section is-gray">
                     <div class="container">
 
-                        <!-- HEADING -->
-                        <div class="d-flex align-items-center">
-                            <h2 class="text-uppercase mb-2">
-                                <i class="fa fa-comment mr-1"></i> Browse
-                                <span class="font-weight-normal">People</span>
-                            </h2>
+                        <!-- HEADER -->
+                        <header>
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
 
-                            <!-- MORE BLOG POSTS -->
-                            <a class="text-uppercase ml-auto text-dark" href="/our-people/">Our People
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
+                                    <!-- HEADING -->
+                                    <h2 class="text-uppercase mb-2">
+                                        <i class="fa fa-users mr-1"></i> Browse
+                                        <span class="font-weight-normal">People</span>
+                                    </h2>
+                                </div>
+                                <div class="col-md-6 text-md-right">
+
+                                    <!-- MORE BLOG POSTS -->
+                                    <a class="text-uppercase ml-auto text-dark" href="/our-people/">View All
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- DIVIDER -->
                         <hr class="mb-5">
 
                         <!-- PEOPLE -->
-                        <ul class="block-grid-xs-1 block-grid-md-3 block-grid-xl-4 block-grid-xxl-5 is-condensed-more">
+                        <ul class="block-grid-xs-1 block-grid-md-3 block-grid-xl-4 is-condensed-more mb-4">
                             <li>
 
                                 <!-- MEDIA BTN -->
@@ -1131,266 +1144,6 @@
                                     </div>
                                 </a>
                             </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Garry Palasis">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/garry-palasis@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Garry Palasis</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Partner
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Lynn Pham">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/lynn-pham@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Lynn Pham</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Associate
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Suzanne Pinyon">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/suzanne-pinyon@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Suzanne Pinyon</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Partner
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Simon Ridley">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/simon-ridley@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Simon Ridley</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Associate
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Arthur Siow">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/arthur-siow@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Arthur Siow</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Partner
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Alexandra Stephens">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/alexandra-stephens@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Alexandra Stephens</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Solicitor
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Ryan Thomas">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/ryan-thomas@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Ryan Thomas</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Partner
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Melissa Tredrea">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/melissa-tredrea@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Melissa Tredrea</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Senior Associate
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Jeff Widera">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/jeff-widera@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Jeff Widera</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">Associate
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-
-                                <!-- MEDIA BTN -->
-                                <a href="/our-people/our-people-item/">
-                                    <div class="media media-btn">
-
-                                        <!-- MEDIA IMAGE -->
-                                        <div class="media-img btn-tile mr-2">
-                                            <img width="100%" src="/assets/img/ui/no-face.png" alt="Richard Wills">
-                                            <span class="btn-tile-bg" style="background-image: url(/assets/img/content/people/richard-wills@2x.jpg); background-position: top center;"></span>
-                                        </div>
-
-                                        <!-- MEDIA BODY -->
-                                        <div class="media-body">
-
-                                            <!-- TITLE -->
-                                            <h6 class="media-title text-primary mb-1">Richard Wills</h6>
-
-                                            <!-- POSITION + LOCATION -->
-                                            <p class="text-muted">In-house Consultant
-                                                <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </section>
@@ -1399,18 +1152,26 @@
                 <section class="section section-blog is-secondary is-dark" style="background-image: url()">
                     <div class="container">
 
-                        <!-- HEADING -->
-                        <div class="d-flex align-items-center">
-                            <h2 class="text-uppercase mb-2">
-                                <i class="fa fa-comment mr-1"></i> LawTalk
-                                <span class="font-weight-normal">Blog</span>
-                            </h2>
+                        <!-- HEADER -->
+                        <header>
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
 
-                            <!-- MORE BLOG POSTS -->
-                            <a class="text-uppercase ml-auto" href="/blog/">More posts
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
+                                    <!-- HEADING -->
+                                    <h2 class="text-uppercase mb-2">
+                                        <i class="fa fa-comment mr-1"></i> LawTalk
+                                        <span class="font-weight-normal">Blog</span>
+                                    </h2>
+                                </div>
+                                <div class="col-md-6 text-md-right">
+
+                                    <!-- MORE BLOG POSTS -->
+                                    <a class="text-uppercase ml-auto" href="/blog/">More posts
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </header>
                         <hr class="mb-5">
                         <div class="row spec-spacious">
                             <div class="col-md-4 col-lg-4 mb-4">
