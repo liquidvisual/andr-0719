@@ -28,12 +28,18 @@
 
     <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
     <script>
-    var loader = document.getElementById('lv-page-loader');
-    loader.style.display = 'flex';
-    // Limit to 2+ seconds of waiting time
-    setTimeout(function() {
-        loader.className += ' force-finish';
-    }, 2000);
+    (function loader() {
+        var loader = document.getElementById('lv-page-loader');
+        loader.style.display = 'flex';
+        // add class when window has fully loaded
+        window.addEventListener('load', function() {
+            document.documentElement.classList.add('has-loaded');
+        });
+        // Prevent loader from getting stuck if body takes too long
+        setTimeout(function() {
+            loader.classList.add('force-finish');
+        }, 1500); // max of 1.5 secs
+    })();
     </script>
     <div class="lv-page">
 
@@ -499,7 +505,7 @@
                                     <div class="lv-hero-item-caption animated fadeInLeftSubtle">
 
                                         <!-- HEADER -->
-                                        <h1 class="display-1 text-uppercase mb-3">South Australian
+                                        <h1 class="display-1 is-unique text-uppercase mb-3">South Australian
                                             <span class="font-weight-normal">Law Firm</span>
                                         </h1>
 
@@ -523,21 +529,21 @@
                 <section class="section section-practice-areas is-light is-primary" style="background-image: url()">
                     <div class="container">
                         <div class="row h-100">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-lg-5">
                                 <div class="row">
                                     <div class="col-md-9 pr-md-5">
 
                                         <!-- HEADER -->
-                                        <h2 class="float-md-right text-uppercase text-body mb-4">Practice
+                                        <h2 class="is-unique float-md-right text-uppercase text-body mb-4">Practice
                                             <span class="d-md-block font-weight-normal">Areas</span>
                                         </h2>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-8 col-lg-7 col-xl-7">
+                            <div class="col-md-7 col-lg-7 col-xl-7">
 
                                 <!-- BG FILL -->
-                                <div class="bg-fill is-white ml-4"></div>
+                                <div class="bg-fill is-white ml-xl-4"></div>
 
                                 <!-- PRACTICE AREAS -->
                                 <ul class="list-squares block-grid-xs-1 block-grid-md-2">
@@ -599,14 +605,12 @@
 
                 <!-- CONTACT SECTION -->
                 <section class="section section-about-us is-dark has-image-bg is-tinted" style="background-image: url(/assets/img/content/backgrounds/about-us-bg.jpg)">
-                    <div class="container text-center">
+                    <div class="container text-md-center">
                         <div class="row">
                             <div class="col-md-7 mx-auto">
 
                                 <!-- HEADER -->
-                                <h2 class="text-uppercase mb-4">About
-                                    <span class="font-weight-normal">Us</span>
-                                </h2>
+                                <h2 class="text-uppercase mb-4">About Us</h2>
 
                                 <!-- WYSIWYG -->
                                 <div class="wysiwyg">
@@ -624,9 +628,7 @@
                     <div class="container text-center py-3">
 
                         <!-- HEADER -->
-                        <h2 class="h1 text-uppercase mb-4 pb-3">Client
-                            <span class="font-weight-normal">Testimonials</span>
-                        </h2>
+                        <h2 class="text-uppercase mb-4 pb-3">Client Testimonials</h2>
 
                         <!-- SLIDER -->
                         <div class="slider slider-stats" data-slider>
@@ -658,7 +660,7 @@
 
                                         <!-- STATS -->
                                         <div class="row">
-                                            <div class="col-md-5 mx-auto">
+                                            <div class="col-sm-10 col-md-7 col-lg-5 mx-auto">
 
                                                 <!-- QUOTE -->
                                                 <blockquote class="blockquote">
@@ -680,7 +682,7 @@
 
                                         <!-- STATS -->
                                         <div class="row">
-                                            <div class="col-md-5 mx-auto">
+                                            <div class="col-sm-10 col-md-7 col-lg-5 mx-auto">
 
                                                 <!-- QUOTE -->
                                                 <blockquote class="blockquote">
@@ -721,10 +723,10 @@
                                     <div class="bg-fill is-white"></div>
 
                                     <!-- HEADER -->
-                                    <h2 class="text-uppercase text-center text-md-left mb-4">Contact
-                                        <span class="font-weight-normal">Us</span>
-                                    </h2>
-                                    <div class="spacer mb-3"></div>
+                                    <h2 class="text-uppercase mb-4">Contact Us</h2>
+
+                                    <!-- SPACER -->
+                                    <div class="spacer mb-lg-3"></div>
 
                                     <!-- TEXT -->
                                     <p class="h4 font-weight-normal">For any general inquiries, please fill in the following contact form</p>

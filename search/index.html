@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Search
-        <span class="font-weight-normal">Results</span> - Andersons Solicitors</title>
+    <title>Search Results - Andersons Solicitors</title>
 
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap">
@@ -29,12 +28,18 @@
 
     <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
     <script>
-    var loader = document.getElementById('lv-page-loader');
-    loader.style.display = 'flex';
-    // Limit to 2+ seconds of waiting time
-    setTimeout(function() {
-        loader.className += ' force-finish';
-    }, 2000);
+    (function loader() {
+        var loader = document.getElementById('lv-page-loader');
+        loader.style.display = 'flex';
+        // add class when window has fully loaded
+        window.addEventListener('load', function() {
+            document.documentElement.classList.add('has-loaded');
+        });
+        // Prevent loader from getting stuck if body takes too long
+        setTimeout(function() {
+            loader.classList.add('force-finish');
+        }, 1500); // max of 1.5 secs
+    })();
     </script>
     <div class="lv-page">
 
@@ -458,9 +463,7 @@
                                     <div class="lv-hero-item-caption animated fadeInLeftSubtle">
 
                                         <!-- HEADER -->
-                                        <h1 class="display-1 text-white text-uppercase mb-0">Search
-                                            <span class="font-weight-normal">Results</span>
-                                        </h1>
+                                        <h1 class="display-1 text-white text-uppercase mb-0">Search Results</h1>
                                     </div>
                                 </div>
                             </div>

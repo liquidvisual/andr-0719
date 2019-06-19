@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Personal
-        <span class="font-weight-normal">Injury</span> - Andersons Solicitors</title>
+    <title>Personal Injury - Andersons Solicitors</title>
 
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap">
@@ -29,12 +28,18 @@
 
     <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
     <script>
-    var loader = document.getElementById('lv-page-loader');
-    loader.style.display = 'flex';
-    // Limit to 2+ seconds of waiting time
-    setTimeout(function() {
-        loader.className += ' force-finish';
-    }, 2000);
+    (function loader() {
+        var loader = document.getElementById('lv-page-loader');
+        loader.style.display = 'flex';
+        // add class when window has fully loaded
+        window.addEventListener('load', function() {
+            document.documentElement.classList.add('has-loaded');
+        });
+        // Prevent loader from getting stuck if body takes too long
+        setTimeout(function() {
+            loader.classList.add('force-finish');
+        }, 1500); // max of 1.5 secs
+    })();
     </script>
     <div class="lv-page">
 
@@ -468,9 +473,7 @@
                                         </section>
 
                                         <!-- HEADER -->
-                                        <h1 class="display-1 text-white text-uppercase mb-0">Personal
-                                            <span class="font-weight-normal">Injury</span>
-                                        </h1>
+                                        <h1 class="display-1 text-white text-uppercase mb-0">Personal Injury</h1>
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +518,7 @@
 
                                 <!-- IMAGE -->
                                 <p class="img-right">
-                                    <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-1.jpg" alt="...">
+                                    <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-01.jpg" alt="...">
                                 </p>
 
                                 <!-- WYSIWYG -->
@@ -586,8 +589,7 @@
                             <section class="section">
 
                                 <!-- HEADING -->
-                                <h4 class="mb-4 pb-1">Our Personal
-                                    <span class="font-weight-normal">Injury</span> Team</h4>
+                                <h4 class="mb-4 pb-1">Our Personal Injury Team</h4>
 
                                 <!-- PEOPLE -->
                                 <ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-2 block-grid-xxl-3 is-condensed-more">
@@ -1030,14 +1032,12 @@
 
                                     <!-- HEADING -->
                                     <h2 class="text-uppercase mb-2">
-                                        <i class="fa fa-comment mr-1"></i> LawTalk
-                                        <span class="font-weight-normal">Blog</span>
-                                    </h2>
+                                        <i class="fa fa-comment mr-1"></i> LawTalk Blog</h2>
                                 </div>
                                 <div class="col-md-6 text-md-right">
 
                                     <!-- MORE BLOG POSTS -->
-                                    <a class="text-uppercase ml-auto" href="/blog/">More posts
+                                    <a class="text-uppercase ml-auto" href="/lawtalk-blog/">More posts
                                         <i class="fa fa-angle-right"></i>
                                     </a>
                                 </div>
@@ -1096,10 +1096,10 @@
                                     <div class="bg-fill is-white"></div>
 
                                     <!-- HEADER -->
-                                    <h2 class="text-uppercase text-center text-md-left mb-4">Contact
-                                        <span class="font-weight-normal">Us</span>
-                                    </h2>
-                                    <div class="spacer mb-3"></div>
+                                    <h2 class="text-uppercase mb-4">Contact Us</h2>
+
+                                    <!-- SPACER -->
+                                    <div class="spacer mb-lg-3"></div>
 
                                     <!-- TEXT -->
                                     <p class="h4 font-weight-normal">For any general inquiries, please fill in the following contact form</p>

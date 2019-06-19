@@ -28,12 +28,18 @@
 
     <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
     <script>
-    var loader = document.getElementById('lv-page-loader');
-    loader.style.display = 'flex';
-    // Limit to 2+ seconds of waiting time
-    setTimeout(function() {
-        loader.className += ' force-finish';
-    }, 2000);
+    (function loader() {
+        var loader = document.getElementById('lv-page-loader');
+        loader.style.display = 'flex';
+        // add class when window has fully loaded
+        window.addEventListener('load', function() {
+            document.documentElement.classList.add('has-loaded');
+        });
+        // Prevent loader from getting stuck if body takes too long
+        setTimeout(function() {
+            loader.classList.add('force-finish');
+        }, 1500); // max of 1.5 secs
+    })();
     </script>
     <div class="lv-page">
 
@@ -467,9 +473,7 @@
                                         </section>
 
                                         <!-- HEADER -->
-                                        <h2 class="display-1 text-white text-uppercase mb-0">Our
-                                            <span class="font-weight-normal">People</span>
-                                        </h2>
+                                        <h2 class="display-1 text-white text-uppercase mb-0">Our People</h2>
                                     </div>
                                 </div>
                             </div>
@@ -493,7 +497,7 @@
                                     <div class="col-xl-9">
 
                                         <!-- HEADER -->
-                                        <header class="text-uppercase mb-4 pb-1">
+                                        <header class="mb-4 pb-1">
                                             <h1 class="text-primary">Camille McDonald</h1>
                                             <h3 class="h4 text-muted">Senior Associate</h3>
                                         </header>
@@ -1161,14 +1165,12 @@
 
                                     <!-- HEADING -->
                                     <h2 class="text-uppercase mb-2">
-                                        <i class="fa fa-comment mr-1"></i> LawTalk
-                                        <span class="font-weight-normal">Blog</span>
-                                    </h2>
+                                        <i class="fa fa-comment mr-1"></i> LawTalk Blog</h2>
                                 </div>
                                 <div class="col-md-6 text-md-right">
 
                                     <!-- MORE BLOG POSTS -->
-                                    <a class="text-uppercase ml-auto" href="/blog/">More posts
+                                    <a class="text-uppercase ml-auto" href="/lawtalk-blog/">More posts
                                         <i class="fa fa-angle-right"></i>
                                     </a>
                                 </div>

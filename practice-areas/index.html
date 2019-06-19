@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no">
     <meta name="description" content="">
-    <title>Practice
-        <span class="font-weight-normal">Areas</span> - Andersons Solicitors</title>
+    <title>Practice Areas - Andersons Solicitors</title>
 
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap">
@@ -29,12 +28,18 @@
 
     <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
     <script>
-    var loader = document.getElementById('lv-page-loader');
-    loader.style.display = 'flex';
-    // Limit to 2+ seconds of waiting time
-    setTimeout(function() {
-        loader.className += ' force-finish';
-    }, 2000);
+    (function loader() {
+        var loader = document.getElementById('lv-page-loader');
+        loader.style.display = 'flex';
+        // add class when window has fully loaded
+        window.addEventListener('load', function() {
+            document.documentElement.classList.add('has-loaded');
+        });
+        // Prevent loader from getting stuck if body takes too long
+        setTimeout(function() {
+            loader.classList.add('force-finish');
+        }, 1500); // max of 1.5 secs
+    })();
     </script>
     <div class="lv-page">
 
@@ -460,9 +465,7 @@
                                             <div class="col-md-8">
 
                                                 <!-- HEADING -->
-                                                <h1 class="display-1 text-white text-uppercase mb-4">Practice
-                                                    <span class="font-weight-normal">Areas</span>
-                                                </h1>
+                                                <h1 class="display-1 text-white text-uppercase mb-4">Practice Areas</h1>
 
                                                 <!-- LEAD -->
                                                 <p class="display-3 mb-4 pb-1">At Andersons, we can advise and assist you in most areas of legal practice.</p>
@@ -502,7 +505,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Commercial Law and Business Law">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-15@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-15@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -530,7 +533,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Conveyancing Services">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-13@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-13@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -558,7 +561,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Criminal and Police Matters">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-07@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-07@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -586,7 +589,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Elder Law">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-04@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-04@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -614,7 +617,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Employment and Industrial Law">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-17@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-17@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -642,7 +645,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Family Law">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-16@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-16@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -670,7 +673,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Personal Injury">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-01@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -698,7 +701,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Wills and Estates">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-10@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-10@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -726,7 +729,7 @@
                                     <!-- IMAGE -->
                                     <a class="btn-tile" href="/practice-areas/practice-areas-item/">
                                         <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--440x180.svg" alt="Other Legal Services">
-                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/area-of-practice-thumbs/thumb-21@2x.jpg)"></span>
+                                        <span class="btn-tile-bg" style="background-image: url(/assets/img/content/practice-area-thumbs/thumb-21@2x.jpg)"></span>
                                     </a>
 
                                     <!-- CARD BODY -->
@@ -761,10 +764,10 @@
                                     <div class="bg-fill is-white"></div>
 
                                     <!-- HEADER -->
-                                    <h2 class="text-uppercase text-center text-md-left mb-4">Contact
-                                        <span class="font-weight-normal">Us</span>
-                                    </h2>
-                                    <div class="spacer mb-3"></div>
+                                    <h2 class="text-uppercase mb-4">Contact Us</h2>
+
+                                    <!-- SPACER -->
+                                    <div class="spacer mb-lg-3"></div>
 
                                     <!-- TEXT -->
                                     <p class="h4 font-weight-normal">For any general inquiries, please fill in the following contact form</p>
