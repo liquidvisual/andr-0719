@@ -5676,7 +5676,7 @@ function launchGallery() {
   });
 }(jQuery), $(function () {
   $.Scrollax();
-});var wow = new WOW({ boxClass: "wow", animateClass: "animated", offset: 0, mobile: !0, live: !0, callback: function callback(e) {}, scrollContainer: null, resetAnimation: !0 });wow.init();var headings = document.querySelectorAll(".display-1:not(.is-unique), h2.text-uppercase:not(.is-unique)");function boldSecondWord(e) {
+});var wow = new WOW({ boxClass: "wow", animateClass: "animated", offset: 0, mobile: !1, live: !0, callback: function callback(e) {}, scrollContainer: null, resetAnimation: !0 });wow.init();var headings = document.querySelectorAll(".display-1:not(.is-unique), h2.text-uppercase:not(.is-unique)");function boldSecondWord(e) {
   var t = e.textContent.trim().split(" "),
       n = t[0],
       i = t.slice(1).join(" ");e.innerHTML = n + ' <span class="font-weight-normal">' + i + "</span>";
