@@ -1,11 +1,10 @@
 ---
 layout: child_layout/our_people_item
 title: Camille McDonald
-title_override: Our <span class="font-weight-normal">People</span>
+title_override: Our People
 permalink: /our-people/our-people-item/
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:
-hero_caption_align: left
 breadcrumbs: true
 breadcrumbs_text: Back
 lead:

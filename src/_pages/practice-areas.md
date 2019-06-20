@@ -1,6 +1,6 @@
 ---
 layout: child_layout/practice_areas
-title: Practice <span class="font-weight-normal">Areas</span>
+title: Practice Areas
 permalink: /practice-areas/
 hero_options: is-default
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg

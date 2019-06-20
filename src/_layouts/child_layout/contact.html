@@ -9,14 +9,14 @@ layout: base__page
     <div class="container">
 
         <!-- HEADING -->
-        <h2 class="h3 text-uppercase text-dark mb-md-4">
-            Our South Australia Offices
+        <h2 class="mb-md-4">
+            South Australia Offices
         </h2>
 
         <!-- OFFICES -->
-        <ul class="block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
+        <ul class="mb-0 block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
             {% for item in settings.offices['sa'] %}
-                <li>
+                <li class="wow fadeIn">
                     {% include components/content/contact_box.html %}
                 </li>
             {% endfor %}
@@ -25,8 +25,4 @@ layout: base__page
     </div>
 </section>
 
-{% include sections/section_contact.html %}
-
-{% comment %}
-{% include components/widgets/google_map.html address="site.data.settings.offices.qld[0].address" %}
-{% endcomment %}
+{% include sections/section_contact_centered.html %}

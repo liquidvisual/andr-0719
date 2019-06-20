@@ -69,7 +69,18 @@
 
     li {
         padding: 0; // [RESET]
-        border-top: 1px solid white; //rgba(black, 0.13); //0.13
+    }
+
+    > ul > li:not(.active-parent) {
+        border-bottom: 1px solid rgba(white, 0.4);
+    }
+
+    > ul > li > ul > li {
+        border-top: 1px solid #2e2b2c;
+    }
+
+    .has-dropdown.active-parent {
+        margin-top: -1px;
     }
 
     //-----------------------------------------------------------------
@@ -103,7 +114,7 @@
         color: white;
 
         &:hover {
-            color: rgba(white, 0.9);
+            color: rgba(white, 0.8);
         }
     }
 
@@ -124,16 +135,16 @@
         position: relative;
         // background: #024f83;
 
-        &:after {
-            content: "\f105";
-            position: absolute;
-            top: rem-calc(8);
-            right: rem-calc(15);
-            font-family: "FontAwesome";
-            font-size: rem-calc(24);
-            font-weight: $font-weight-bold;
-            color: white;
-        }
+        // &:after {
+        //     content: "\f105";
+        //     position: absolute;
+        //     top: rem-calc(8);
+        //     right: rem-calc(15);
+        //     font-family: "FontAwesome";
+        //     font-size: rem-calc(24);
+        //     font-weight: $font-weight-bold;
+        //     color: white;
+        // }
     }
 
     //-----------------------------------------------------------------

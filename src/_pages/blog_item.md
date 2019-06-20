@@ -1,14 +1,12 @@
 ---
 layout: child_layout/blog_item
-title: The Trick to Creating Delicious Meals on the Go
-title_override: 'LawTalk Blog'
+title:
+title_override: LawTalk Blog
 permalink: /lawtalk-blog/lawtalk-blog-item/
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
-hero_options: is-gray-minimal
+hero_options: is-minimal
 breadcrumbs: true
 breadcrumbs_text: Back
-theme: theme-no-heroX
-lead:
 ---
 
 In an early blog post we explained [what you needed to know before moving into a retirement village](#). This article provides more detail about the rights you have and need to be aware of before signing a retirement village contract.

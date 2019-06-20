@@ -53,12 +53,12 @@ b, strong {
 
 .btn-download {
     padding: rem-calc(8 15);
-    background-color: #e6e6e6;
+    background-color: #f0f0f1; //#e6e6e6;
     font-size: rem-calc(14);
     color: $body-color;
 
     &:hover {
-        background-color: darken(#e6e6e6, 2%)
+        background-color: darken(#f0f0f1, 5%); //darken(#e6e6e6, 2%)
     }
 }
 
@@ -125,7 +125,7 @@ b, strong {
     color: $body-color;
 
     &.active {
-        background: $gray-200;
+        background: rgba(black, 0.08); //$gray-200;
         color: $body-color;
     }
 }

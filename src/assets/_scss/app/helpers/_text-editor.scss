@@ -46,6 +46,7 @@ $font-family-serif: inherit !default;
 .img-right img {
 	@include media-breakpoint-down(sm) {
 		width: 100%;
+		max-width: 100% !important; // [LOCKED] - handles case where template determines desktop default width
 	}
 }
 
@@ -74,6 +75,14 @@ $font-family-serif: inherit !default;
 
 	p, ul, ol, hr {
 		margin-bottom: rem-calc(20);
+	}
+
+	ul, ol {
+		// margin-bottom: rem-calc(30);
+
+		@include media-breakpoint-down(sm) {
+		    padding-left: rem-calc(30);
+		}
 	}
 
 	ul li,

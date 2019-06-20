@@ -35,7 +35,7 @@ layout: base__page_sidebar_8x4_nav
 
 	<!-- IMAGE -->
 	<p class="img-right">
-	    <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-1.jpg" alt="...">
+	    <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-01.jpg" alt="...">
 	</p>
 
 	<!-- WYSIWYG -->
@@ -60,11 +60,11 @@ layout: base__page_sidebar_8x4_nav
 </section>
 
 <!-- PEOPLE -->
-<section class="section">
+<section class="section pb-0 pb-lg-5 mb-lg-4 wow fadeIn">
 
 	<!-- HEADING -->
 	<h4 class="mb-4 pb-1">
-		Our {{ page.title }} Team
+		Our Personal Injury Team
 	</h4>
 
 	<!-- PEOPLE -->
@@ -78,16 +78,8 @@ layout: base__page_sidebar_8x4_nav
 </section>
 
 {% contentfor content_additional %}
-	<!-- BLOG POSTS -->
-	<section class="section is-secondary">
-		<div class="container">
-			<h2 class="text-white text-uppercase text-center mb-5">Blog Posts - Personal Compensation Law</h2>
-			{% include components/cards/cards.html flat="true" columns=4 %}
-			<p class="text-center mb-0">
-				<a href="/lawtalk-blog/" class="btn btn-primary">More Blog Articles &nbsp;<i class="fa fa-angle-right"></i></a>
-			</p>
-		</div>
-	</section>
+
+	{% include sections/section_blog_latest_minimal.html %}
 
 	{% include sections/section_contact.html %}
 {% endcontentfor %}

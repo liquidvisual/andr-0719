@@ -2,8 +2,6 @@
 layout: base__page
 ---
 
-{% assign posts = site.data.lorem_ipsum %}
-
 {% contentfor hero_caption %}
 
 	<div class="row justify-content-center">
@@ -24,6 +22,7 @@ layout: base__page
 				{{ content }}
 			</div>
 
+			<!-- SPACER -->
 			<div class="spacer my-3"></div>
 
 		</div>
@@ -31,6 +30,4 @@ layout: base__page
 
 {% endcontentfor %}
 
-<!-- { % include sections/section_lawtalk_blog.html %} -->
-
-{% include sections/section_contact.html %}
+{% include sections/section_contact_centered.html %}

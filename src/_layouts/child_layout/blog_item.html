@@ -1,13 +1,13 @@
 ---
-layout: base__page_sidebar_8x4
+layout: base__page_sidebar_9x3
 ---
 
-{% assign categories = site.categories | sort %}
+{% assign blog_categories = site.data.blog_categories %}
 {% assign blog_posts = site.data.lorem_ipsum %}
 {% assign item = blog_posts[0] %}
 
 <!-- BLOG POST -->
-<section class="section">
+<section class="section pb-0 pb-lg-5">
 
     <!-- TITLE -->
     <h1 class="h2 text-dark mb-4">
@@ -41,11 +41,11 @@ layout: base__page_sidebar_8x4
 
     <!-- IMAGE -->
     <p class="img-right">
-        <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-1.jpg" alt="...">
+        <img style="max-width: 400px" src="{{ item.image }}" alt="...">
     </p>
 
     {% if page.lead %}
-        <!-- LEAD -->
+        <!-- LEAD (OPTIONAL) -->
         <p class="lead">
             {{ page.lead }}
         </p>
@@ -53,18 +53,17 @@ layout: base__page_sidebar_8x4
 
     <!-- WYSIWYG -->
     <div class="wysiwyg mb-5">
-        {{ content | markdownify }}
+        {{ content }}
     </div>
 
+    <!-- DIVIDER -->
     <hr class="mb-4 pb-1">
 
     <!-- AUTHOR MEDIA -->
     <div class="media">
 
         <!-- MEDIA IMAGE -->
-        <p>
-            <img class="mr-4" style="max-width: 90px" src="/assets/img/ui/no-face.png" alt="Cameron Hall">
-        </p>
+        <p><img class="mr-4" style="max-width: 90px" src="/assets/img/ui/no-face.png" alt="..."></p>
 
         <!-- MEDIA BODY -->
         <div class="media-body">
@@ -73,6 +72,7 @@ layout: base__page_sidebar_8x4
                 <a href="/our-people/our-people-item/">John Smith <i class="fa fa-angle-right"></i></a>
             </p>
 
+            <!-- SMALL TEXT -->
             <small>
                 Senior Associate in <a href="#">Elder Law</a> and <a href="#">Commercial Law and Business Law</a>
                 and <a href="#">Wills and Estates</a>
@@ -80,6 +80,7 @@ layout: base__page_sidebar_8x4
         </div>
     </div>
 
+    <!-- DIVIDER -->
     <hr class="mb-4 pb-2">
 
     <!-- PREV + NEXT -->
@@ -137,7 +138,11 @@ layout: base__page_sidebar_8x4
             {% endfor %}
 
             <!-- MORE BUTTON -->
-            <a href="#" class="btn btn-primary side-btn btn-block text-left">See more posts by John<i class="ml-auto fa fa-angle-right"></i></a>
+            <a href="#" class="btn btn-primary side-btn btn-block text-left">
+                See more posts by John
+                <i class="ml-auto fa fa-angle-right"></i>
+            </a>
+
         </div>
 
         <!-- CATEGORIES -->
@@ -149,16 +154,20 @@ layout: base__page_sidebar_8x4
                 Categories
             </h3>
 
-            <!-- CAT LIST -->
+            <!-- LIST -->
             <div class="sidebox-body mb-2">
-                <ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-1">
+                <ul class="list-categories block-grid-xs-1 block-grid-md-2 block-grid-lg-1">
                     {% for item in site.data.blog_categories %}
-                        <li><a href="#">{{ item.title }}&nbsp;<i class="fa fa-angle-right d-inline"></i></a></li>
+                        <li><a href="#"><span class="text">{{- item.title -}}</span><i class="fa fa-angle-right d-inline"></i></a></li>
                     {% endfor %}
                 </ul>
             </div>
+
         </div>
 
     </section>
+{% endcontentfor %}
 
+{% contentfor content_additional %}
+    {% include sections/section_blog_latest_minimal.html %}
 {% endcontentfor %}

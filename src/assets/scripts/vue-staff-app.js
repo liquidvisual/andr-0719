@@ -46,8 +46,7 @@ function initStaffApp() {
         },
         data() {
             return {
-                sortOrder: 'Position', // need this to init with
-                teamByPositionAscending: {}
+                sortOrder: 'Position' // need this to init with
             }
         }
      });
@@ -81,38 +80,29 @@ function initStaffApp() {
                     // },
                     'Position': () => {
 
-                        // var result = this.list.filter((item, index, arr) => arr.indexOf(item.position) === item.position);
-                        var result = this.list.map((item, arr) => {
-                            return item.position;
-                        });
-
-                        result = result.filter((item, index) => result.indexOf(item) === index);
-                        // result = [...new Set(result)];
-
-
-                        var finalObj = {};
-
-                        result.forEach((item) => {
-                            finalObj.shit = [];
-                        })
-
-                        console.log(result);
+                        /* from DISCORD
+                        const groupByKey = (group, key, arr) => arr.reduce((acc, el) => {
+                          if (acc[el[group]]) {
+                            acc[el[group]] = [...acc[el[group]], {[key]: el[key]}]
+                          } else {
+                            acc[el[group]] = [{[key]: el[key]}]
+                          }
+                          return acc;
+                        }, {})
 
 
-                        var finalObj = [];
+                        groupByKey("position", "name", team);
 
-                        result.forEach((item) => {
+                        //{"Associate": [{"name": "Mr G"}], "Partner": [{"name": "Mr D"}, {"name": "Mr F"}], "Solicitor": [{"name": "Mr A"}, {"name": "Mr B"}, {"name": "Mr C"}, {"name": "Mr E"}]}
+                        */
 
-                        })
 
-                        console.log(finalObj)
-
-                       // return this.list.slice().sort(function(a, b) {
-                       //    if (a.position === b.position) {
-                       //       return a['lastName'].localeCompare(b['lastName']);
-                       //    }
-                       //    return a['position'].localeCompare(b['position']);
-                       // });
+                       return this.list.slice().sort(function(a, b) {
+                          if (a.position === b.position) {
+                             return a['lastName'].localeCompare(b['lastName']);
+                          }
+                          return a['position'].localeCompare(b['position']);
+                       });
                     },
                     'Surname': () => {
                         // Set slice() to avoid to generate an infinite loop!
@@ -131,7 +121,6 @@ function initStaffApp() {
             }
             // init
             this.list = staffList;
-            // this.teamByPositionAscending = teamByPositionAscending;
         },
         methods: {
             sort(sortOrder){

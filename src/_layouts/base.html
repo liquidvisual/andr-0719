@@ -15,17 +15,21 @@
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap">
 
+    {% comment %}
     <!-- build:js({src,.}) /assets/scripts/vue.js -->
     <script src="/node_modules/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>
     <!-- endbuild -->
-
     <script>Vue.config.productionTip = false;</script>
+    {% endcomment %}
+
+    <!-- WOW.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 </head>
-<body class="{{ page.theme }}" data-location>
+<body class="{{ page.theme }}">
 
     {% include components/layout/loader.html %}
 
@@ -87,15 +91,13 @@
     <script src="/node_modules/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="/node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="/node_modules/scrollax/scrollax.js"></script>
-    <script src="/assets/scripts/liquidvisual/responsive-utility.js"></script>
     <script src="/assets/scripts/liquidvisual/equal-height.js"></script>
-    <script src="/assets/scripts/hero-slider.js"></script>
+    <script src="/assets/scripts/liquidvisual/gallery.js"></script>
+    <script src="/assets/scripts/liquidvisual/headroom.js"></script>
+    <script src="/assets/scripts/liquidvisual/hero-slider.js"></script>
+    <script src="/assets/scripts/liquidvisual/off-canvas.js"></script>
+    <script src="/assets/scripts/liquidvisual/responsive-utility.js"></script>
     <script src="/assets/scripts/slider.js"></script>
-    <script src="/assets/scripts/modal.js"></script>
-    <script src="/assets/scripts/off-canvas.js"></script>
-    <script src="/assets/scripts/search.js"></script>
-    <script src="/assets/scripts/vue-staff-app.js"></script>
-    <script src="/assets/scripts/gallery.js"></script>
     <script src="/assets/scripts/main.js"></script>
     <!-- endbuild -->
 

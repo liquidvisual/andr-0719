@@ -14,11 +14,18 @@
 
 <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
 <script>
-    var loader = document.getElementById('lv-page-loader');
-    loader.style.display = 'flex';
+    (function loader(){
+        var loader = document.getElementById('lv-page-loader');
+        loader.style.display = 'flex';
 
-    // Limit to 2+ seconds of waiting time
-    setTimeout(function(){
-        loader.className += ' force-finish';
-    }, 2000);
+        // add class when window has fully loaded
+        window.addEventListener('load', function() {
+            document.documentElement.classList.add('has-loaded');
+        });
+
+        // Prevent loader from getting stuck if body takes too long
+        setTimeout(function(){
+            loader.classList.add('force-finish');
+        }, 1500); // max of 1.5 secs
+    })();
 </script>

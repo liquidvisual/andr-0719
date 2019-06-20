@@ -2,37 +2,14 @@
 layout: base__page
 ---
 
-{% comment %}
-<script>
-	var staffList = {{ site.data.staff_by_group }};
-</script>
-{% endcomment %}
-
 <!-- SECTION -->
-<section id="vue-staff-app" class="section">
+<section class="section">
 	<div class="container">
-		<div class="row align-items-end">
-
-			{% comment %}
-			<div class="col-md-8 pr-md-4">
-
-				<!-- LEAD -->
-				<p class="lead mb-4">
-					{{ page.lead }}
-				</p>
-
-				<!-- WYSIWYG -->
-				<div class="wysiwyg mb-4 mb-md-0">
-					{{ content | markdownify }}
-				</div>
-
-			</div>
-			{% endcomment %}
-
-			<div class="col-md-6 ml-auto">
+		<div class="row">
+			<div class="col text-center text-md-right">
 
 				<!-- TABS -->
-				<nav class="btn-tabs nav mb-4 d-inline-flex align-items-center float-right mb-4 mb-md-0" role="tablist">
+				<nav class="btn-tabs nav mb-4 d-inline-flex align-items-center mb-4 mb-md-0" role="tablist">
 
 					<!-- VIEW BY -->
 					<span class="mr-3">View by:</span>
@@ -48,23 +25,8 @@ layout: base__page
 					</a>
 
 				</nav>
-
-				{% comment %}
-				<!-- FORM SORT SELECT -->
-				<div class="form-sort-select d-flex align-items-center ml-xxl-5">
-					<span class="text">Sort by:</span>
-					<sort-select
-						v-model="sortOrder"
-						:sort-options="sortOptions">
-					</sort-select>
-				</div>
-				{% endcomment %}
-
 			</div>
 		</div>
-
-		<!-- SPACER -->
-		<!-- <div class="spacer mb-3 mb-md-5"></div> -->
 
 		{% capture view_mode_1 %}
 			{% for item in site.data.staff_by_group %}
@@ -82,7 +44,7 @@ layout: base__page
 					{% for item in item[1] %}
 						<li>
 							<!-- CARD -->
-							<div class="card is-flat">
+							<div class="card is-flat wow fadeIn">
 
 								<!-- IMAGE -->
 								<a class="btn-tile" href="{{ item.url }}">
@@ -99,13 +61,6 @@ layout: base__page
 											{{ item.name }}
 										</h3>
 									</a>
-
-									{% comment %}
-									<!-- POSITION -->
-									<p class="text-muted h6 font-weight-normal">
-										{{ item.position }}
-									</p>
-									{% endcomment %}
 
 								</div>
 							</div>
@@ -130,7 +85,7 @@ layout: base__page
 				{% for item in site.data.staff %}
 					<li>
 						<!-- CARD -->
-						<div class="card is-flat">
+						<div class="card is-flat wow fadeIn">
 
 							<!-- IMAGE -->
 							<a class="btn-tile" href="{{ item.url }}">
@@ -164,75 +119,15 @@ layout: base__page
 		<div class="tab-content mb-4">
 
 			<!-- VIEW MODE #1 -->
-			<div id="view-mode-1" class="tab-pane fade active show" role="tabpanel">
+			<div id="view-mode-1" class="tab-pane fadeX active show" role="tabpanel">
 				{{ view_mode_1 }}
 			</div>
 
 			<!-- VIEW MODE #2 -->
-			<div id="view-mode-2" class="tab-pane fade" role="tabpanel">
+			<div id="view-mode-2" class="tab-pane fadeX" role="tabpanel">
 				{{ view_mode_2 }}
 			</div>
 
 		</div>
-
-		{% comment %}
-		<div
-			v-for="(item, propertyName, index) in teamByPositionAscending"
-			:key="propertyName"
-		>
-			<h2 v-text="propertyName"></h2>
-
-			<div v-for="(item, index) in item" v-text="item.name">
-			</div>
-		</div>
-
-		<!-- STAFF LIST -->
-		<transition-group
-			v-cloak
-			name="staffTransition"
-			tag="ul"
-			class="block-grid-xs-2 block-grid-lg-4 block-grid-xl-5 is-condensed mb-5"
-		>
-			<li
-				v-for="(item, index) in sort(sortOrder)"
-				:key="index"
-			>
-				<!-- CARD -->
-				<div class="card is-flat">
-
-					<!-- IMAGE -->
-					<a class="btn-tile" :href="item.url">
-						<img width="100%" class="card-img-top" src="/assets/img/ui/no-face.png" :alt="item.name">
-						<span v-if="!item.image" class="btn-tile-bg" style="background-image: url('/assets/img/ui/no-face.png');"></span>
-						<span v-if="item.image" class="btn-tile-bg" :style="{ backgroundImage: 'url(' + item.image +')' }" style="background-position: top center;"></span>
-					</a>
-
-					<!-- CARD BODY -->
-					<div class="card-body d-flex flex-column">
-
-						<!-- TITLE -->
-						<a :href="item.url">
-							<h3 class="h5 text-uppercase card-title mb-1" v-text="item.name"></h3>
-						</a>
-
-						<!-- POSITION + LOCATION -->
-						<p class="text-muted h6 font-weight-normal">
-							<span v-text="item.position"></span>
-						</p>
-
-					</div>
-				</div>
-			</li>
-		</transition-group>
-		{% endcomment %}
-
 	</div>
 </section>
-
-{% comment %}
-<style>
-	.staffTransition-move {
-		transition: transform 600ms ease;
-	}
-</style>
-{% endcomment %}

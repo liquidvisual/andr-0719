@@ -8,89 +8,35 @@ layout: base__page
 <section class="section">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
-
-				<!-- PHOTO -->
-				<p class="mb-1"><img width="100%" src="/assets/img/content/people/camille-mcdonald@2x.jpg" alt="Camille McDonald"></p>
-
-				{% comment %}
-				<!-- GET IN TOUCH -->
-				<div class="sidebox mb-1">
-					<h3 class="sidebox-header h5 text-uppercase mb-3">Contact Camille</h3>
-					<div class="sidebox-body">
-
-						<!-- EMAIL -->
-						<p class="mb-3">
-		                    <a class="d-inline-flex align-items-center" href="mailto:vanessa@hallpayne.com.au">
-		                        <i class="fa fa-envelope mr-2"></i>
-		                        <span class="text">Send an email</span>
-		                    </a>
-		                </p>
-
-						<!-- PHONE -->
-						<p class="mb-3">
-						    <a class="d-inline-flex align-items-center" href="tel:0732810322">
-						        <i class="fa fa-phone mr-2"></i>
-						        <span class="text">(08) 8447 4911</span>
-						    </a>
-						</p>
-
-						<!-- FAX -->
-						<p class="mb-3">
-						    <a class="d-inline-flex align-items-center" href="#/LINK-HERE">
-						        <i class="fa fa-fax mr-2"></i>
-						        <span class="text">(08) 8238 6600</span>
-						    </a>
-						</p>
-
-					</div>
-				</div>
-				{% endcomment %}
-
-				<!-- KEY SERVICE AREAS -->
-				<div class="sidebox mb-1">
-					<h3 class="sidebox-header h5 text-uppercase mb-3">Camille's Practice Areas</h3>
-					<div class="sidebox-body">
-						<ul class="block-grid-xs-1">
-							<li>Children's issues</li>
-							<li>Property settlement</li>
-							<li>Divorce</li>
-							<li>Consent Orders</li>
-							<li>Mediation and Negotiation</li>
-							<li>Recovery and relocation</li>
-							<li>Child abuse matters</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- SEE BLOG POSTS -->
-				<a href="/blog/" class="btn btn-primary side-btn btn-block text-left"><i class="fa fa-comment icon mr-2"></i> See Blog Posts by Camille<i class="ml-auto fa fa-angle-right"></i></a>
-
-			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 order-md-last">
 				<div class="row">
-					<div class="col-md-9">
+					<div class="col-xl-9">
 
 						<!-- HEADER -->
-						<header class="text-uppercase mb-4 pb-1">
+						<header class="mb-4 pb-1">
 							<h1 class="text-primary">{{ page.title }}</h1>
 							<h3 class="h4 text-muted">Senior Associate</h3>
 						</header>
 
+						<!-- PHOTO (MOBILE ONLY) -->
+						<p class="mb-4 hidden-md-up">
+							<img width="100%" src="/assets/img/content/people/camille-mcdonald@2x.jpg" alt="Camille McDonald">
+						</p>
+
 						<!-- EMAIL -->
-	                    <a class="d-inline-flex align-items-center" href="mailto:vanessa@hallpayne.com.au" data-toggle="modal" data-target="#contact-modal">
+	                    <a class="d-inline-flex align-items-center mb-2 mb-md-0" href="mailto:camille@email.com" data-toggle="modal" data-target="#contact-modal">
 	                        <i class="fa fa-envelope mr-2 text-dark"></i>
 	                        <span class="text">Send an email</span>
 	                    </a> <span class="mx-2">|</span>
 
 	                	<!-- PHONE -->
-	                    <a class="d-inline-flex align-items-center" href="tel:0732810322">
+	                    <a class="d-inline-flex align-items-center mb-2 mb-md-0" href="tel:0884474911">
 	                        <i class="fa fa-phone mr-2 text-dark"></i>
 	                        <span class="text">(08) 8447 4911</span>
-	                    </a> <span class="mx-2">|</span>
+	                    </a> <span class="mx-2 hidden-sm-down">|</span>
 
 	                	<!-- FAX -->
-	                    <a class="d-inline-flex align-items-center" href="#/LINK-HERE">
+	                    <a class="d-block d-md-inline-flex align-items-center mb-2 mb-md-0" href="#/LINK-HERE">
 	                        <i class="fa fa-fax mr-2 text-dark"></i>
 	                        <span class="text">(08) 8238 6600</span>
 	                    </a>
@@ -110,82 +56,76 @@ layout: base__page
 					</div>
 				</div>
 			</div>
+			<div class="col-md-4">
+
+				<!-- PHOTO (DESKTOP) -->
+				<p class="mb-1 hidden-sm-down">
+					<img width="100%" src="/assets/img/content/people/camille-mcdonald@2x.jpg" alt="Camille McDonald">
+				</p>
+
+				<!-- AREAS OF EXPERTISE -->
+				<div class="sidebox mb-1">
+
+					<!-- HEADING -->
+					<h3 class="sidebox-header h5 text-uppercase mb-3">
+						Camille's Areas of Expertise
+					</h3>
+
+					<!-- LIST -->
+					<div class="sidebox-body">
+						<ul class="block-grid-xs-1">
+							<li>Children's issues</li>
+							<li>Property settlement</li>
+							<li>Divorce</li>
+							<li>Consent Orders</li>
+							<li>Mediation and Negotiation</li>
+							<li>Recovery and relocation</li>
+							<li>Child abuse matters</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- SEE BLOG POSTS (OPTIONAL) -->
+				<a href="/blog/" class="btn btn-primary side-btn btn-block text-left">
+					<i class="fa fa-comment icon mr-2"></i> See Blog Posts by Camille
+					<i class="ml-auto fa fa-angle-right"></i>
+				</a>
+
+			</div>
 		</div>
 	</div>
 </section>
 
-{% comment %}
-{% contentfor sidebar %}
-
-	<!-- SECTION -->
-	<section class="section">
-
-	    <!-- SIDE BOX -->
-	    <div class="sidebox mb-4">
-
-	        <!-- HEADING -->
-	        <h3 class="sidebox-header h5 text-uppercase mb-4">
-	            <i class="fa fa-users mr-1"></i>
-	            Browse People
-	        </h3>
-
-	        <!-- PEOPLE LIST -->
-	        <div class="sidebox-body mb-2">
-	            <ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-1">
-	                {% for item in site.data.staff %}
-	                    <li><a href="#">{{ item.name }}&nbsp;<i class="fa fa-angle-right d-inline"></i></a></li>
-	                {% endfor %}
-	            </ul>
-	        </div>
-	    </div>
-	</section>
-
-{% endcontentfor %}
-
-
-<!-- BROWSE OUR PEOPLE -->
-<section class="section is-gray">
-	<div class="container">
-
-	    <!-- HEADING -->
-    	<h2 class="text-uppercase mb-2">
-    		<i class="fa fa-users mr-1"></i> Browse <span class="font-weight-normal">People</span>
-    	</h2>
-
-	    <hr class="mb-5">
-
-	    <!-- PEOPLE LIST -->
-	    <div class="sidebox-body mb-2">
-	        <ul class="block-grid-xs-1 block-grid-md-5 is-condensed">
-	            {% for item in site.data.staff %}
-	                <li><a class="text-body font-weight-normal" href="/our-people/our-people-item/">{{ item.name }}&nbsp;<i class="fa fa-angle-right d-inline"></i></a></li>
-	            {% endfor %}
-	        </ul>
-	    </div>
-
-	</div>
-</section>
-{% endcomment %}
-
 <!-- PEOPLE -->
-<section class="section is-gray">
+<section class="section is-gray wow fadeIn">
 	<div class="container">
 
-	    <!-- HEADING -->
-	    <div class="d-flex align-items-center">
-	    	<h2 class="text-uppercase mb-2">
-	    		<i class="fa fa-comment mr-1"></i> Browse <span class="font-weight-normal">People</span>
-	    	</h2>
+	    <!-- HEADER -->
+	    <header>
+	    	<div class="row align-items-center">
+	    		<div class="col-md-6">
 
-	    	<!-- MORE BLOG POSTS -->
-	    	<a class="text-uppercase ml-auto text-dark" href="/our-people/">Our People <i class="fa fa-angle-right"></i></a>
-	    </div>
+	    			<!-- HEADING -->
+	    			<h2 class="text-uppercase mb-2">
+	    				<i class="fa fa-users mr-1"></i> Browse <span class="font-weight-normal">People</span>
+	    			</h2>
 
+	    		</div>
+	    		<div class="col-md-6 text-md-right">
+
+	    			<!-- MORE BLOG POSTS -->
+	    			<a class="text-uppercase ml-auto text-dark" href="/our-people/">View All <i class="fa fa-angle-right"></i></a>
+
+	    		</div>
+	    	</div>
+	    </header>
+
+		<!-- DIVIDER -->
 	    <hr class="mb-5">
 
 		<!-- PEOPLE -->
-		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-xl-4 block-grid-xxl-5 is-condensed-more">
-			{% for item in site.data.staff %}
+		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-xl-4 is-condensed-more mb-4">
+			{% for item in site.data.staff limit: 20 %}
 				<li>
 					{% include components/media/media_btn.html %}
 				</li>
@@ -195,6 +135,6 @@ layout: base__page
 	</div>
 </section>
 
-{% include sections/section_lawtalk_blog.html %}
+{% include sections/section_blog_latest_minimal.html %}
 
 {% include components/modals/modal_contact_form.html %}

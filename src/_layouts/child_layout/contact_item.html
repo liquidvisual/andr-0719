@@ -1,5 +1,5 @@
 ---
-layout: base__page_sidebar_8x4_form
+layout: base__page_sidebar_7x5_bg
 ---
 
 {% assign offices = site.data.settings.offices['sa'] %}
@@ -17,6 +17,19 @@ layout: base__page_sidebar_8x4_form
 <div class="hidden-md-up">
     {% include components/widgets/google_map.html %}
 </div>
+
+{% contentfor sidebar %}
+
+    <!-- DIRECTIONS -->
+    <section class="section">
+        <div class="container">
+            <div class="wysiwyg text-white pl-lg-5">
+                {{ content }}
+            </div>
+        </div>
+    </section>
+
+{% endcontentfor %}
 
 {% contentfor content_additional %}
     <!-- MD UP MAP -->

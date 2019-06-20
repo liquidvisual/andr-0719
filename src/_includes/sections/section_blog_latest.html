@@ -1,0 +1,31 @@
+{% assign settings = site.data.settings %}
+{% assign au_office = settings.offices['aus'][0] %}
+{% assign bg_image = include.bg_image | default: '' %}
+{% assign parallax_enabled = include.parallax_enabled | default: false %}
+
+<!-- LATEST FROM THE BLOG -->
+<section
+	class="section section-blog is-secondary is-dark"
+	style="background-image: url({{ bg_image }})">
+
+	{% if parallax_enabled %}
+		<!-- PARALLAX (OPTIONAL) -->
+		{% include components/hero/hero__parallax_plugin.html image=bg_image %}
+	{% endif %}
+
+	<div class="container wow fadeIn">
+
+		<!-- HEADING -->
+		<h2 class="text-white text-uppercase text-center mb-5 has-scroll-reveal">
+			Latest from the Blog
+		</h2>
+
+		{% include components/cards/cards.html flat="true" columns=4 %}
+
+		<!-- CTA -->
+		<p class="text-center mb-0">
+			<a href="/lawtalk-blog/" class="btn btn-primary">More Blog Articles &nbsp;<i class="fa fa-angle-right"></i></a>
+		</p>
+
+	</div>
+</section>

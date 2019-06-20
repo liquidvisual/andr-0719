@@ -1,6 +1,6 @@
 ---
 layout: child_layout/about
-title: About <span class="font-weight-normal">Andersons</span>
+title: About Andersons
 permalink: /about/
 hero_image: /assets/img/content/backgrounds/about-bg.jpg
 hero_options: is-default

@@ -81,6 +81,14 @@
 
     a {
         display: flex;
+
+        &:hover h3 {
+            color: $primary !important;
+        }
+    }
+
+    h3 {
+        transition: color 200ms ease;
     }
 
     li a:before {
@@ -93,6 +101,16 @@
         height: rem-calc(15);
         margin-right: rem-calc(26);
         background-color: $primary;
+    }
+}
+
+//-----------------------------------------------------------------
+// QUICK FIX - appears in blog sidebox categories
+//-----------------------------------------------------------------
+
+.list-categories {
+    .text {
+        margin-right: 3px;
     }
 }
 

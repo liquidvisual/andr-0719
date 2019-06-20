@@ -5,8 +5,8 @@ layout: base__page
 <!-- SITE MAP -->
 <section class="section">
 	<div class="container">
-		<nav class="lv-site-map">
-			<!-- { % include components/navigation/nav.html %} -->
+		<nav class="site-map">
+			{% include components/navigation/nav.html data=site.data.sitemap %}
 		</nav>
 	</div>
 </section>

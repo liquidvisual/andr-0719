@@ -4,10 +4,7 @@ title: Personal Injury
 permalink: /practice-areas/practice-areas-item/
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:
-hero_caption_align: left
 breadcrumbs: true
-locational: true
-theme: theme-show-modal
 lead:
 side_video: true
 ---

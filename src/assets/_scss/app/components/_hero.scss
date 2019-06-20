@@ -10,23 +10,21 @@
 //-----------------------------------------------------------------
 
 $hero-height-presets: (
-    is-home: (
-        xs: auto,
-        md: auto, //rem-calc(800),
-        lg: auto, //rem-calc(846), // [LOCKED] - 576 maintain aspect ratio?
-        // xl: rem-calc(660),
-    ),
     is-default: (
         xs: auto,
-        md: auto, //rem-calc(800),
-        lg: auto, //rem-calc(846), // [LOCKED] - 576 maintain aspect ratio?
-        // xl: rem-calc(660),
+        md: auto,
+        lg: auto, // rem-calc(846), // [LOCKED] - 576 maintain aspect ratio?
+    ),
+    is-home: (
+        xs: auto,
+        md: auto,
+        lg: auto,
     ),
     is-short: (
-        xs: rem-calc(252), //300
-        md: rem-calc(290), //386
-        lg: rem-calc(322), //386
-        xxl: rem-calc(354) // client requested
+        xs: rem-calc(252), // 300
+        md: rem-calc(290), // 386
+        lg: rem-calc(322), // 386
+        xxl: rem-calc(354)
     ),
     is-full: (
         xs: auto,
@@ -38,12 +36,12 @@ $hero-height-presets: (
         md: auto, //rem-calc(320),
         lg: auto //rem-calc(386),
     ),
-    is-gray-minimal: (
+    is-minimal: (
         xs: auto,
         md: auto,
         lg: auto,
     ),
-    is-gray-minimal-short: (
+    is-minimal-short: (
         xs: rem-calc(70),
         md: rem-calc(76),
         lg: rem-calc(76),
@@ -51,11 +49,11 @@ $hero-height-presets: (
 );
 
 //-----------------------------------------------------------------
-// HERO WRAPPER [LOCKED]
+// HERO WRAPPER
 //-----------------------------------------------------------------
 
 .lv-hero-wrapper {
-    position: relative;
+    position: relative; // [LOCKED]
 
     .lv-hero {
         overflow: hidden; // [LOCKED] - hides slides when no JS
@@ -75,15 +73,6 @@ $hero-height-presets: (
             @include media-breakpoint-up($bp) {
                 height: $val;
             }
-
-            // @if $bp != xl {
-            //     @include media-breakpoint-up($bp) {
-            //         min-height: $val;
-            //     }
-            // } @else {
-            //     height: $val;
-            //     min-height: $val;
-            // }
         }
     }
 }
@@ -110,7 +99,7 @@ $hero-height-presets: (
     @include media-breakpoint-up(md) {
         height: 100%;
         // padding: 0;
-        padding: 8.7% 0;//rem-calc(110 0);
+        padding: 8.7% 0; //rem-calc(110 0);
     }
 
     @include media-breakpoint-up(xl) {
@@ -149,11 +138,11 @@ $hero-height-presets: (
 }
 
 //-----------------------------------------------------------------
-// IS GRAY MINIMAL (BLOG/BLOG ITEM)
+// IS MINIMAL (BLOG/BLOG ITEM)
 //-----------------------------------------------------------------
 
-.is-gray-minimal,
-.is-gray-minimal-short {
+.is-minimal,
+.is-minimal-short {
 
     .lv-hero-item {
         padding: rem-calc(50 0 30 0);
@@ -219,14 +208,13 @@ $hero-height-presets: (
 //----------------------------------------------------------------- *****
 
 .is-home .lv-hero-item-caption {
-    padding: rem-calc(20);
+    // padding: rem-calc(20);
     background: rgba($primary, 0.82);
 
     @include media-breakpoint-down(sm) {
         left: -20px;
         width: calc(100% + 40px);
-        // max-width: rem-calc(680); // [LOCKED] - psd
-        padding: rem-calc(15);
+        padding: rem-calc(20 15);
         margin-top: 100px;
         margin-bottom: rem-calc(-50);
     }

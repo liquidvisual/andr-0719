@@ -4,13 +4,9 @@ title: Superannuation Insurance Claims
 permalink: /practice-areas/practice-areas-item/practice-areas-item/
 hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
 hero_options:
-hero_caption_align: left
 breadcrumbs: true
 breadcrumbs_text: Personal Injury
-locational: true
-theme: theme-show-modal
 lead:
-
 accordion:
   - title: What can I expect from our personal injury team?
     body: |
