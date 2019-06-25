@@ -81,7 +81,7 @@
                                         <!-- SUBMENU ARROW -->
                                         </a>
                                 </li>
-                                <li class="active" data-hook="about">
+                                <li class="has-dropdown active-parent active" data-hook="about">
 
                                     <!-- ANCHOR -->
                                     <a href="/about/">
@@ -90,7 +90,25 @@
                                         <span class="text">About</span>
 
                                         <!-- SUBMENU ARROW -->
-                                        </a>
+                                        <span class="submenu-arrow">
+                                            <i class="fa fa-angle-right"></i>
+                                        </span>
+                                    </a>
+
+                                    <!-- DROPDOWN -->
+                                    <ul class="dropdown" data-parent="About">
+                                        <li class="" data-hook="what-s-new">
+
+                                            <!-- ANCHOR -->
+                                            <a href="/about/whats-new/">
+
+                                                <!-- TEXT -->
+                                                <span class="text">What's New?</span>
+
+                                                <!-- SUBMENU ARROW -->
+                                                </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="has-dropdown" data-hook="our-people">
 
@@ -464,26 +482,28 @@
 
                                     <!-- HERO CAPTION -->
                                     <div class="lv-hero-item-caption animated fadeInLeftSubtle">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-8">
 
-                                                <!-- HEADING -->
-                                                <h1 class="display-1 text-white text-uppercase mb-4">About Andersons</h1>
+                                        <!-- HEADING -->
+                                        <h1 class="display-1 text-white text-uppercase mb-4">About Andersons</h1>
 
-                                                <!-- LEAD -->
-                                                <p class="display-3 mb-4 pb-1">Andersons Solicitors has provided legal service to tens and thousands of South Australians for over 50 years.</p>
+                                        <!-- LEAD -->
+                                        <p class="display-3 mb-4 pb-1">Andersons Solicitors has provided legal service to tens and thousands of South Australians for over 50 years.</p>
 
-                                                <!-- WYSIWYG -->
-                                                <div class="wysiwyg h4 font-weight-normal">
-                                                    <p>Originally based in Port Adelaide, Andersons has significantly expanded over the 50 years with full time office locations in the Adelaide CBD, Morphett Vale, Port Adelaide and Murray Bridge over 50 staff.</p>
-                                                    <p>Andersons Solicitors practice in the areas of family law, civil litigation, wills and estates and commercial law</p>
-                                                    <p>Wherever you may be based in South Australia or throughout the country, we are able to easily and professionally provide services via email and phone.</p>
-                                                </div>
-
-                                                <!-- SPACER -->
-                                                <div class="spacer my-3"></div>
-                                            </div>
+                                        <!-- WYSIWYG -->
+                                        <div class="wysiwyg h4 font-weight-normal mb-4">
+                                            <p>Originally based in Port Adelaide, Andersons has significantly expanded over the 50 years with full time office locations in the Adelaide CBD, Morphett Vale, Port Adelaide and Murray Bridge over 50 staff.</p>
+                                            <p>Andersons Solicitors practice in the areas of family law, civil litigation, wills and estates and commercial law</p>
+                                            <p>Wherever you may be based in South Australia or throughout the country, we are able to easily and professionally provide services via email and phone.</p>
                                         </div>
+
+                                        <!-- WHAT'S NEW? -->
+                                        <p>
+                                            <a href="/about/whats-new/" class="btn btn-primary">What's New?</a>
+                                        </p>
+
+                                        <!-- SPACERS -->
+                                        <div class="spacer my-5 my-xl-3"></div>
+                                        <div class="spacer py-5 my-5 py-xxl-0 my-md-0"></div>
                                     </div>
                                 </div>
                             </div>
@@ -682,7 +702,7 @@
                     <!-- SUBMENU ARROW -->
                     </a>
             </li>
-            <li class="active" data-hook="about">
+            <li class="has-dropdown active-parent active" data-hook="about">
 
                 <!-- ANCHOR -->
                 <a href="/about/">
@@ -691,7 +711,25 @@
                     <span class="text">About</span>
 
                     <!-- SUBMENU ARROW -->
-                    </a>
+                    <span class="submenu-arrow">
+                        <i class="fa fa-angle-right"></i>
+                    </span>
+                </a>
+
+                <!-- DROPDOWN -->
+                <ul class="dropdown" data-parent="About">
+                    <li class="" data-hook="what-s-new">
+
+                        <!-- ANCHOR -->
+                        <a href="/about/whats-new/">
+
+                            <!-- TEXT -->
+                            <span class="text">What's New?</span>
+
+                            <!-- SUBMENU ARROW -->
+                            </a>
+                    </li>
+                </ul>
             </li>
             <li class="has-dropdown" data-hook="our-people">
 
