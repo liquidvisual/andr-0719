@@ -2,7 +2,7 @@
 layout: child_layout/practice_areas_item
 title: Personal Injury
 permalink: /practice-areas/practice-areas-item/
-hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
+hero_image: /assets/img/content/backgrounds/practice-areas-bg-2.jpg
 hero_options:
 breadcrumbs: true
 lead:

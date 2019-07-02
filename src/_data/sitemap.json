@@ -4,7 +4,13 @@
     },
     "About": {
         "alias": "about-us",
-        "url": "/about/"
+        "url": "/about/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "What's New?": {
+                "url": "/about/whats-new/",
+            }
+        }
     },
     "Our People": {
         "url": "/our-people/",

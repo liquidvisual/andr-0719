@@ -1,9 +1,9 @@
 ---
-layout: child_layout/blog_item
+layout: child_layout/about_whats_new_item
 title:
-title_override: LawTalk Blog
-permalink: /lawtalk-blog/lawtalk-blog-item/
-hero_image: /assets/img/content/backgrounds/blog-bg-2.jpg
+title_override: What's New?
+permalink: /about/whats-new/whats-new-item/
+hero_image: /assets/img/content/backgrounds/about-bg.jpg
 hero_options:
 breadcrumbs: true
 breadcrumbs_text: Back

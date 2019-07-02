@@ -10,7 +10,7 @@ layout: base__page_sidebar_9x3
 <section class="section pb-0 pb-lg-5">
 
     <!-- TITLE -->
-    <h1 class="h2 text-dark mb-4">
+    <h1 class="h2 mb-4">
         {{ item.title }}
     </h1>
 
@@ -31,7 +31,7 @@ layout: base__page_sidebar_9x3
 
             <!-- DOWNLOAD LINK(S) -->
             <p>
-                <a href="#" class="btn btn-download text-dark">
+                <a href="#" class="btn btn-download text-body">
                     <i class="fa fa-file-pdf-o mr-2"></i> Download as PDF
                 </a>
             </p>
@@ -101,7 +101,7 @@ layout: base__page_sidebar_9x3
             <div class="author-box mb-4">
 
                 <!-- HEADING -->
-                <h3 class="author-box-header font-weight-bold text-dark h5">
+                <h3 class="author-box-header font-weight-bold text-body h5">
                     Get in touch with the author
                 </h3>
 
@@ -122,7 +122,7 @@ layout: base__page_sidebar_9x3
         <div class="mb-5">
 
             <!-- HEADING -->
-            <h3 class="sidebox-header h5 text-dark font-weight-bold mb-4">
+            <h3 class="sidebox-header h5 text-body font-weight-bold mb-4">
                 Other blog posts by Errol...
             </h3>
 
@@ -130,7 +130,7 @@ layout: base__page_sidebar_9x3
             {% for item in blog_posts limit: 3 %}
                 <hr>
                 <a class="d-block mb-3" href="{{ item.url }}">
-                    <h4 class="h6 text-dark font-weight-bold mb-0">{{ item.title }}</h4>
+                    <h4 class="h6 text-body font-weight-bold mb-0">{{ item.title }}</h4>
                     <small class="text-muted">
                         <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%A %B %d, %Y" }}</time>
                     </small>

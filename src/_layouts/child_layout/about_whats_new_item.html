@@ -1,0 +1,96 @@
+---
+layout: base__page_sidebar_9x3
+---
+
+{% assign blog_categories = site.data.blog_categories %}
+{% assign blog_posts = site.data.lorem_ipsum %}
+{% assign item = blog_posts[0] %}
+
+<!-- BLOG POST -->
+<section class="section pb-0 pb-lg-5">
+
+    <!-- TITLE -->
+    <h1 class="h2 text-body mb-4">
+        {{ item.title }}
+    </h1>
+
+    <!-- DATE + DOWNLOADS -->
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- DATE -->
+            <p class="h5 font-weight-normal text-muted mb-4 pb-2">
+                <i class="fa fa-calendar-o mr-1"></i>
+                <time datetime="{{ item.date | date_to_xmlschema }}">
+                    {{ item.date | date: "%A %B %d, %Y" }}
+                </time>
+            </p>
+
+        </div>
+        <div class="col-md-6 mb-3 text-md-right">
+
+            <!-- DOWNLOAD LINK(S) -->
+            <p>
+                <a href="#" class="btn btn-download text-body">
+                    <i class="fa fa-file-pdf-o mr-2"></i> Download as PDF
+                </a>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- IMAGE -->
+    <p class="img-right">
+        <img style="max-width: 400px" src="{{ item.image }}" alt="...">
+    </p>
+
+    {% if page.lead %}
+        <!-- LEAD (OPTIONAL) -->
+        <p class="lead">
+            {{ page.lead }}
+        </p>
+    {% endif %}
+
+    <!-- WYSIWYG -->
+    <div class="wysiwyg mb-5">
+        {{ content }}
+    </div>
+
+    <!-- DIVIDER -->
+    <hr class="mb-4 pb-1">
+
+    <!-- AUTHOR MEDIA -->
+    <div class="media">
+
+        <!-- MEDIA IMAGE -->
+        <p><img class="mr-4" style="max-width: 90px" src="/assets/img/ui/no-face.png" alt="..."></p>
+
+        <!-- MEDIA BODY -->
+        <div class="media-body">
+            <p>
+                <strong>Get in touch with today's blog writer:</strong><br>
+                <a href="/our-people/our-people-item/">John Smith <i class="fa fa-angle-right"></i></a>
+            </p>
+
+            <!-- SMALL TEXT -->
+            <small>
+                Senior Associate in <a href="#">Elder Law</a> and <a href="#">Commercial Law and Business Law</a>
+                and <a href="#">Wills and Estates</a>
+            </small>
+        </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <hr class="mb-4 pb-2">
+
+    <!-- PREV + NEXT -->
+    <p>
+        <a class="float-left" href="#prev"><i class="fa fa-angle-left"></i> Previous Item</a>
+        <a class="float-right" href="#next">Next Item <i class="fa fa-angle-right"></i></a>
+    </p>
+
+</section>
+
+{% contentfor content_additional %}
+    {% include sections/section_blog_latest_minimal.html %}
+{% endcontentfor %}

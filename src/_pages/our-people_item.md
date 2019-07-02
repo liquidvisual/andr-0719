@@ -3,7 +3,7 @@ layout: child_layout/our_people_item
 title: Camille McDonald
 title_override: Our People
 permalink: /our-people/our-people-item/
-hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
+hero_image: /assets/img/content/backgrounds/people-bg.jpg
 hero_options:
 breadcrumbs: true
 breadcrumbs_text: Back

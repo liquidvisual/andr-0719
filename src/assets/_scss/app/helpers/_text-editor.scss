@@ -93,7 +93,7 @@ $font-family-serif: inherit !default;
 	h1, h2, h3, h4, h5, h6 {
 		margin-bottom: rem-calc(25);
 
-		@extend .text-dark;
+		// @extend .text-dark;
 	}
 
 	h1 {

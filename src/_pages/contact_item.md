@@ -2,7 +2,7 @@
 layout: child_layout/contact_item
 title: Adelaide Office
 permalink: /contact/contact-item/
-hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
+hero_image: /assets/img/content/backgrounds/contact-bg-2.jpg
 hero_options:
 breadcrumbs: true
 ---

@@ -1,0 +1,57 @@
+---
+layout: base__page
+---
+
+{% assign posts = site.data.lorem_ipsum limit: 9 %}
+
+<!-- SECTION -->
+<section class="section pb-0 pb-lg-5">
+    <div class="container">
+        <div class="row">
+            {% for item in posts %}
+                <div class="col-md-6 col-xl-4 mb-4 mb-xl-5 wow fadeIn">
+
+                    <!-- CARD -->
+                    <div class="card h-100 is-flat">
+
+                        <!-- IMAGE -->
+                        <a class="btn-tile" href="/about/whats-new/whats-new-item/">
+                            <img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--480x288.svg" alt="{{ item.title }}">
+                            <span class="btn-tile-bg" style="background-image: url({{ item.image }})"></span>
+                        </a>
+
+                        <!-- CARD BODY -->
+                        <div class="card-body d-flex flex-column">
+
+                            <!-- TITLE -->
+                            <a class="text-body" href="/about/whats-new/whats-new-item/">
+                                <h3 class="h4 card-title text-primary">{{ item.title }}</h3>
+                            </a>
+
+                            <!-- DATE -->
+                            <small class="mb-3">
+                                <time class="text-uppercase mr-1" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date }}</time>
+                            </small>
+
+                            <!-- TEXT -->
+                            <div class="card-text mb-2">
+                                {{ item.body | truncate: 150 }}
+                            </div>
+
+                            <!-- BUTTON -->
+                            <p>
+                                <a href="/about/whats-new/whats-new-item/" class="text-uppercase text-link">
+                                    Read more <i class="fa fa-angle-right"></i>
+                                </a>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+        {% include components/navigation/pagination.html %}
+    </div>
+</section>

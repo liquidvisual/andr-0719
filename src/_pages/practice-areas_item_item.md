@@ -2,7 +2,7 @@
 layout: child_layout/practice_areas_item_item
 title: Superannuation Insurance Claims
 permalink: /practice-areas/practice-areas-item/practice-areas-item/
-hero_image: /assets/img/content/backgrounds/andersons-bg.jpg
+hero_image: /assets/img/content/backgrounds/practice-areas-bg-2.jpg
 hero_options:
 breadcrumbs: true
 breadcrumbs_text: Personal Injury
