@@ -1,12 +1,12 @@
 {% assign settings = site.data.settings %}
 {% assign au_office = settings.offices['aus'][0] %}
-{% assign bg_image = include.bg_image | default: '/assets/img/content/backgrounds/about-us-bg.jpg' %}
+{% assign bg_image = include.bg_image | default: '/assets/img/content/backgrounds/about-homepage-bg.jpg' %}
 {% assign parallax_enabled = include.parallax_enabled | default: false %}
 
 <!-- ABOUT US SECTION -->
 <section
 	class="section section-about-us is-dark has-image-bg is-tinted"
-	style="background-image: url({{ bg_image }})">
+	style="background-image: url({{ bg_image }}); background-position: top center">
 
 	{% if parallax_enabled %}
 		<!-- PARALLAX (OPTIONAL) -->
