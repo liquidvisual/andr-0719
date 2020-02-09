@@ -28,8 +28,8 @@ function launchGallery() {
       c = {},
       u = c.toString,
       d = c.hasOwnProperty,
-      h = d.toString,
-      f = h.call(Object),
+      f = d.toString,
+      h = f.call(Object),
       p = {},
       m = function m(e) {
     return "function" == typeof e && "number" != typeof e.nodeType;
@@ -91,7 +91,7 @@ function launchGallery() {
   }, _.extend({ expando: "jQuery" + ("3.3.1" + Math.random()).replace(/\D/g, ""), isReady: !0, error: function error(e) {
       throw new Error(e);
     }, noop: function noop() {}, isPlainObject: function isPlainObject(e) {
-      var t, n;return !(!e || "[object Object]" !== u.call(e)) && (!(t = o(e)) || "function" == typeof (n = d.call(t, "constructor") && t.constructor) && h.call(n) === f);
+      var t, n;return !(!e || "[object Object]" !== u.call(e)) && (!(t = o(e)) || "function" == typeof (n = d.call(t, "constructor") && t.constructor) && f.call(n) === h);
     }, isEmptyObject: function isEmptyObject(e) {
       var t;for (t in e) {
         return !1;
@@ -140,8 +140,8 @@ function launchGallery() {
         c,
         u,
         d,
-        h,
         f,
+        h,
         p,
         m,
         g,
@@ -196,7 +196,7 @@ function launchGallery() {
       return t ? "\0" === e ? "�" : e.slice(0, -1) + "\\" + e.charCodeAt(e.length - 1).toString(16) + " " : "\\" + e;
     },
         ie = function ie() {
-      h();
+      f();
     },
         oe = ye(function (e) {
       return !0 === e.disabled && ("form" in e || "label" in e);
@@ -217,7 +217,7 @@ function launchGallery() {
           p,
           v,
           y = t && t.ownerDocument,
-          E = t ? t.nodeType : 9;if (i = i || [], "string" != typeof e || !e || 1 !== E && 9 !== E && 11 !== E) return i;if (!o && ((t ? t.ownerDocument || t : w) !== f && h(t), t = t || f, m)) {
+          E = t ? t.nodeType : 9;if (i = i || [], "string" != typeof e || !e || 1 !== E && 9 !== E && 11 !== E) return i;if (!o && ((t ? t.ownerDocument || t : w) !== h && f(t), t = t || h, m)) {
         if (11 !== E && (d = G.exec(e))) if (r = d[1]) {
           if (9 === E) {
             if (!(c = t.getElementById(r))) return i;if (c.id === r) return i.push(c), i;
@@ -243,7 +243,7 @@ function launchGallery() {
     }function ae(e) {
       return e[_] = !0, e;
     }function le(e) {
-      var t = f.createElement("fieldset");try {
+      var t = h.createElement("fieldset");try {
         return !!e(t);
       } catch (e) {
         return !1;
@@ -263,11 +263,11 @@ function launchGallery() {
       return function (t) {
         return "input" === t.nodeName.toLowerCase() && t.type === e;
       };
-    }function he(e) {
+    }function fe(e) {
       return function (t) {
         var n = t.nodeName.toLowerCase();return ("input" === n || "button" === n) && t.type === e;
       };
-    }function fe(e) {
+    }function he(e) {
       return function (t) {
         return "form" in t ? t.parentNode && !1 === t.disabled ? "label" in t ? "label" in t.parentNode ? t.parentNode.disabled === e : t.disabled === e : t.isDisabled === e || t.isDisabled !== !e && oe(t) === e : t.disabled === e : "label" in t && t.disabled === e;
       };
@@ -283,15 +283,15 @@ function launchGallery() {
       return e && void 0 !== e.getElementsByTagName && e;
     }for (t in n = re.support = {}, r = re.isXML = function (e) {
       var t = e && (e.ownerDocument || e).documentElement;return !!t && "HTML" !== t.nodeName;
-    }, h = re.setDocument = function (e) {
+    }, f = re.setDocument = function (e) {
       var t,
           o,
-          s = e ? e.ownerDocument || e : w;return s !== f && 9 === s.nodeType && s.documentElement ? (p = (f = s).documentElement, m = !r(f), w !== f && (o = f.defaultView) && o.top !== o && (o.addEventListener ? o.addEventListener("unload", ie, !1) : o.attachEvent && o.attachEvent("onunload", ie)), n.attributes = le(function (e) {
+          s = e ? e.ownerDocument || e : w;return s !== h && 9 === s.nodeType && s.documentElement ? (p = (h = s).documentElement, m = !r(h), w !== h && (o = h.defaultView) && o.top !== o && (o.addEventListener ? o.addEventListener("unload", ie, !1) : o.attachEvent && o.attachEvent("onunload", ie)), n.attributes = le(function (e) {
         return e.className = "i", !e.getAttribute("className");
       }), n.getElementsByTagName = le(function (e) {
-        return e.appendChild(f.createComment("")), !e.getElementsByTagName("*").length;
-      }), n.getElementsByClassName = X.test(f.getElementsByClassName), n.getById = le(function (e) {
-        return p.appendChild(e).id = _, !f.getElementsByName || !f.getElementsByName(_).length;
+        return e.appendChild(h.createComment("")), !e.getElementsByTagName("*").length;
+      }), n.getElementsByClassName = X.test(h.getElementsByClassName), n.getById = le(function (e) {
+        return p.appendChild(e).id = _, !h.getElementsByName || !h.getElementsByName(_).length;
       }), n.getById ? (i.filter.ID = function (e) {
         var t = e.replace(J, ee);return function (e) {
           return e.getAttribute("id") === t;
@@ -328,10 +328,10 @@ function launchGallery() {
         }return r;
       }, i.find.CLASS = n.getElementsByClassName && function (e, t) {
         if (void 0 !== t.getElementsByClassName && m) return t.getElementsByClassName(e);
-      }, v = [], g = [], (n.qsa = X.test(f.querySelectorAll)) && (le(function (e) {
+      }, v = [], g = [], (n.qsa = X.test(h.querySelectorAll)) && (le(function (e) {
         p.appendChild(e).innerHTML = "<a id='" + _ + "'></a><select id='" + _ + "-\r\\' msallowcapture=''><option selected=''></option></select>", e.querySelectorAll("[msallowcapture^='']").length && g.push("[*^$]=" + M + "*(?:''|\"\")"), e.querySelectorAll("[selected]").length || g.push("\\[" + M + "*(?:value|" + j + ")"), e.querySelectorAll("[id~=" + _ + "-]").length || g.push("~="), e.querySelectorAll(":checked").length || g.push(":checked"), e.querySelectorAll("a#" + _ + "+*").length || g.push(".#.+[+~]");
       }), le(function (e) {
-        e.innerHTML = "<a href='' disabled='disabled'></a><select disabled='disabled'><option/></select>";var t = f.createElement("input");t.setAttribute("type", "hidden"), e.appendChild(t).setAttribute("name", "D"), e.querySelectorAll("[name=d]").length && g.push("name" + M + "*[*^$|!~]?="), 2 !== e.querySelectorAll(":enabled").length && g.push(":enabled", ":disabled"), p.appendChild(e).disabled = !0, 2 !== e.querySelectorAll(":disabled").length && g.push(":enabled", ":disabled"), e.querySelectorAll("*,:x"), g.push(",.*:");
+        e.innerHTML = "<a href='' disabled='disabled'></a><select disabled='disabled'><option/></select>";var t = h.createElement("input");t.setAttribute("type", "hidden"), e.appendChild(t).setAttribute("name", "D"), e.querySelectorAll("[name=d]").length && g.push("name" + M + "*[*^$|!~]?="), 2 !== e.querySelectorAll(":enabled").length && g.push(":enabled", ":disabled"), p.appendChild(e).disabled = !0, 2 !== e.querySelectorAll(":disabled").length && g.push(":enabled", ":disabled"), e.querySelectorAll("*,:x"), g.push(",.*:");
       })), (n.matchesSelector = X.test(y = p.matches || p.webkitMatchesSelector || p.mozMatchesSelector || p.oMatchesSelector || p.msMatchesSelector)) && le(function (e) {
         n.disconnectedMatch = y.call(e, "*"), y.call(e, "[s!='']:x"), v.push("!=", F);
       }), g = g.length && new RegExp(g.join("|")), v = v.length && new RegExp(v.join("|")), t = X.test(p.compareDocumentPosition), b = t || X.test(p.contains) ? function (e, t) {
@@ -342,31 +342,31 @@ function launchGallery() {
           if (t === e) return !0;
         }return !1;
       }, D = t ? function (e, t) {
-        if (e === t) return d = !0, 0;var i = !e.compareDocumentPosition - !t.compareDocumentPosition;return i || (1 & (i = (e.ownerDocument || e) === (t.ownerDocument || t) ? e.compareDocumentPosition(t) : 1) || !n.sortDetached && t.compareDocumentPosition(e) === i ? e === f || e.ownerDocument === w && b(w, e) ? -1 : t === f || t.ownerDocument === w && b(w, t) ? 1 : u ? P(u, e) - P(u, t) : 0 : 4 & i ? -1 : 1);
+        if (e === t) return d = !0, 0;var i = !e.compareDocumentPosition - !t.compareDocumentPosition;return i || (1 & (i = (e.ownerDocument || e) === (t.ownerDocument || t) ? e.compareDocumentPosition(t) : 1) || !n.sortDetached && t.compareDocumentPosition(e) === i ? e === h || e.ownerDocument === w && b(w, e) ? -1 : t === h || t.ownerDocument === w && b(w, t) ? 1 : u ? P(u, e) - P(u, t) : 0 : 4 & i ? -1 : 1);
       } : function (e, t) {
         if (e === t) return d = !0, 0;var n,
             i = 0,
             o = e.parentNode,
             r = t.parentNode,
             s = [e],
-            a = [t];if (!o || !r) return e === f ? -1 : t === f ? 1 : o ? -1 : r ? 1 : u ? P(u, e) - P(u, t) : 0;if (o === r) return ue(e, t);for (n = e; n = n.parentNode;) {
+            a = [t];if (!o || !r) return e === h ? -1 : t === h ? 1 : o ? -1 : r ? 1 : u ? P(u, e) - P(u, t) : 0;if (o === r) return ue(e, t);for (n = e; n = n.parentNode;) {
           s.unshift(n);
         }for (n = t; n = n.parentNode;) {
           a.unshift(n);
         }for (; s[i] === a[i];) {
           i++;
         }return i ? ue(s[i], a[i]) : s[i] === w ? -1 : a[i] === w ? 1 : 0;
-      }, f) : f;
+      }, h) : h;
     }, re.matches = function (e, t) {
       return re(e, null, null, t);
     }, re.matchesSelector = function (e, t) {
-      if ((e.ownerDocument || e) !== f && h(e), t = t.replace(U, "='$1']"), n.matchesSelector && m && !T[t + " "] && (!v || !v.test(t)) && (!g || !g.test(t))) try {
+      if ((e.ownerDocument || e) !== h && f(e), t = t.replace(U, "='$1']"), n.matchesSelector && m && !T[t + " "] && (!v || !v.test(t)) && (!g || !g.test(t))) try {
         var i = y.call(e, t);if (i || n.disconnectedMatch || e.document && 11 !== e.document.nodeType) return i;
-      } catch (e) {}return re(t, f, null, [e]).length > 0;
+      } catch (e) {}return re(t, h, null, [e]).length > 0;
     }, re.contains = function (e, t) {
-      return (e.ownerDocument || e) !== f && h(e), b(e, t);
+      return (e.ownerDocument || e) !== h && f(e), b(e, t);
     }, re.attr = function (e, t) {
-      (e.ownerDocument || e) !== f && h(e);var o = i.attrHandle[t.toLowerCase()],
+      (e.ownerDocument || e) !== h && f(e);var o = i.attrHandle[t.toLowerCase()],
           r = o && A.call(i.attrHandle, t.toLowerCase()) ? o(e, t, !m) : void 0;return void 0 !== r ? r : n.attributes || !m ? e.getAttribute(t) : (r = e.getAttributeNode(t)) && r.specified ? r.value : null;
     }, re.escape = function (e) {
       return (e + "").replace(te, ne);
@@ -426,8 +426,8 @@ function launchGallery() {
             var c,
                 u,
                 d,
-                h,
                 f,
+                h,
                 p,
                 m = r !== s ? "nextSibling" : "previousSibling",
                 g = t.parentNode,
@@ -436,17 +436,17 @@ function launchGallery() {
                 b = !1;if (g) {
               if (r) {
                 for (; m;) {
-                  for (h = t; h = h[m];) {
-                    if (a ? h.nodeName.toLowerCase() === v : 1 === h.nodeType) return !1;
+                  for (f = t; f = f[m];) {
+                    if (a ? f.nodeName.toLowerCase() === v : 1 === f.nodeType) return !1;
                   }p = m = "only" === e && !p && "nextSibling";
                 }return !0;
               }if (p = [s ? g.firstChild : g.lastChild], s && y) {
-                for (b = (f = (c = (u = (d = (h = g)[_] || (h[_] = {}))[h.uniqueID] || (d[h.uniqueID] = {}))[e] || [])[0] === E && c[1]) && c[2], h = f && g.childNodes[f]; h = ++f && h && h[m] || (b = f = 0) || p.pop();) {
-                  if (1 === h.nodeType && ++b && h === t) {
-                    u[e] = [E, f, b];break;
+                for (b = (h = (c = (u = (d = (f = g)[_] || (f[_] = {}))[f.uniqueID] || (d[f.uniqueID] = {}))[e] || [])[0] === E && c[1]) && c[2], f = h && g.childNodes[h]; f = ++h && f && f[m] || (b = h = 0) || p.pop();) {
+                  if (1 === f.nodeType && ++b && f === t) {
+                    u[e] = [E, h, b];break;
                   }
                 }
-              } else if (y && (b = f = (c = (u = (d = (h = t)[_] || (h[_] = {}))[h.uniqueID] || (d[h.uniqueID] = {}))[e] || [])[0] === E && c[1]), !1 === b) for (; (h = ++f && h && h[m] || (b = f = 0) || p.pop()) && ((a ? h.nodeName.toLowerCase() !== v : 1 !== h.nodeType) || !++b || (y && ((u = (d = h[_] || (h[_] = {}))[h.uniqueID] || (d[h.uniqueID] = {}))[e] = [E, b]), h !== t));) {}return (b -= o) === i || b % i == 0 && b / i >= 0;
+              } else if (y && (b = h = (c = (u = (d = (f = t)[_] || (f[_] = {}))[f.uniqueID] || (d[f.uniqueID] = {}))[e] || [])[0] === E && c[1]), !1 === b) for (; (f = ++h && f && f[m] || (b = h = 0) || p.pop()) && ((a ? f.nodeName.toLowerCase() !== v : 1 !== f.nodeType) || !++b || (y && ((u = (d = f[_] || (f[_] = {}))[f.uniqueID] || (d[f.uniqueID] = {}))[e] = [E, b]), f !== t));) {}return (b -= o) === i || b % i == 0 && b / i >= 0;
             }
           };
         }, PSEUDO: function PSEUDO(e, t) {
@@ -487,8 +487,8 @@ function launchGallery() {
         }, root: function root(e) {
           return e === p;
         }, focus: function focus(e) {
-          return e === f.activeElement && (!f.hasFocus || f.hasFocus()) && !!(e.type || e.href || ~e.tabIndex);
-        }, enabled: fe(!1), disabled: fe(!0), checked: function checked(e) {
+          return e === h.activeElement && (!h.hasFocus || h.hasFocus()) && !!(e.type || e.href || ~e.tabIndex);
+        }, enabled: he(!1), disabled: he(!0), checked: function checked(e) {
           var t = e.nodeName.toLowerCase();return "input" === t && !!e.checked || "option" === t && !!e.selected;
         }, selected: function selected(e) {
           return e.parentNode && e.parentNode.selectedIndex, !0 === e.selected;
@@ -531,7 +531,7 @@ function launchGallery() {
         }) } }).pseudos.nth = i.pseudos.eq, { radio: !0, checkbox: !0, file: !0, password: !0, image: !0 }) {
       i.pseudos[t] = de(t);
     }for (t in { submit: !0, reset: !0 }) {
-      i.pseudos[t] = he(t);
+      i.pseudos[t] = fe(t);
     }function ge() {}function ve(e) {
       for (var t = 0, n = e.length, i = ""; t < n; t++) {
         i += e[t].value;
@@ -549,13 +549,13 @@ function launchGallery() {
         var c,
             u,
             d,
-            h = [E, a];if (l) {
+            f = [E, a];if (l) {
           for (; t = t[i];) {
             if ((1 === t.nodeType || s) && e(t, n, l)) return !0;
           }
         } else for (; t = t[i];) {
           if (1 === t.nodeType || s) if (u = (d = t[_] || (t[_] = {}))[t.uniqueID] || (d[t.uniqueID] = {}), o && o === t.nodeName.toLowerCase()) t = t[i] || t;else {
-            if ((c = u[r]) && c[0] === E && c[1] === a) return h[2] = c[2];if (u[r] = h, h[2] = e(t, n, l)) return !0;
+            if ((c = u[r]) && c[0] === E && c[1] === a) return f[2] = c[2];if (u[r] = f, f[2] = e(t, n, l)) return !0;
           }
         }return !1;
       };
@@ -574,17 +574,17 @@ function launchGallery() {
         var c,
             u,
             d,
-            h = [],
             f = [],
+            h = [],
             p = s.length,
             m = r || function (e, t, n) {
           for (var i = 0, o = t.length; i < o; i++) {
             re(e, t[i], n);
           }return n;
         }(t || "*", a.nodeType ? [a] : a, []),
-            g = !e || !r && t ? m : _e(m, h, e, a, l),
-            v = n ? o || (r ? e : p || i) ? [] : s : g;if (n && n(g, v, a, l), i) for (c = _e(v, f), i(c, [], a, l), u = c.length; u--;) {
-          (d = c[u]) && (v[f[u]] = !(g[f[u]] = d));
+            g = !e || !r && t ? m : _e(m, f, e, a, l),
+            v = n ? o || (r ? e : p || i) ? [] : s : g;if (n && n(g, v, a, l), i) for (c = _e(v, h), i(c, [], a, l), u = c.length; u--;) {
+          (d = c[u]) && (v[h[u]] = !(g[h[u]] = d));
         }if (r) {
           if (o || e) {
             if (o) {
@@ -592,7 +592,7 @@ function launchGallery() {
                 (d = v[u]) && c.push(g[u] = d);
               }o(null, v = [], c, l);
             }for (u = v.length; u--;) {
-              (d = v[u]) && (c = o ? P(r, d) : h[u]) > -1 && (r[c] = !(s[c] = d));
+              (d = v[u]) && (c = o ? P(r, d) : f[u]) > -1 && (r[c] = !(s[c] = d));
             }
           }
         } else v = _e(v === s ? v.splice(p, v.length) : v), o ? o(null, s, v, l) : O.apply(s, v);
@@ -602,15 +602,15 @@ function launchGallery() {
         return e === t;
       }, a, !0), d = ye(function (e) {
         return P(t, e) > -1;
-      }, a, !0), h = [function (e, n, i) {
+      }, a, !0), f = [function (e, n, i) {
         var o = !s && (i || n !== c) || ((t = n).nodeType ? u(e, n, i) : d(e, n, i));return t = null, o;
       }]; l < r; l++) {
-        if (n = i.relative[e[l].type]) h = [ye(be(h), n)];else {
+        if (n = i.relative[e[l].type]) f = [ye(be(f), n)];else {
           if ((n = i.filter[e[l].type].apply(null, e[l].matches))[_]) {
-            for (o = ++l; o < r && !i.relative[e[o].type]; o++) {}return we(l > 1 && be(h), l > 1 && ve(e.slice(0, l - 1).concat({ value: " " === e[l - 2].type ? "*" : "" })).replace(W, "$1"), n, l < o && Ee(e.slice(l, o)), o < r && Ee(e = e.slice(o)), o < r && ve(e));
-          }h.push(n);
+            for (o = ++l; o < r && !i.relative[e[o].type]; o++) {}return we(l > 1 && be(f), l > 1 && ve(e.slice(0, l - 1).concat({ value: " " === e[l - 2].type ? "*" : "" })).replace(W, "$1"), n, l < o && Ee(e.slice(l, o)), o < r && Ee(e = e.slice(o)), o < r && ve(e));
+          }f.push(n);
         }
-      }return be(h);
+      }return be(f);
     }return ge.prototype = i.filters = i.pseudos, i.setFilters = new ge(), s = re.tokenize = function (e, t) {
       var n,
           o,
@@ -645,10 +645,10 @@ function launchGallery() {
                 w = c,
                 C = _r || o && i.find.TAG("*", u),
                 x = E += null == w ? 1 : Math.random() || .1,
-                S = C.length;for (u && (c = s === f || s || u); y !== S && null != (d = C[y]); y++) {
+                S = C.length;for (u && (c = s === h || s || u); y !== S && null != (d = C[y]); y++) {
               if (o && d) {
-                for (p = 0, s || d.ownerDocument === f || (h(d), a = !m); g = e[p++];) {
-                  if (g(d, s || f, a)) {
+                for (p = 0, s || d.ownerDocument === h || (f(d), a = !m); g = e[p++];) {
+                  if (g(d, s || h, a)) {
                     l.push(d);break;
                   }
                 }u && (E = x);
@@ -671,18 +671,18 @@ function launchGallery() {
           c,
           u,
           d,
-          h = "function" == typeof e && e,
-          f = !o && s(e = h.selector || e);if (n = n || [], 1 === f.length) {
-        if ((l = f[0] = f[0].slice(0)).length > 2 && "ID" === (c = l[0]).type && 9 === t.nodeType && m && i.relative[l[1].type]) {
-          if (!(t = (i.find.ID(c.matches[0].replace(J, ee), t) || [])[0])) return n;h && (t = t.parentNode), e = e.slice(l.shift().value.length);
+          f = "function" == typeof e && e,
+          h = !o && s(e = f.selector || e);if (n = n || [], 1 === h.length) {
+        if ((l = h[0] = h[0].slice(0)).length > 2 && "ID" === (c = l[0]).type && 9 === t.nodeType && m && i.relative[l[1].type]) {
+          if (!(t = (i.find.ID(c.matches[0].replace(J, ee), t) || [])[0])) return n;f && (t = t.parentNode), e = e.slice(l.shift().value.length);
         }for (r = K.needsContext.test(e) ? 0 : l.length; r-- && (c = l[r], !i.relative[u = c.type]);) {
           if ((d = i.find[u]) && (o = d(c.matches[0].replace(J, ee), Z.test(l[0].type) && me(t.parentNode) || t))) {
             if (l.splice(r, 1), !(e = o.length && ve(l))) return O.apply(n, o), n;break;
           }
         }
-      }return (h || a(e, f))(o, t, !m, n, !t || Z.test(e) && me(t.parentNode) || t), n;
-    }, n.sortStable = _.split("").sort(D).join("") === _, n.detectDuplicates = !!d, h(), n.sortDetached = le(function (e) {
-      return 1 & e.compareDocumentPosition(f.createElement("fieldset"));
+      }return (f || a(e, h))(o, t, !m, n, !t || Z.test(e) && me(t.parentNode) || t), n;
+    }, n.sortStable = _.split("").sort(D).join("") === _, n.detectDuplicates = !!d, f(), n.sortDetached = le(function (e) {
+      return 1 & e.compareDocumentPosition(h.createElement("fieldset"));
     }), le(function (e) {
       return e.innerHTML = "<a href='#'></a>", "#" === e.firstChild.getAttribute("href");
     }) || ce("type|href|height|width", function (e, t, n) {
@@ -1111,23 +1111,23 @@ function launchGallery() {
     } });var ce = /^(?:checkbox|radio)$/i,
       ue = /<([a-z][^\/\0>\x20\t\r\n\f]+)/i,
       de = /^$|^module$|\/(?:java|ecma)script/i,
-      he = { option: [1, "<select multiple='multiple'>", "</select>"], thead: [1, "<table>", "</table>"], col: [2, "<table><colgroup>", "</colgroup></table>"], tr: [2, "<table><tbody>", "</tbody></table>"], td: [3, "<table><tbody><tr>", "</tr></tbody></table>"], _default: [0, "", ""] };function fe(e, t) {
+      fe = { option: [1, "<select multiple='multiple'>", "</select>"], thead: [1, "<table>", "</table>"], col: [2, "<table><colgroup>", "</colgroup></table>"], tr: [2, "<table><tbody>", "</tbody></table>"], td: [3, "<table><tbody><tr>", "</tr></tbody></table>"], _default: [0, "", ""] };function he(e, t) {
     var n;return n = void 0 !== e.getElementsByTagName ? e.getElementsByTagName(t || "*") : void 0 !== e.querySelectorAll ? e.querySelectorAll(t || "*") : [], void 0 === t || t && D(e, t) ? _.merge([e], n) : n;
   }function pe(e, t) {
     for (var n = 0, i = e.length; n < i; n++) {
       Y.set(e[n], "globalEval", !t || Y.get(t[n], "globalEval"));
     }
-  }he.optgroup = he.option, he.tbody = he.tfoot = he.colgroup = he.caption = he.thead, he.th = he.td;var me,
+  }fe.optgroup = fe.option, fe.tbody = fe.tfoot = fe.colgroup = fe.caption = fe.thead, fe.th = fe.td;var me,
       ge,
       ve = /<|&#?\w+;/;function ye(e, t, n, i, o) {
-    for (var r, s, a, l, c, u, d = t.createDocumentFragment(), h = [], f = 0, p = e.length; f < p; f++) {
-      if ((r = e[f]) || 0 === r) if ("object" === b(r)) _.merge(h, r.nodeType ? [r] : r);else if (ve.test(r)) {
-        for (s = s || d.appendChild(t.createElement("div")), a = (ue.exec(r) || ["", ""])[1].toLowerCase(), l = he[a] || he._default, s.innerHTML = l[1] + _.htmlPrefilter(r) + l[2], u = l[0]; u--;) {
+    for (var r, s, a, l, c, u, d = t.createDocumentFragment(), f = [], h = 0, p = e.length; h < p; h++) {
+      if ((r = e[h]) || 0 === r) if ("object" === b(r)) _.merge(f, r.nodeType ? [r] : r);else if (ve.test(r)) {
+        for (s = s || d.appendChild(t.createElement("div")), a = (ue.exec(r) || ["", ""])[1].toLowerCase(), l = fe[a] || fe._default, s.innerHTML = l[1] + _.htmlPrefilter(r) + l[2], u = l[0]; u--;) {
           s = s.lastChild;
-        }_.merge(h, s.childNodes), (s = d.firstChild).textContent = "";
-      } else h.push(t.createTextNode(r));
-    }for (d.textContent = "", f = 0; r = h[f++];) {
-      if (i && _.inArray(r, i) > -1) o && o.push(r);else if (c = _.contains(r.ownerDocument, r), s = fe(d.appendChild(r), "script"), c && pe(s), n) for (u = 0; r = s[u++];) {
+        }_.merge(f, s.childNodes), (s = d.firstChild).textContent = "";
+      } else f.push(t.createTextNode(r));
+    }for (d.textContent = "", h = 0; r = f[h++];) {
+      if (i && _.inArray(r, i) > -1) o && o.push(r);else if (c = _.contains(r.ownerDocument, r), s = he(d.appendChild(r), "script"), c && pe(s), n) for (u = 0; r = s[u++];) {
         de.test(r.type || "") && n.push(r);
       }
     }return d;
@@ -1160,14 +1160,14 @@ function launchGallery() {
           c,
           u,
           d,
-          h,
           f,
+          h,
           p,
           m,
           g = Y.get(e);if (g) for (n.handler && (n = (r = n).handler, o = r.selector), o && _.find.matchesSelector(be, o), n.guid || (n.guid = _.guid++), (l = g.events) || (l = g.events = {}), (s = g.handle) || (s = g.handle = function (t) {
         return void 0 !== _ && _.event.triggered !== t.type ? _.event.dispatch.apply(e, arguments) : void 0;
       }), c = (t = (t || "").match(j) || [""]).length; c--;) {
-        f = m = (a = Ee.exec(t[c]) || [])[1], p = (a[2] || "").split(".").sort(), f && (d = _.event.special[f] || {}, f = (o ? d.delegateType : d.bindType) || f, d = _.event.special[f] || {}, u = _.extend({ type: f, origType: m, data: i, handler: n, guid: n.guid, selector: o, needsContext: o && _.expr.match.needsContext.test(o), namespace: p.join(".") }, r), (h = l[f]) || ((h = l[f] = []).delegateCount = 0, d.setup && !1 !== d.setup.call(e, i, p, s) || e.addEventListener && e.addEventListener(f, s)), d.add && (d.add.call(e, u), u.handler.guid || (u.handler.guid = n.guid)), o ? h.splice(h.delegateCount++, 0, u) : h.push(u), _.event.global[f] = !0);
+        h = m = (a = Ee.exec(t[c]) || [])[1], p = (a[2] || "").split(".").sort(), h && (d = _.event.special[h] || {}, h = (o ? d.delegateType : d.bindType) || h, d = _.event.special[h] || {}, u = _.extend({ type: h, origType: m, data: i, handler: n, guid: n.guid, selector: o, needsContext: o && _.expr.match.needsContext.test(o), namespace: p.join(".") }, r), (f = l[h]) || ((f = l[h] = []).delegateCount = 0, d.setup && !1 !== d.setup.call(e, i, p, s) || e.addEventListener && e.addEventListener(h, s)), d.add && (d.add.call(e, u), u.handler.guid || (u.handler.guid = n.guid)), o ? f.splice(f.delegateCount++, 0, u) : f.push(u), _.event.global[h] = !0);
       }
     }, remove: function remove(e, t, n, i, o) {
       var r,
@@ -1177,18 +1177,18 @@ function launchGallery() {
           c,
           u,
           d,
-          h,
           f,
+          h,
           p,
           m,
           g = Y.hasData(e) && Y.get(e);if (g && (l = g.events)) {
         for (c = (t = (t || "").match(j) || [""]).length; c--;) {
-          if (f = m = (a = Ee.exec(t[c]) || [])[1], p = (a[2] || "").split(".").sort(), f) {
-            for (d = _.event.special[f] || {}, h = l[f = (i ? d.delegateType : d.bindType) || f] || [], a = a[2] && new RegExp("(^|\\.)" + p.join("\\.(?:.*\\.|)") + "(\\.|$)"), s = r = h.length; r--;) {
-              u = h[r], !o && m !== u.origType || n && n.guid !== u.guid || a && !a.test(u.namespace) || i && i !== u.selector && ("**" !== i || !u.selector) || (h.splice(r, 1), u.selector && h.delegateCount--, d.remove && d.remove.call(e, u));
-            }s && !h.length && (d.teardown && !1 !== d.teardown.call(e, p, g.handle) || _.removeEvent(e, f, g.handle), delete l[f]);
-          } else for (f in l) {
-            _.event.remove(e, f + t[c], n, i, !0);
+          if (h = m = (a = Ee.exec(t[c]) || [])[1], p = (a[2] || "").split(".").sort(), h) {
+            for (d = _.event.special[h] || {}, f = l[h = (i ? d.delegateType : d.bindType) || h] || [], a = a[2] && new RegExp("(^|\\.)" + p.join("\\.(?:.*\\.|)") + "(\\.|$)"), s = r = f.length; r--;) {
+              u = f[r], !o && m !== u.origType || n && n.guid !== u.guid || a && !a.test(u.namespace) || i && i !== u.selector && ("**" !== i || !u.selector) || (f.splice(r, 1), u.selector && f.delegateCount--, d.remove && d.remove.call(e, u));
+            }s && !f.length && (d.teardown && !1 !== d.teardown.call(e, p, g.handle) || _.removeEvent(e, h, g.handle), delete l[h]);
+          } else for (h in l) {
+            _.event.remove(e, h + t[c], n, i, !0);
           }
         }_.isEmptyObject(l) && Y.remove(e, "handle events");
       }
@@ -1301,21 +1301,21 @@ function launchGallery() {
         c,
         u,
         d = 0,
-        h = e.length,
-        f = h - 1,
+        f = e.length,
+        h = f - 1,
         g = t[0],
-        v = m(g);if (v || h > 1 && "string" == typeof g && !p.checkClone && ke.test(g)) return e.each(function (o) {
+        v = m(g);if (v || f > 1 && "string" == typeof g && !p.checkClone && ke.test(g)) return e.each(function (o) {
       var r = e.eq(o);v && (t[0] = g.call(this, o, r.html())), je(r, t, n, i);
-    });if (h && (r = (o = ye(t, e[0].ownerDocument, !1, e, i)).firstChild, 1 === o.childNodes.length && (o = r), r || i)) {
-      for (l = (a = _.map(fe(o, "script"), Oe)).length; d < h; d++) {
-        c = o, d !== f && (c = _.clone(c, !0, !0), l && _.merge(a, fe(c, "script"))), n.call(e[d], c, d);
+    });if (f && (r = (o = ye(t, e[0].ownerDocument, !1, e, i)).firstChild, 1 === o.childNodes.length && (o = r), r || i)) {
+      for (l = (a = _.map(he(o, "script"), Oe)).length; d < f; d++) {
+        c = o, d !== h && (c = _.clone(c, !0, !0), l && _.merge(a, he(c, "script"))), n.call(e[d], c, d);
       }if (l) for (u = a[a.length - 1].ownerDocument, _.map(a, Le), d = 0; d < l; d++) {
         c = a[d], de.test(c.type || "") && !Y.access(c, "globalEval") && _.contains(u, c) && (c.src && "module" !== (c.type || "").toLowerCase() ? _._evalUrl && _._evalUrl(c.src) : y(c.textContent.replace(Ie, ""), u, c));
       }
     }return e;
   }function Me(e, t, n) {
     for (var i, o = t ? _.filter(t, e) : e, r = 0; null != (i = o[r]); r++) {
-      n || 1 !== i.nodeType || _.cleanData(fe(i)), i.parentNode && (n && _.contains(i.ownerDocument, i) && pe(fe(i, "script")), i.parentNode.removeChild(i));
+      n || 1 !== i.nodeType || _.cleanData(he(i)), i.parentNode && (n && _.contains(i.ownerDocument, i) && pe(he(i, "script")), i.parentNode.removeChild(i));
     }return e;
   }_.extend({ htmlPrefilter: function htmlPrefilter(e) {
       return e.replace(De, "<$1></$2>");
@@ -1328,11 +1328,11 @@ function launchGallery() {
           l,
           c,
           u = e.cloneNode(!0),
-          d = _.contains(e.ownerDocument, e);if (!(p.noCloneChecked || 1 !== e.nodeType && 11 !== e.nodeType || _.isXMLDoc(e))) for (s = fe(u), i = 0, o = (r = fe(e)).length; i < o; i++) {
+          d = _.contains(e.ownerDocument, e);if (!(p.noCloneChecked || 1 !== e.nodeType && 11 !== e.nodeType || _.isXMLDoc(e))) for (s = he(u), i = 0, o = (r = he(e)).length; i < o; i++) {
         a = r[i], l = s[i], void 0, "input" === (c = l.nodeName.toLowerCase()) && ce.test(a.type) ? l.checked = a.checked : "input" !== c && "textarea" !== c || (l.defaultValue = a.defaultValue);
-      }if (t) if (n) for (r = r || fe(e), s = s || fe(u), i = 0, o = r.length; i < o; i++) {
+      }if (t) if (n) for (r = r || he(e), s = s || he(u), i = 0, o = r.length; i < o; i++) {
         Pe(r[i], s[i]);
-      } else Pe(e, u);return (s = fe(u, "script")).length > 0 && pe(s, !d && fe(e, "script")), u;
+      } else Pe(e, u);return (s = he(u, "script")).length > 0 && pe(s, !d && he(e, "script")), u;
     }, cleanData: function cleanData(e) {
       for (var t, n, i, o = _.event.special, r = 0; void 0 !== (n = e[r]); r++) {
         if (K(n)) {
@@ -1373,7 +1373,7 @@ function launchGallery() {
       });
     }, empty: function empty() {
       for (var e, t = 0; null != (e = this[t]); t++) {
-        1 === e.nodeType && (_.cleanData(fe(e, !1)), e.textContent = "");
+        1 === e.nodeType && (_.cleanData(he(e, !1)), e.textContent = "");
       }return this;
     }, clone: function clone(e, t) {
       return e = null != e && e, t = null == t ? e : t, this.map(function () {
@@ -1383,17 +1383,17 @@ function launchGallery() {
       return R(this, function (e) {
         var t = this[0] || {},
             n = 0,
-            i = this.length;if (void 0 === e && 1 === t.nodeType) return t.innerHTML;if ("string" == typeof e && !Ae.test(e) && !he[(ue.exec(e) || ["", ""])[1].toLowerCase()]) {
+            i = this.length;if (void 0 === e && 1 === t.nodeType) return t.innerHTML;if ("string" == typeof e && !Ae.test(e) && !fe[(ue.exec(e) || ["", ""])[1].toLowerCase()]) {
           e = _.htmlPrefilter(e);try {
             for (; n < i; n++) {
-              1 === (t = this[n] || {}).nodeType && (_.cleanData(fe(t, !1)), t.innerHTML = e);
+              1 === (t = this[n] || {}).nodeType && (_.cleanData(he(t, !1)), t.innerHTML = e);
             }t = 0;
           } catch (e) {}
         }t && this.empty().append(e);
       }, null, e, arguments.length);
     }, replaceWith: function replaceWith() {
       var e = [];return je(this, arguments, function (t) {
-        var n = this.parentNode;_.inArray(this, e) < 0 && (_.cleanData(fe(this)), n && n.replaceChild(t, this));
+        var n = this.parentNode;_.inArray(this, e) < 0 && (_.cleanData(he(this)), n && n.replaceChild(t, this));
       }, e);
     } }), _.each({ appendTo: "append", prependTo: "prepend", insertBefore: "before", insertAfter: "after", replaceAll: "replaceWith" }, function (e, t) {
     _.fn[e] = function (e) {
@@ -1599,32 +1599,32 @@ function launchGallery() {
           c,
           u,
           d = "width" in t || "height" in t,
-          h = this,
-          f = {},
+          f = this,
+          h = {},
           p = e.style,
           m = e.nodeType && ie(e),
           g = Y.get(e, "fxshow");for (i in n.queue || (null == (s = _._queueHooks(e, "fx")).unqueued && (s.unqueued = 0, a = s.empty.fire, s.empty.fire = function () {
         s.unqueued || a();
-      }), s.unqueued++, h.always(function () {
-        h.always(function () {
+      }), s.unqueued++, f.always(function () {
+        f.always(function () {
           s.unqueued--, _.queue(e, "fx").length || s.empty.fire();
         });
       })), t) {
         if (o = t[i], tt.test(o)) {
           if (delete t[i], r = r || "toggle" === o, o === (m ? "hide" : "show")) {
             if ("show" !== o || !g || void 0 === g[i]) continue;m = !0;
-          }f[i] = g && g[i] || _.style(e, i);
+          }h[i] = g && g[i] || _.style(e, i);
         }
-      }if ((l = !_.isEmptyObject(t)) || !_.isEmptyObject(f)) for (i in d && 1 === e.nodeType && (n.overflow = [p.overflow, p.overflowX, p.overflowY], null == (c = g && g.display) && (c = Y.get(e, "display")), "none" === (u = _.css(e, "display")) && (c ? u = c : (le([e], !0), c = e.style.display || c, u = _.css(e, "display"), le([e]))), ("inline" === u || "inline-block" === u && null != c) && "none" === _.css(e, "float") && (l || (h.done(function () {
+      }if ((l = !_.isEmptyObject(t)) || !_.isEmptyObject(h)) for (i in d && 1 === e.nodeType && (n.overflow = [p.overflow, p.overflowX, p.overflowY], null == (c = g && g.display) && (c = Y.get(e, "display")), "none" === (u = _.css(e, "display")) && (c ? u = c : (le([e], !0), c = e.style.display || c, u = _.css(e, "display"), le([e]))), ("inline" === u || "inline-block" === u && null != c) && "none" === _.css(e, "float") && (l || (f.done(function () {
         p.display = c;
-      }), null == c && (u = p.display, c = "none" === u ? "" : u)), p.display = "inline-block")), n.overflow && (p.overflow = "hidden", h.always(function () {
+      }), null == c && (u = p.display, c = "none" === u ? "" : u)), p.display = "inline-block")), n.overflow && (p.overflow = "hidden", f.always(function () {
         p.overflow = n.overflow[0], p.overflowX = n.overflow[1], p.overflowY = n.overflow[2];
-      })), l = !1, f) {
-        l || (g ? "hidden" in g && (m = g.hidden) : g = Y.access(e, "fxshow", { display: c }), r && (g.hidden = !m), m && le([e], !0), h.done(function () {
-          for (i in m || le([e]), Y.remove(e, "fxshow"), f) {
-            _.style(e, i, f[i]);
+      })), l = !1, h) {
+        l || (g ? "hidden" in g && (m = g.hidden) : g = Y.access(e, "fxshow", { display: c }), r && (g.hidden = !m), m && le([e], !0), f.done(function () {
+          for (i in m || le([e]), Y.remove(e, "fxshow"), h) {
+            _.style(e, i, h[i]);
           }
-        })), l = st(m ? g[i] : 0, i, h), i in g || (g[i] = l.start, m && (l.end = l.start, l.start = 0));
+        })), l = st(m ? g[i] : 0, i, f), i in g || (g[i] = l.start, m && (l.end = l.start, l.start = 0));
       }
     }], prefilter: function prefilter(e, t) {
       t ? at.prefilters.unshift(e) : at.prefilters.push(e);
@@ -1725,9 +1725,9 @@ function launchGallery() {
           s = t.toLowerCase();return i || (r = ct[s], ct[s] = o, o = null != n(e, t, i) ? s : null, ct[s] = r), o;
     };
   });var ut = /^(?:input|select|textarea|button)$/i,
-      dt = /^(?:a|area)$/i;function ht(e) {
+      dt = /^(?:a|area)$/i;function ft(e) {
     return (e.match(j) || []).join(" ");
-  }function ft(e) {
+  }function ht(e) {
     return e.getAttribute && e.getAttribute("class") || "";
   }function pt(e) {
     return Array.isArray(e) ? e : "string" == typeof e && e.match(j) || [];
@@ -1758,12 +1758,12 @@ function launchGallery() {
           s,
           a,
           l = 0;if (m(e)) return this.each(function (t) {
-        _(this).addClass(e.call(this, t, ft(this)));
+        _(this).addClass(e.call(this, t, ht(this)));
       });if ((t = pt(e)).length) for (; n = this[l++];) {
-        if (o = ft(n), i = 1 === n.nodeType && " " + ht(o) + " ") {
+        if (o = ht(n), i = 1 === n.nodeType && " " + ft(o) + " ") {
           for (s = 0; r = t[s++];) {
             i.indexOf(" " + r + " ") < 0 && (i += r + " ");
-          }o !== (a = ht(i)) && n.setAttribute("class", a);
+          }o !== (a = ft(i)) && n.setAttribute("class", a);
         }
       }return this;
     }, removeClass: function removeClass(e) {
@@ -1775,30 +1775,30 @@ function launchGallery() {
           s,
           a,
           l = 0;if (m(e)) return this.each(function (t) {
-        _(this).removeClass(e.call(this, t, ft(this)));
+        _(this).removeClass(e.call(this, t, ht(this)));
       });if (!arguments.length) return this.attr("class", "");if ((t = pt(e)).length) for (; n = this[l++];) {
-        if (o = ft(n), i = 1 === n.nodeType && " " + ht(o) + " ") {
+        if (o = ht(n), i = 1 === n.nodeType && " " + ft(o) + " ") {
           for (s = 0; r = t[s++];) {
             for (; i.indexOf(" " + r + " ") > -1;) {
               i = i.replace(" " + r + " ", " ");
             }
-          }o !== (a = ht(i)) && n.setAttribute("class", a);
+          }o !== (a = ft(i)) && n.setAttribute("class", a);
         }
       }return this;
     }, toggleClass: function toggleClass(e, t) {
       var n = typeof e === "undefined" ? "undefined" : _typeof(e),
           i = "string" === n || Array.isArray(e);return "boolean" == typeof t && i ? t ? this.addClass(e) : this.removeClass(e) : m(e) ? this.each(function (n) {
-        _(this).toggleClass(e.call(this, n, ft(this), t), t);
+        _(this).toggleClass(e.call(this, n, ht(this), t), t);
       }) : this.each(function () {
         var t, o, r, s;if (i) for (o = 0, r = _(this), s = pt(e); t = s[o++];) {
           r.hasClass(t) ? r.removeClass(t) : r.addClass(t);
-        } else void 0 !== e && "boolean" !== n || ((t = ft(this)) && Y.set(this, "__className__", t), this.setAttribute && this.setAttribute("class", t || !1 === e ? "" : Y.get(this, "__className__") || ""));
+        } else void 0 !== e && "boolean" !== n || ((t = ht(this)) && Y.set(this, "__className__", t), this.setAttribute && this.setAttribute("class", t || !1 === e ? "" : Y.get(this, "__className__") || ""));
       });
     }, hasClass: function hasClass(e) {
       var t,
           n,
           i = 0;for (t = " " + e + " "; n = this[i++];) {
-        if (1 === n.nodeType && (" " + ht(ft(n)) + " ").indexOf(t) > -1) return !0;
+        if (1 === n.nodeType && (" " + ft(ht(n)) + " ").indexOf(t) > -1) return !0;
       }return !1;
     } });var mt = /\r/g;_.fn.extend({ val: function val(e) {
       var t,
@@ -1810,7 +1810,7 @@ function launchGallery() {
         })), (t = _.valHooks[this.type] || _.valHooks[this.nodeName.toLowerCase()]) && "set" in t && void 0 !== t.set(this, o, "value") || (this.value = o));
       })) : o ? (t = _.valHooks[o.type] || _.valHooks[o.nodeName.toLowerCase()]) && "get" in t && void 0 !== (n = t.get(o, "value")) ? n : "string" == typeof (n = o.value) ? n.replace(mt, "") : null == n ? "" : n : void 0;
     } }), _.extend({ valHooks: { option: { get: function get(e) {
-          var t = _.find.attr(e, "value");return null != t ? t : ht(_.text(e));
+          var t = _.find.attr(e, "value");return null != t ? t : ft(_.text(e));
         } }, select: { get: function get(e) {
           var t,
               n,
@@ -1843,19 +1843,19 @@ function launchGallery() {
           l,
           c,
           u,
-          h,
           f,
+          h,
           p,
           v = [o || i],
           y = d.call(t, "type") ? t.type : t,
-          b = d.call(t, "namespace") ? t.namespace.split(".") : [];if (a = p = l = o = o || i, 3 !== o.nodeType && 8 !== o.nodeType && !gt.test(y + _.event.triggered) && (y.indexOf(".") > -1 && (y = (b = y.split(".")).shift(), b.sort()), u = y.indexOf(":") < 0 && "on" + y, (t = t[_.expando] ? t : new _.Event(y, "object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && t)).isTrigger = r ? 2 : 3, t.namespace = b.join("."), t.rnamespace = t.namespace ? new RegExp("(^|\\.)" + b.join("\\.(?:.*\\.|)") + "(\\.|$)") : null, t.result = void 0, t.target || (t.target = o), n = null == n ? [t] : _.makeArray(n, [t]), f = _.event.special[y] || {}, r || !f.trigger || !1 !== f.trigger.apply(o, n))) {
-        if (!r && !f.noBubble && !g(o)) {
-          for (c = f.delegateType || y, gt.test(c + y) || (a = a.parentNode); a; a = a.parentNode) {
+          b = d.call(t, "namespace") ? t.namespace.split(".") : [];if (a = p = l = o = o || i, 3 !== o.nodeType && 8 !== o.nodeType && !gt.test(y + _.event.triggered) && (y.indexOf(".") > -1 && (y = (b = y.split(".")).shift(), b.sort()), u = y.indexOf(":") < 0 && "on" + y, (t = t[_.expando] ? t : new _.Event(y, "object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && t)).isTrigger = r ? 2 : 3, t.namespace = b.join("."), t.rnamespace = t.namespace ? new RegExp("(^|\\.)" + b.join("\\.(?:.*\\.|)") + "(\\.|$)") : null, t.result = void 0, t.target || (t.target = o), n = null == n ? [t] : _.makeArray(n, [t]), h = _.event.special[y] || {}, r || !h.trigger || !1 !== h.trigger.apply(o, n))) {
+        if (!r && !h.noBubble && !g(o)) {
+          for (c = h.delegateType || y, gt.test(c + y) || (a = a.parentNode); a; a = a.parentNode) {
             v.push(a), l = a;
           }l === (o.ownerDocument || i) && v.push(l.defaultView || l.parentWindow || e);
         }for (s = 0; (a = v[s++]) && !t.isPropagationStopped();) {
-          p = a, t.type = s > 1 ? c : f.bindType || y, (h = (Y.get(a, "events") || {})[t.type] && Y.get(a, "handle")) && h.apply(a, n), (h = u && a[u]) && h.apply && K(a) && (t.result = h.apply(a, n), !1 === t.result && t.preventDefault());
-        }return t.type = y, r || t.isDefaultPrevented() || f._default && !1 !== f._default.apply(v.pop(), n) || !K(o) || u && m(o[y]) && !g(o) && ((l = o[u]) && (o[u] = null), _.event.triggered = y, t.isPropagationStopped() && p.addEventListener(y, vt), o[y](), t.isPropagationStopped() && p.removeEventListener(y, vt), _.event.triggered = void 0, l && (o[u] = l)), t.result;
+          p = a, t.type = s > 1 ? c : h.bindType || y, (f = (Y.get(a, "events") || {})[t.type] && Y.get(a, "handle")) && f.apply(a, n), (f = u && a[u]) && f.apply && K(a) && (t.result = f.apply(a, n), !1 === t.result && t.preventDefault());
+        }return t.type = y, r || t.isDefaultPrevented() || h._default && !1 !== h._default.apply(v.pop(), n) || !K(o) || u && m(o[y]) && !g(o) && ((l = o[u]) && (o[u] = null), _.event.triggered = y, t.isPropagationStopped() && p.addEventListener(y, vt), o[y](), t.isPropagationStopped() && p.removeEventListener(y, vt), _.event.triggered = void 0, l && (o[u] = l)), t.result;
       }
     }, simulate: function simulate(e, t, n) {
       var i = _.extend(new _.Event(), n, { type: e, isSimulated: !0 });_.event.trigger(i, null, t);
@@ -1955,8 +1955,8 @@ function launchGallery() {
           c,
           u,
           d,
-          h,
           f,
+          h,
           p = _.ajaxSetup({}, n),
           m = p.context || p,
           g = p.context && (m.nodeType || m.jquery) ? _(m) : _.event,
@@ -1990,8 +1990,8 @@ function launchGallery() {
         } catch (e) {
           p.crossDomain = !0;
         }
-      }if (p.data && p.processData && "string" != typeof p.data && (p.data = _.param(p.data, p.traditional)), Ht(Ot, p, n, x), u) return x;for (h in (d = _.event && p.global) && 0 == _.active++ && _.event.trigger("ajaxStart"), p.type = p.type.toUpperCase(), p.hasContent = !It.test(p.type), r = p.url.replace(Dt, ""), p.hasContent ? p.data && p.processData && 0 === (p.contentType || "").indexOf("application/x-www-form-urlencoded") && (p.data = p.data.replace(Tt, "+")) : (f = p.url.slice(r.length), p.data && (p.processData || "string" == typeof p.data) && (r += (_t.test(r) ? "&" : "?") + p.data, delete p.data), !1 === p.cache && (r = r.replace(At, "$1"), f = (_t.test(r) ? "&" : "?") + "_=" + bt++ + f), p.url = r + f), p.ifModified && (_.lastModified[r] && x.setRequestHeader("If-Modified-Since", _.lastModified[r]), _.etag[r] && x.setRequestHeader("If-None-Match", _.etag[r])), (p.data && p.hasContent && !1 !== p.contentType || n.contentType) && x.setRequestHeader("Content-Type", p.contentType), x.setRequestHeader("Accept", p.dataTypes[0] && p.accepts[p.dataTypes[0]] ? p.accepts[p.dataTypes[0]] + ("*" !== p.dataTypes[0] ? ", " + Pt + "; q=0.01" : "") : p.accepts["*"]), p.headers) {
-        x.setRequestHeader(h, p.headers[h]);
+      }if (p.data && p.processData && "string" != typeof p.data && (p.data = _.param(p.data, p.traditional)), Ht(Ot, p, n, x), u) return x;for (f in (d = _.event && p.global) && 0 == _.active++ && _.event.trigger("ajaxStart"), p.type = p.type.toUpperCase(), p.hasContent = !It.test(p.type), r = p.url.replace(Dt, ""), p.hasContent ? p.data && p.processData && 0 === (p.contentType || "").indexOf("application/x-www-form-urlencoded") && (p.data = p.data.replace(Tt, "+")) : (h = p.url.slice(r.length), p.data && (p.processData || "string" == typeof p.data) && (r += (_t.test(r) ? "&" : "?") + p.data, delete p.data), !1 === p.cache && (r = r.replace(At, "$1"), h = (_t.test(r) ? "&" : "?") + "_=" + bt++ + h), p.url = r + h), p.ifModified && (_.lastModified[r] && x.setRequestHeader("If-Modified-Since", _.lastModified[r]), _.etag[r] && x.setRequestHeader("If-None-Match", _.etag[r])), (p.data && p.hasContent && !1 !== p.contentType || n.contentType) && x.setRequestHeader("Content-Type", p.contentType), x.setRequestHeader("Accept", p.dataTypes[0] && p.accepts[p.dataTypes[0]] ? p.accepts[p.dataTypes[0]] + ("*" !== p.dataTypes[0] ? ", " + Pt + "; q=0.01" : "") : p.accepts["*"]), p.headers) {
+        x.setRequestHeader(f, p.headers[f]);
       }if (p.beforeSend && (!1 === p.beforeSend.call(m, x, p) || u)) return x.abort();if (C = "abort", y.add(p.complete), x.done(p.success), x.fail(p.error), o = Ht(Lt, p, n, x)) {
         if (x.readyState = 1, d && g.trigger("ajaxSend", [x, p]), u) return x;p.async && p.timeout > 0 && (l = e.setTimeout(function () {
           x.abort("timeout");
@@ -2002,8 +2002,8 @@ function launchGallery() {
         }
       } else S(-1, "No Transport");function S(t, n, i, a) {
         var c,
-            h,
             f,
+            h,
             w,
             E,
             C = n;u || (u = !0, l && e.clearTimeout(l), o = void 0, s = a || "", x.readyState = t > 0 ? 4 : 0, c = t >= 200 && t < 300 || 304 === t, i && (w = function (e, t, n) {
@@ -2042,7 +2042,7 @@ function launchGallery() {
               }
             }
           }return { state: "success", data: t };
-        }(p, w, x, c), c ? (p.ifModified && ((E = x.getResponseHeader("Last-Modified")) && (_.lastModified[r] = E), (E = x.getResponseHeader("etag")) && (_.etag[r] = E)), 204 === t || "HEAD" === p.type ? C = "nocontent" : 304 === t ? C = "notmodified" : (C = w.state, h = w.data, c = !(f = w.error))) : (f = C, !t && C || (C = "error", t < 0 && (t = 0))), x.status = t, x.statusText = (n || C) + "", c ? v.resolveWith(m, [h, C, x]) : v.rejectWith(m, [x, C, f]), x.statusCode(b), b = void 0, d && g.trigger(c ? "ajaxSuccess" : "ajaxError", [x, p, c ? h : f]), y.fireWith(m, [x, C]), d && (g.trigger("ajaxComplete", [x, p]), --_.active || _.event.trigger("ajaxStop")));
+        }(p, w, x, c), c ? (p.ifModified && ((E = x.getResponseHeader("Last-Modified")) && (_.lastModified[r] = E), (E = x.getResponseHeader("etag")) && (_.etag[r] = E)), 204 === t || "HEAD" === p.type ? C = "nocontent" : 304 === t ? C = "notmodified" : (C = w.state, f = w.data, c = !(h = w.error))) : (h = C, !t && C || (C = "error", t < 0 && (t = 0))), x.status = t, x.statusText = (n || C) + "", c ? v.resolveWith(m, [f, C, x]) : v.rejectWith(m, [x, C, h]), x.statusCode(b), b = void 0, d && g.trigger(c ? "ajaxSuccess" : "ajaxError", [x, p, c ? f : h]), y.fireWith(m, [x, C]), d && (g.trigger("ajaxComplete", [x, p]), --_.active || _.event.trigger("ajaxStop")));
       }return x;
     }, getJSON: function getJSON(e, t, n) {
       return _.get(e, t, n, "json");
@@ -2143,7 +2143,7 @@ function launchGallery() {
         o,
         r,
         s = this,
-        a = e.indexOf(" ");return a > -1 && (i = ht(e.slice(a)), e = e.slice(0, a)), m(t) ? (n = t, t = void 0) : t && "object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && (o = "POST"), s.length > 0 && _.ajax({ url: e, type: o || "GET", dataType: "html", data: t }).done(function (e) {
+        a = e.indexOf(" ");return a > -1 && (i = ft(e.slice(a)), e = e.slice(0, a)), m(t) ? (n = t, t = void 0) : t && "object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && (o = "POST"), s.length > 0 && _.ajax({ url: e, type: o || "GET", dataType: "html", data: t }).done(function (e) {
       r = arguments, s.html(i ? _("<div>").append(_.parseHTML(e)).find(i) : e);
     }).always(n && function (e, t) {
       s.each(function () {
@@ -2276,19 +2276,19 @@ function launchGallery() {
   }var c = e && !(!window.MSInputMethodContext || !document.documentMode),
       u = e && /MSIE 10/.test(navigator.userAgent);function d(e) {
     return 11 === e ? c : 10 === e ? u : c || u;
-  }function h(e) {
+  }function f(e) {
     if (!e) return document.documentElement;for (var t = d(10) ? document.body : null, n = e.offsetParent || null; n === t && e.nextElementSibling;) {
       n = (e = e.nextElementSibling).offsetParent;
-    }var i = n && n.nodeName;return i && "BODY" !== i && "HTML" !== i ? -1 !== ["TH", "TD", "TABLE"].indexOf(n.nodeName) && "static" === s(n, "position") ? h(n) : n : e ? e.ownerDocument.documentElement : document.documentElement;
-  }function f(e) {
-    return null !== e.parentNode ? f(e.parentNode) : e;
+    }var i = n && n.nodeName;return i && "BODY" !== i && "HTML" !== i ? -1 !== ["TH", "TD", "TABLE"].indexOf(n.nodeName) && "static" === s(n, "position") ? f(n) : n : e ? e.ownerDocument.documentElement : document.documentElement;
+  }function h(e) {
+    return null !== e.parentNode ? h(e.parentNode) : e;
   }function p(e, t) {
     if (!(e && e.nodeType && t && t.nodeType)) return document.documentElement;var n = e.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING,
         i = n ? e : t,
         o = n ? t : e,
         r = document.createRange();r.setStart(i, 0), r.setEnd(o, 0);var s,
         a,
-        l = r.commonAncestorContainer;if (e !== l && t !== l || i.contains(o)) return "BODY" === (a = (s = l).nodeName) || "HTML" !== a && h(s.firstElementChild) !== s ? h(l) : l;var c = f(e);return c.host ? p(c.host, t) : p(e, f(t).host);
+        l = r.commonAncestorContainer;if (e !== l && t !== l || i.contains(o)) return "BODY" === (a = (s = l).nodeName) || "HTML" !== a && f(s.firstElementChild) !== s ? f(l) : l;var c = h(e);return c.host ? p(c.host, t) : p(e, h(t).host);
   }function m(e) {
     var t = "top" === (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top") ? "scrollTop" : "scrollLeft",
         n = e.nodeName;if ("BODY" === n || "HTML" === n) {
@@ -2338,7 +2338,7 @@ function launchGallery() {
         l = r.height || e.clientHeight || o.bottom - o.top,
         c = e.offsetWidth - a,
         u = e.offsetHeight - l;if (c || u) {
-      var h = s(e);c -= g(h, "x"), u -= g(h, "y"), o.width -= c, o.height -= u;
+      var f = s(e);c -= g(f, "x"), u -= g(f, "y"), o.width -= c, o.height -= u;
     }return C(o);
   }function S(e, t) {
     var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -2348,10 +2348,10 @@ function launchGallery() {
         a = x(t),
         c = l(e),
         u = s(t),
-        h = parseFloat(u.borderTopWidth, 10),
-        f = parseFloat(u.borderLeftWidth, 10);n && o && (a.top = Math.max(a.top, 0), a.left = Math.max(a.left, 0));var p = C({ top: r.top - a.top - h, left: r.left - a.left - f, width: r.width, height: r.height });if (p.marginTop = 0, p.marginLeft = 0, !i && o) {
+        f = parseFloat(u.borderTopWidth, 10),
+        h = parseFloat(u.borderLeftWidth, 10);n && o && (a.top = Math.max(a.top, 0), a.left = Math.max(a.left, 0));var p = C({ top: r.top - a.top - f, left: r.left - a.left - h, width: r.width, height: r.height });if (p.marginTop = 0, p.marginLeft = 0, !i && o) {
       var g = parseFloat(u.marginTop, 10),
-          v = parseFloat(u.marginLeft, 10);p.top -= h - g, p.bottom -= h - g, p.left -= f - v, p.right -= f - v, p.marginTop = g, p.marginLeft = v;
+          v = parseFloat(u.marginLeft, 10);p.top -= f - g, p.bottom -= f - g, p.left -= h - v, p.right -= h - v, p.marginTop = g, p.marginLeft = v;
     }return (i && !n ? t.contains(c) : t === c && "BODY" !== c.nodeName) && (p = function (e, t) {
       var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           i = m(t, "top"),
@@ -2377,9 +2377,9 @@ function launchGallery() {
       var u = void 0;"scrollParent" === i ? "BODY" === (u = l(a(t))).nodeName && (u = e.ownerDocument.documentElement) : u = "window" === i ? e.ownerDocument.documentElement : i;var d = S(u, c, o);if ("HTML" !== u.nodeName || function e(t) {
         var n = t.nodeName;if ("BODY" === n || "HTML" === n) return !1;if ("fixed" === s(t, "position")) return !0;var i = a(t);return !!i && e(i);
       }(c)) r = d;else {
-        var h = y(e.ownerDocument),
-            f = h.height,
-            g = h.width;r.top += d.top - d.marginTop, r.bottom = f + d.top, r.left += d.left - d.marginLeft, r.right = g + d.left;
+        var f = y(e.ownerDocument),
+            h = f.height,
+            g = f.width;r.top += d.top - d.marginTop, r.bottom = h + d.top, r.left += d.left - d.marginLeft, r.right = g + d.left;
       }
     }var v = "number" == typeof (n = n || 0);return r.left += v ? n : n.left || 0, r.top += v ? n : n.top || 0, r.right -= v ? n : n.right || 0, r.bottom -= v ? n : n.bottom || 0, r;
   }function A(e, t, n, i, o) {
@@ -2517,7 +2517,7 @@ function launchGallery() {
               a = i.split("-")[0],
               l = void 0;return l = z(+n) ? [+n, 0] : Q(n, r, s, a), "left" === a ? (r.top += l[0], r.left -= l[1]) : "right" === a ? (r.top += l[0], r.left += l[1]) : "top" === a ? (r.left += l[0], r.top -= l[1]) : "bottom" === a && (r.left += l[0], r.top += l[1]), e.popper = r, e;
         }, offset: 0 }, preventOverflow: { order: 300, enabled: !0, fn: function fn(e, t) {
-          var n = t.boundariesElement || h(e.instance.popper);e.instance.reference === n && (n = h(n));var i = M("transform"),
+          var n = t.boundariesElement || f(e.instance.popper);e.instance.reference === n && (n = f(n));var i = M("transform"),
               o = e.instance.popper.style,
               r = o.top,
               s = o.left,
@@ -2551,14 +2551,14 @@ function launchGallery() {
               c = -1 !== ["left", "right"].indexOf(o),
               u = c ? "height" : "width",
               d = c ? "Top" : "Left",
-              h = d.toLowerCase(),
-              f = c ? "left" : "top",
+              f = d.toLowerCase(),
+              h = c ? "left" : "top",
               p = c ? "bottom" : "right",
-              m = I(i)[u];l[p] - m < a[h] && (e.offsets.popper[h] -= a[h] - (l[p] - m)), l[h] + m > a[p] && (e.offsets.popper[h] += l[h] + m - a[p]), e.offsets.popper = C(e.offsets.popper);var g = l[h] + l[u] / 2 - m / 2,
+              m = I(i)[u];l[p] - m < a[f] && (e.offsets.popper[f] -= a[f] - (l[p] - m)), l[f] + m > a[p] && (e.offsets.popper[f] += l[f] + m - a[p]), e.offsets.popper = C(e.offsets.popper);var g = l[f] + l[u] / 2 - m / 2,
               v = s(e.instance.popper),
               y = parseFloat(v["margin" + d], 10),
               b = parseFloat(v["border" + d + "Width"], 10),
-              _ = g - e.offsets.popper[h] - y - b;return _ = Math.max(Math.min(a[u] - m, _), 0), e.arrowElement = i, e.offsets.arrow = (w(n = {}, h, Math.round(_)), w(n, f, ""), n), e;
+              _ = g - e.offsets.popper[f] - y - b;return _ = Math.max(Math.min(a[u] - m, _), 0), e.arrowElement = i, e.offsets.arrow = (w(n = {}, f, Math.round(_)), w(n, h, ""), n), e;
         }, element: "[x-arrow]" }, flip: { order: 600, enabled: !0, fn: function fn(e, t) {
           if (j(e.instance.modifiers, "inner")) return e;if (e.flipped && e.placement === e.originalPlacement) return e;var n = D(e.instance.popper, e.instance.reference, t.padding, t.boundariesElement, e.positionFixed),
               i = e.placement.split("-")[0],
@@ -2572,16 +2572,16 @@ function launchGallery() {
             if (i !== a || s.length === l + 1) return e;i = e.placement.split("-")[0], o = N(i);var c = e.offsets.popper,
                 u = e.offsets.reference,
                 d = Math.floor,
-                h = "left" === i && d(c.right) > d(u.left) || "right" === i && d(c.left) < d(u.right) || "top" === i && d(c.bottom) > d(u.top) || "bottom" === i && d(c.top) < d(u.bottom),
-                f = d(c.left) < d(n.left),
+                f = "left" === i && d(c.right) > d(u.left) || "right" === i && d(c.left) < d(u.right) || "top" === i && d(c.bottom) > d(u.top) || "bottom" === i && d(c.top) < d(u.bottom),
+                h = d(c.left) < d(n.left),
                 p = d(c.right) > d(n.right),
                 m = d(c.top) < d(n.top),
                 g = d(c.bottom) > d(n.bottom),
-                v = "left" === i && f || "right" === i && p || "top" === i && m || "bottom" === i && g,
+                v = "left" === i && h || "right" === i && p || "top" === i && m || "bottom" === i && g,
                 y = -1 !== ["top", "bottom"].indexOf(i),
-                b = !!t.flipVariations && (y && "start" === r && f || y && "end" === r && p || !y && "start" === r && m || !y && "end" === r && g),
-                _ = !!t.flipVariationsByContent && (y && "start" === r && p || y && "end" === r && f || !y && "start" === r && g || !y && "end" === r && m),
-                w = b || _;(h || v || w) && (e.flipped = !0, (h || v) && (i = s[l + 1]), w && (r = function (e) {
+                b = !!t.flipVariations && (y && "start" === r && h || y && "end" === r && p || !y && "start" === r && m || !y && "end" === r && g),
+                _ = !!t.flipVariationsByContent && (y && "start" === r && p || y && "end" === r && h || !y && "start" === r && g || !y && "end" === r && m),
+                w = b || _;(f || v || w) && (e.flipped = !0, (f || v) && (i = s[l + 1]), w && (r = function (e) {
               return "end" === e ? "start" : "start" === e ? "end" : e;
             }(r)), e.placement = i + (r ? "-" + r : ""), e.offsets.popper = E({}, e.offsets.popper, O(e.instance.popper, e.offsets.reference, e.placement)), e = P(e.instance.modifiers, e, "flip"));
           }), e;
@@ -2609,7 +2609,7 @@ function launchGallery() {
               r = L(e.instance.modifiers, function (e) {
             return "applyStyle" === e.name;
           }).gpuAcceleration;void 0 !== r && console.warn("WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!");var s = void 0 !== r ? r : t.gpuAcceleration,
-              a = h(e.instance.popper),
+              a = f(e.instance.popper),
               l = x(a),
               c = { position: o.position },
               u = function (e, t) {
@@ -2625,16 +2625,16 @@ function launchGallery() {
                 c = r(i.width),
                 u = -1 !== ["left", "right"].indexOf(e.placement),
                 d = -1 !== e.placement.indexOf("-"),
-                h = t ? u || d || l % 2 == c % 2 ? r : s : a,
-                f = t ? r : a;return { left: h(l % 2 == 1 && c % 2 == 1 && !d && t ? i.left - 1 : i.left), top: f(i.top), bottom: f(i.bottom), right: h(i.right) };
+                f = t ? u || d || l % 2 == c % 2 ? r : s : a,
+                h = t ? r : a;return { left: f(l % 2 == 1 && c % 2 == 1 && !d && t ? i.left - 1 : i.left), top: h(i.top), bottom: h(i.bottom), right: f(i.right) };
           }(e, window.devicePixelRatio < 2 || !R),
               d = "bottom" === n ? "top" : "bottom",
-              f = "right" === i ? "left" : "right",
+              h = "right" === i ? "left" : "right",
               p = M("transform"),
               m = void 0,
-              g = void 0;if (g = "bottom" === d ? "HTML" === a.nodeName ? -a.clientHeight + u.bottom : -l.height + u.bottom : u.top, m = "right" === f ? "HTML" === a.nodeName ? -a.clientWidth + u.right : -l.width + u.right : u.left, s && p) c[p] = "translate3d(" + m + "px, " + g + "px, 0)", c[d] = 0, c[f] = 0, c.willChange = "transform";else {
+              g = void 0;if (g = "bottom" === d ? "HTML" === a.nodeName ? -a.clientHeight + u.bottom : -l.height + u.bottom : u.top, m = "right" === h ? "HTML" === a.nodeName ? -a.clientWidth + u.right : -l.width + u.right : u.left, s && p) c[p] = "translate3d(" + m + "px, " + g + "px, 0)", c[d] = 0, c[h] = 0, c.willChange = "transform";else {
             var v = "bottom" === d ? -1 : 1,
-                y = "right" === f ? -1 : 1;c[d] = g * v, c[f] = m * y, c.willChange = d + ", " + f;
+                y = "right" === h ? -1 : 1;c[d] = g * v, c[h] = m * y, c.willChange = d + ", " + h;
           }var b = { "x-placement": e.placement };return e.attributes = E({}, b, e.attributes), e.styles = E({}, c, e.styles), e.arrowStyles = E({}, e.offsets.arrow, e.arrowStyles), e;
         }, gpuAcceleration: !0, x: "bottom", y: "right" }, applyStyle: { order: 900, enabled: !0, fn: function fn(e) {
           var t, n;return W(e.instance.popper, e.styles), t = e.instance.popper, n = e.attributes, Object.keys(n).forEach(function (e) {
@@ -2745,8 +2745,8 @@ function launchGallery() {
       if (t(e.target).is(this)) return e.handleObj.handler.apply(this, arguments);
     } };var u = t.fn.alert,
       d = { CLOSE: "close.bs.alert", CLOSED: "closed.bs.alert", CLICK_DATA_API: "click.bs.alert.data-api" },
-      h = "alert",
-      f = "fade",
+      f = "alert",
+      h = "fade",
       p = "show",
       m = function () {
     function e(e) {
@@ -2757,11 +2757,11 @@ function launchGallery() {
       t.removeData(this._element, "bs.alert"), this._element = null;
     }, n._getRootElement = function (e) {
       var n = c.getSelectorFromElement(e),
-          i = !1;return n && (i = document.querySelector(n)), i || (i = t(e).closest("." + h)[0]), i;
+          i = !1;return n && (i = document.querySelector(n)), i || (i = t(e).closest("." + f)[0]), i;
     }, n._triggerCloseEvent = function (e) {
       var n = t.Event(d.CLOSE);return t(e).trigger(n), n;
     }, n._removeElement = function (e) {
-      var n = this;if (t(e).removeClass(p), t(e).hasClass(f)) {
+      var n = this;if (t(e).removeClass(p), t(e).hasClass(h)) {
         var i = c.getTransitionDurationFromElement(e);t(e).one(c.TRANSITION_END, function (t) {
           return n._destroyElement(e, t);
         }).emulateTransitionEnd(i);
@@ -2930,14 +2930,14 @@ function launchGallery() {
           l = this._getItemIndex(a),
           u = n || a && this._getItemByDirection(e, a),
           d = this._getItemIndex(u),
-          h = Boolean(this._interval);if (e === O ? (i = W, o = R, r = P) : (i = z, o = B, r = j), u && t(u).hasClass(q)) this._isSliding = !1;else if (!this._triggerSlideEvent(u, r).isDefaultPrevented() && a && u) {
-        this._isSliding = !0, h && this.pause(), this._setActiveIndicatorElement(u);var f = t.Event(M.SLID, { relatedTarget: u, direction: r, from: l, to: d });if (t(this._element).hasClass(F)) {
+          f = Boolean(this._interval);if (e === O ? (i = W, o = R, r = P) : (i = z, o = B, r = j), u && t(u).hasClass(q)) this._isSliding = !1;else if (!this._triggerSlideEvent(u, r).isDefaultPrevented() && a && u) {
+        this._isSliding = !0, f && this.pause(), this._setActiveIndicatorElement(u);var h = t.Event(M.SLID, { relatedTarget: u, direction: r, from: l, to: d });if (t(this._element).hasClass(F)) {
           t(u).addClass(o), c.reflow(u), t(a).addClass(i), t(u).addClass(i);var p = parseInt(u.getAttribute("data-interval"), 10);p ? (this._config.defaultInterval = this._config.defaultInterval || this._config.interval, this._config.interval = p) : this._config.interval = this._config.defaultInterval || this._config.interval;var m = c.getTransitionDurationFromElement(a);t(a).one(c.TRANSITION_END, function () {
             t(u).removeClass(i + " " + o).addClass(q), t(a).removeClass(q + " " + o + " " + i), s._isSliding = !1, setTimeout(function () {
-              return t(s._element).trigger(f);
+              return t(s._element).trigger(h);
             }, 0);
           }).emulateTransitionEnd(m);
-        } else t(a).removeClass(q), t(u).addClass(q), this._isSliding = !1, t(this._element).trigger(f);h && this.cycle();
+        } else t(a).removeClass(q), t(u).addClass(q), this._isSliding = !1, t(this._element).trigger(h);f && this.cycle();
       }
     }, e._jQueryInterface = function (n) {
       return this.each(function () {
@@ -3056,8 +3056,8 @@ function launchGallery() {
       ce = new RegExp("38|40|27"),
       ue = { HIDE: "hide.bs.dropdown", HIDDEN: "hidden.bs.dropdown", SHOW: "show.bs.dropdown", SHOWN: "shown.bs.dropdown", CLICK: "click.bs.dropdown", CLICK_DATA_API: "click.bs.dropdown.data-api", KEYDOWN_DATA_API: "keydown.bs.dropdown.data-api", KEYUP_DATA_API: "keyup.bs.dropdown.data-api" },
       de = "disabled",
-      he = "show",
-      fe = "dropup",
+      fe = "show",
+      he = "dropup",
       pe = "dropright",
       me = "dropleft",
       ge = "dropdown-menu-right",
@@ -3081,26 +3081,26 @@ function launchGallery() {
     }var i = e.prototype;return i.toggle = function () {
       if (!this._element.disabled && !t(this._element).hasClass(de)) {
         var i = e._getParentFromElement(this._element),
-            o = t(this._menu).hasClass(he);if (e._clearMenus(), !o) {
+            o = t(this._menu).hasClass(fe);if (e._clearMenus(), !o) {
           var r = { relatedTarget: this._element },
               s = t.Event(ue.SHOW, r);if (t(i).trigger(s), !s.isDefaultPrevented()) {
             if (!this._inNavbar) {
               if (void 0 === n) throw new TypeError("Bootstrap's dropdowns require Popper.js (https://popper.js.org/)");var a = this._element;"parent" === this._config.reference ? a = i : c.isElement(this._config.reference) && (a = this._config.reference, void 0 !== this._config.reference.jquery && (a = this._config.reference[0])), "scrollParent" !== this._config.boundary && t(i).addClass(ve), this._popper = new n(a, this._menu, this._getPopperConfig());
-            }"ontouchstart" in document.documentElement && 0 === t(i).closest(we).length && t(document.body).children().on("mouseover", null, t.noop), this._element.focus(), this._element.setAttribute("aria-expanded", !0), t(this._menu).toggleClass(he), t(i).toggleClass(he).trigger(t.Event(ue.SHOWN, r));
+            }"ontouchstart" in document.documentElement && 0 === t(i).closest(we).length && t(document.body).children().on("mouseover", null, t.noop), this._element.focus(), this._element.setAttribute("aria-expanded", !0), t(this._menu).toggleClass(fe), t(i).toggleClass(fe).trigger(t.Event(ue.SHOWN, r));
           }
         }
       }
     }, i.show = function () {
-      if (!(this._element.disabled || t(this._element).hasClass(de) || t(this._menu).hasClass(he))) {
+      if (!(this._element.disabled || t(this._element).hasClass(de) || t(this._menu).hasClass(fe))) {
         var n = { relatedTarget: this._element },
             i = t.Event(ue.SHOW, n),
-            o = e._getParentFromElement(this._element);t(o).trigger(i), i.isDefaultPrevented() || (t(this._menu).toggleClass(he), t(o).toggleClass(he).trigger(t.Event(ue.SHOWN, n)));
+            o = e._getParentFromElement(this._element);t(o).trigger(i), i.isDefaultPrevented() || (t(this._menu).toggleClass(fe), t(o).toggleClass(fe).trigger(t.Event(ue.SHOWN, n)));
       }
     }, i.hide = function () {
-      if (!this._element.disabled && !t(this._element).hasClass(de) && t(this._menu).hasClass(he)) {
+      if (!this._element.disabled && !t(this._element).hasClass(de) && t(this._menu).hasClass(fe)) {
         var n = { relatedTarget: this._element },
             i = t.Event(ue.HIDE, n),
-            o = e._getParentFromElement(this._element);t(o).trigger(i), i.isDefaultPrevented() || (t(this._menu).toggleClass(he), t(o).toggleClass(he).trigger(t.Event(ue.HIDDEN, n)));
+            o = e._getParentFromElement(this._element);t(o).trigger(i), i.isDefaultPrevented() || (t(this._menu).toggleClass(fe), t(o).toggleClass(fe).trigger(t.Event(ue.HIDDEN, n)));
       }
     }, i.dispose = function () {
       t.removeData(this._element, "bs.dropdown"), t(this._element).off(".bs.dropdown"), this._element = null, this._menu = null, null !== this._popper && (this._popper.destroy(), this._popper = null);
@@ -3118,7 +3118,7 @@ function launchGallery() {
       }return this._menu;
     }, i._getPlacement = function () {
       var e = t(this._element.parentNode),
-          n = Se;return e.hasClass(fe) ? (n = Ce, t(this._menu).hasClass(ge) && (n = xe)) : e.hasClass(pe) ? n = De : e.hasClass(me) ? n = Ae : t(this._menu).hasClass(ge) && (n = Te), n;
+          n = Se;return e.hasClass(he) ? (n = Ce, t(this._menu).hasClass(ge) && (n = xe)) : e.hasClass(pe) ? n = De : e.hasClass(me) ? n = Ae : t(this._menu).hasClass(ge) && (n = Te), n;
     }, i._detectNavbar = function () {
       return t(this._element).closest(".navbar").length > 0;
     }, i._getOffset = function () {
@@ -3139,8 +3139,8 @@ function launchGallery() {
         var s = e._getParentFromElement(i[o]),
             a = t(i[o]).data("bs.dropdown"),
             l = { relatedTarget: i[o] };if (n && "click" === n.type && (l.clickEvent = n), a) {
-          var c = a._menu;if (t(s).hasClass(he) && !(n && ("click" === n.type && /input|textarea/i.test(n.target.tagName) || "keyup" === n.type && 9 === n.which) && t.contains(s, n.target))) {
-            var u = t.Event(ue.HIDE, l);t(s).trigger(u), u.isDefaultPrevented() || ("ontouchstart" in document.documentElement && t(document.body).children().off("mouseover", null, t.noop), i[o].setAttribute("aria-expanded", "false"), t(c).removeClass(he), t(s).removeClass(he).trigger(t.Event(ue.HIDDEN, l)));
+          var c = a._menu;if (t(s).hasClass(fe) && !(n && ("click" === n.type && /input|textarea/i.test(n.target.tagName) || "keyup" === n.type && 9 === n.which) && t.contains(s, n.target))) {
+            var u = t.Event(ue.HIDE, l);t(s).trigger(u), u.isDefaultPrevented() || ("ontouchstart" in document.documentElement && t(document.body).children().off("mouseover", null, t.noop), i[o].setAttribute("aria-expanded", "false"), t(c).removeClass(fe), t(s).removeClass(fe).trigger(t.Event(ue.HIDDEN, l)));
           }
         }
       }
@@ -3150,7 +3150,7 @@ function launchGallery() {
     }, e._dataApiKeydownHandler = function (n) {
       if ((/input|textarea/i.test(n.target.tagName) ? !(32 === n.which || 27 !== n.which && (40 !== n.which && 38 !== n.which || t(n.target).closest(_e).length)) : ce.test(n.which)) && (n.preventDefault(), n.stopPropagation(), !this.disabled && !t(this).hasClass(de))) {
         var i = e._getParentFromElement(this),
-            o = t(i).hasClass(he);if (o && (!o || 27 !== n.which && 32 !== n.which)) {
+            o = t(i).hasClass(fe);if (o && (!o || 27 !== n.which && 32 !== n.which)) {
           var r = [].slice.call(i.querySelectorAll(Ee));if (0 !== r.length) {
             var s = r.indexOf(n.target);38 === n.which && s > 0 && s--, 40 === n.which && s < r.length - 1 && s++, s < 0 && (s = 0), r[s].focus();
           }
@@ -3342,8 +3342,8 @@ function launchGallery() {
       ct = "hover",
       ut = "focus",
       dt = "click",
-      ht = "manual",
-      ft = function () {
+      ft = "manual",
+      ht = function () {
     function e(e, t) {
       if (void 0 === n) throw new TypeError("Bootstrap's tooltips require Popper.js (https://popper.js.org/)");this._isEnabled = !0, this._timeout = 0, this._hoverState = "", this._activeTrigger = {}, this._popper = null, this.element = e, this.config = this._getConfig(t), this.tip = null, this._setListeners();
     }var i = e.prototype;return i.enable = function () {
@@ -3370,11 +3370,11 @@ function launchGallery() {
             t.originalPlacement !== t.placement && e._handlePopperPlacementChange(t);
           }, onUpdate: function onUpdate(t) {
             return e._handlePopperPlacementChange(t);
-          } }), t(s).addClass(st), "ontouchstart" in document.documentElement && t(document.body).children().on("mouseover", null, t.noop);var h = function h() {
+          } }), t(s).addClass(st), "ontouchstart" in document.documentElement && t(document.body).children().on("mouseover", null, t.noop);var f = function f() {
           e.config.animation && e._fixTransition();var n = e._hoverState;e._hoverState = null, t(e.element).trigger(e.constructor.Event.SHOWN), n === it && e._leave(null, e);
         };if (t(this.tip).hasClass(rt)) {
-          var f = c.getTransitionDurationFromElement(this.tip);t(this.tip).one(c.TRANSITION_END, h).emulateTransitionEnd(f);
-        } else h();
+          var h = c.getTransitionDurationFromElement(this.tip);t(this.tip).one(c.TRANSITION_END, f).emulateTransitionEnd(h);
+        } else f();
       }
     }, i.hide = function (e) {
       var n = this,
@@ -3414,7 +3414,7 @@ function launchGallery() {
       var e = this;this.config.trigger.split(" ").forEach(function (n) {
         if ("click" === n) t(e.element).on(e.constructor.Event.CLICK, e.config.selector, function (t) {
           return e.toggle(t);
-        });else if (n !== ht) {
+        });else if (n !== ft) {
           var i = n === ct ? e.constructor.Event.MOUSEENTER : e.constructor.Event.FOCUSIN,
               o = n === ct ? e.constructor.Event.MOUSELEAVE : e.constructor.Event.FOCUSOUT;t(e.element).on(i, e.config.selector, function (t) {
             return e._enter(t);
@@ -3477,13 +3477,13 @@ function launchGallery() {
       } }, { key: "DefaultType", get: function get() {
         return Je;
       } }]), e;
-  }();t.fn.tooltip = ft._jQueryInterface, t.fn.tooltip.Constructor = ft, t.fn.tooltip.noConflict = function () {
-    return t.fn.tooltip = Xe, ft._jQueryInterface;
+  }();t.fn.tooltip = ht._jQueryInterface, t.fn.tooltip.Constructor = ht, t.fn.tooltip.noConflict = function () {
+    return t.fn.tooltip = Xe, ht._jQueryInterface;
   };var pt = "popover",
       mt = t.fn.popover,
       gt = new RegExp("(^|\\s)bs-popover\\S+", "g"),
-      vt = s({}, ft.Default, { placement: "right", trigger: "click", content: "", template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>' }),
-      yt = s({}, ft.DefaultType, { content: "(string|element|function)" }),
+      vt = s({}, ht.Default, { placement: "right", trigger: "click", content: "", template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>' }),
+      yt = s({}, ht.DefaultType, { content: "(string|element|function)" }),
       bt = "fade",
       _t = "show",
       wt = ".popover-header",
@@ -3527,7 +3527,7 @@ function launchGallery() {
       } }, { key: "DefaultType", get: function get() {
         return yt;
       } }]), r;
-  }(ft);t.fn.popover = xt._jQueryInterface, t.fn.popover.Constructor = xt, t.fn.popover.noConflict = function () {
+  }(ht);t.fn.popover = xt._jQueryInterface, t.fn.popover.Constructor = xt, t.fn.popover.noConflict = function () {
     return t.fn.popover = mt, xt._jQueryInterface;
   };var St = "scrollspy",
       Tt = t.fn[St],
@@ -3730,7 +3730,7 @@ function launchGallery() {
     return t.fn.toast = Gt, an._jQueryInterface;
   }, function () {
     if (void 0 === t) throw new TypeError("Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript.");var e = t.fn.jquery.split(" ")[0].split(".");if (e[0] < 2 && e[1] < 9 || 1 === e[0] && 9 === e[1] && e[2] < 1 || e[0] >= 4) throw new Error("Bootstrap's JavaScript requires at least jQuery v1.9.1 but less than v4.0.0");
-  }(), e.Util = c, e.Alert = m, e.Button = T, e.Carousel = K, e.Collapse = se, e.Dropdown = Ne, e.Modal = Be, e.Popover = xt, e.Scrollspy = jt, e.Tab = Xt, e.Toast = an, e.Tooltip = ft, Object.defineProperty(e, "__esModule", { value: !0 });
+  }(), e.Util = c, e.Alert = m, e.Button = T, e.Carousel = K, e.Collapse = se, e.Dropdown = Ne, e.Modal = Be, e.Popover = xt, e.Scrollspy = jt, e.Tab = Xt, e.Toast = an, e.Tooltip = ht, Object.defineProperty(e, "__esModule", { value: !0 });
 }), function (e) {
   "use strict";
   function t(t) {
@@ -3919,9 +3919,9 @@ function launchGallery() {
           e[n[t]] = 0;
         }return e;
       }();var c = {};c.width = t.offsetWidth, c.height = t.offsetHeight;for (var u = c.isBorderBox = "border-box" == l.boxSizing, d = 0; d < i; d++) {
-        var h = n[d],
-            f = l[h],
-            p = parseFloat(f);c[h] = isNaN(p) ? 0 : p;
+        var f = n[d],
+            h = l[f],
+            p = parseFloat(h);c[f] = isNaN(p) ? 0 : p;
       }var m = c.paddingLeft + c.paddingRight,
           g = c.paddingTop + c.paddingBottom,
           v = c.marginLeft + c.marginRight,
@@ -4136,16 +4136,16 @@ function launchGallery() {
       t.appendChild(e.shift());
     }
   }var d = 0,
-      h = {};function f(e, t) {
+      f = {};function h(e, t) {
     var n = i.getQueryElement(e);if (n) {
       if (this.element = n, this.element.flickityGUID) {
-        var o = h[this.element.flickityGUID];return o.option(t), o;
+        var o = f[this.element.flickityGUID];return o.option(t), o;
       }a && (this.$element = a(this.element)), this.options = i.extend({}, this.constructor.defaults), this.option(t), this._create();
     } else c && c.error("Bad element for Flickity: " + (n || e));
-  }f.defaults = { accessibility: !0, cellAlign: "center", freeScrollFriction: .075, friction: .28, namespaceJQueryEvents: !0, percentPosition: !0, resize: !0, selectedAttraction: .025, setGallerySize: !0 }, f.createMethods = [];var p = f.prototype;i.extend(p, t.prototype), p._create = function () {
-    var t = this.guid = ++d;for (var n in this.element.flickityGUID = t, h[t] = this, this.selectedIndex = 0, this.restingFrames = 0, this.x = 0, this.velocity = 0, this.originSide = this.options.rightToLeft ? "right" : "left", this.viewport = document.createElement("div"), this.viewport.className = "flickity-viewport", this._createSlider(), (this.options.resize || this.options.watchCSS) && e.addEventListener("resize", this), this.options.on) {
+  }h.defaults = { accessibility: !0, cellAlign: "center", freeScrollFriction: .075, friction: .28, namespaceJQueryEvents: !0, percentPosition: !0, resize: !0, selectedAttraction: .025, setGallerySize: !0 }, h.createMethods = [];var p = h.prototype;i.extend(p, t.prototype), p._create = function () {
+    var t = this.guid = ++d;for (var n in this.element.flickityGUID = t, f[t] = this, this.selectedIndex = 0, this.restingFrames = 0, this.x = 0, this.velocity = 0, this.originSide = this.options.rightToLeft ? "right" : "left", this.viewport = document.createElement("div"), this.viewport.className = "flickity-viewport", this._createSlider(), (this.options.resize || this.options.watchCSS) && e.addEventListener("resize", this), this.options.on) {
       var i = this.options.on[n];this.on(n, i);
-    }f.createMethods.forEach(function (e) {
+    }h.createMethods.forEach(function (e) {
       this[e]();
     }, this), this.options.watchCSS ? this.watchCSS() : this.activate();
   }, p.option = function (e) {
@@ -4293,7 +4293,7 @@ function launchGallery() {
     "touchstart" != e.type && e.preventDefault(), this.focus();
   }, p.onresize = function () {
     this.watchCSS(), this.resize();
-  }, i.debounceMethod(f, "onresize", 150), p.resize = function () {
+  }, i.debounceMethod(h, "onresize", 150), p.resize = function () {
     if (this.isActive) {
       this.getSize(), this.options.wrapAround && (this.x = i.modulo(this.x, this.slideableWidth)), this.positionCells(), this._getWrapShiftCells(), this.setGallerySize(), this.emitEvent("resize");var e = this.selectedElements && this.selectedElements[0];this.selectCell(e, !1, !0);
     }
@@ -4301,9 +4301,9 @@ function launchGallery() {
     this.options.watchCSS && (-1 != l(this.element, ":after").content.indexOf("flickity") ? this.activate() : this.deactivate());
   }, p.onkeydown = function (e) {
     var t = document.activeElement && document.activeElement != this.element;if (this.options.accessibility && !t) {
-      var n = f.keyboardHandlers[e.keyCode];n && n.call(this);
+      var n = h.keyboardHandlers[e.keyCode];n && n.call(this);
     }
-  }, f.keyboardHandlers = { 37: function _() {
+  }, h.keyboardHandlers = { 37: function _() {
       var e = this.options.rightToLeft ? "next" : "previous";this.uiChange(), this[e]();
     }, 39: function _() {
       var e = this.options.rightToLeft ? "previous" : "next";this.uiChange(), this[e]();
@@ -4314,12 +4314,12 @@ function launchGallery() {
       e.destroy();
     }), this.element.removeChild(this.viewport), u(this.slider.children, this.element), this.options.accessibility && (this.element.removeAttribute("tabIndex"), this.element.removeEventListener("keydown", this)), this.isActive = !1, this.emitEvent("deactivate"));
   }, p.destroy = function () {
-    this.deactivate(), e.removeEventListener("resize", this), this.allOff(), this.emitEvent("destroy"), a && this.$element && a.removeData(this.element, "flickity"), delete this.element.flickityGUID, delete h[this.guid];
-  }, i.extend(p, s), f.data = function (e) {
-    var t = (e = i.getQueryElement(e)) && e.flickityGUID;return t && h[t];
-  }, i.htmlInit(f, "flickity"), a && a.bridget && a.bridget("flickity", f), f.setJQuery = function (e) {
+    this.deactivate(), e.removeEventListener("resize", this), this.allOff(), this.emitEvent("destroy"), a && this.$element && a.removeData(this.element, "flickity"), delete this.element.flickityGUID, delete f[this.guid];
+  }, i.extend(p, s), h.data = function (e) {
+    var t = (e = i.getQueryElement(e)) && e.flickityGUID;return t && f[t];
+  }, i.htmlInit(h, "flickity"), a && a.bridget && a.bridget("flickity", h), h.setJQuery = function (e) {
     a = e;
-  }, f.Cell = o, f.Slide = r, f;
+  }, h.Cell = o, h.Slide = r, h;
 }), function (e, t) {
   "function" == typeof define && define.amd ? define("unipointer/unipointer", ["ev-emitter/ev-emitter"], function (n) {
     return t(e, n);
@@ -4971,24 +4971,24 @@ function launchGallery() {
             c = n(this),
             u = c ? this.contentWindow || window : this,
             d = e(u),
-            h = o,
-            f = {};switch (typeof h === "undefined" ? "undefined" : _typeof(h)) {case "number":case "string":
-            if (/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(h)) {
-              h = i(h);break;
-            }h = c ? e(h) : e(h, u);case "object":
-            if (0 === h.length) return;(h.is || h.style) && (l = (h = e(h)).offset());}var p = e.isFunction(s.offset) && s.offset(u, h) || s.offset;e.each(s.axis.split(""), function (e, n) {
+            f = o,
+            h = {};switch (typeof f === "undefined" ? "undefined" : _typeof(f)) {case "number":case "string":
+            if (/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(f)) {
+              f = i(f);break;
+            }f = c ? e(f) : e(f, u);case "object":
+            if (0 === f.length) return;(f.is || f.style) && (l = (f = e(f)).offset());}var p = e.isFunction(s.offset) && s.offset(u, f) || s.offset;e.each(s.axis.split(""), function (e, n) {
           var i = "x" === n ? "Left" : "Top",
               o = i.toLowerCase(),
               r = "scroll" + i,
               g = d[r](),
-              v = t.max(u, n);if (l) f[r] = l[o] + (c ? 0 : g - d.offset()[o]), s.margin && (f[r] -= parseInt(h.css("margin" + i), 10) || 0, f[r] -= parseInt(h.css("border" + i + "Width"), 10) || 0), f[r] += p[o] || 0, s.over[o] && (f[r] += h["x" === n ? "width" : "height"]() * s.over[o]);else {
-            var y = h[o];f[r] = y.slice && "%" === y.slice(-1) ? parseFloat(y) / 100 * v : y;
-          }s.limit && /^\d+$/.test(f[r]) && (f[r] = f[r] <= 0 ? 0 : Math.min(f[r], v)), !e && s.axis.length > 1 && (g === f[r] ? f = {} : a && (m(s.onAfterFirst), f = {}));
+              v = t.max(u, n);if (l) h[r] = l[o] + (c ? 0 : g - d.offset()[o]), s.margin && (h[r] -= parseInt(f.css("margin" + i), 10) || 0, h[r] -= parseInt(f.css("border" + i + "Width"), 10) || 0), h[r] += p[o] || 0, s.over[o] && (h[r] += f["x" === n ? "width" : "height"]() * s.over[o]);else {
+            var y = f[o];h[r] = y.slice && "%" === y.slice(-1) ? parseFloat(y) / 100 * v : y;
+          }s.limit && /^\d+$/.test(h[r]) && (h[r] = h[r] <= 0 ? 0 : Math.min(h[r], v)), !e && s.axis.length > 1 && (g === h[r] ? h = {} : a && (m(s.onAfterFirst), h = {}));
         }), m(s.onAfter);
       }function m(t) {
         var n = e.extend({}, s, { queue: !0, duration: r, complete: t && function () {
-            t.call(u, h, s);
-          } });d.animate(f, n);
+            t.call(u, f, s);
+          } });d.animate(h, n);
       }
     });
   }, t.max = function (t, i) {
@@ -5020,10 +5020,10 @@ function launchGallery() {
       d = function d(t, n, i, o) {
     var r = document.createElement("div");return r.className = "mfp-" + t, i && (r.innerHTML = i), o ? n && n.appendChild(r) : (r = e(r), n && r.appendTo(n)), r;
   },
-      h = function h(n, i) {
+      f = function f(n, i) {
     t.ev.triggerHandler("mfp" + n, i), t.st.callbacks && (n = n.charAt(0).toLowerCase() + n.slice(1), t.st.callbacks[n] && t.st.callbacks[n].apply(t, e.isArray(i) ? i : [i]));
   },
-      f = function f(n) {
+      h = function h(n) {
     return n === s && t.currTemplate.closeBtn || (t.currTemplate.closeBtn = e(t.st.closeMarkup.replace("%title%", t.st.tClose)), s = n), t.currTemplate.closeBtn;
   },
       p = function p() {
@@ -5050,38 +5050,38 @@ function launchGallery() {
           t._checkIfClose(e.target) && t.close();
         }), t.container = d("container", t.wrap)), t.contentContainer = d("content"), t.st.preloader && (t.preloader = d("preloader", t.container, t.st.tLoading));var l = e.magnificPopup.modules;for (o = 0; o < l.length; o++) {
           var p = l[o];p = p.charAt(0).toUpperCase() + p.slice(1), t["init" + p].call(t);
-        }h("BeforeOpen"), t.st.showCloseBtn && (t.st.closeBtnInside ? (u("MarkupParse", function (e, t, n, i) {
-          n.close_replaceWith = f(i.type);
-        }), r += " mfp-close-btn-in") : t.wrap.append(f())), t.st.alignTop && (r += " mfp-align-top"), t.fixedContentPos ? t.wrap.css({ overflow: t.st.overflowY, overflowX: "hidden", overflowY: t.st.overflowY }) : t.wrap.css({ top: c.scrollTop(), position: "absolute" }), (!1 === t.st.fixedBgPos || "auto" === t.st.fixedBgPos && !t.fixedContentPos) && t.bgOverlay.css({ height: i.height(), position: "absolute" }), t.st.enableEscapeKey && i.on("keyup.mfp", function (e) {
+        }f("BeforeOpen"), t.st.showCloseBtn && (t.st.closeBtnInside ? (u("MarkupParse", function (e, t, n, i) {
+          n.close_replaceWith = h(i.type);
+        }), r += " mfp-close-btn-in") : t.wrap.append(h())), t.st.alignTop && (r += " mfp-align-top"), t.fixedContentPos ? t.wrap.css({ overflow: t.st.overflowY, overflowX: "hidden", overflowY: t.st.overflowY }) : t.wrap.css({ top: c.scrollTop(), position: "absolute" }), (!1 === t.st.fixedBgPos || "auto" === t.st.fixedBgPos && !t.fixedContentPos) && t.bgOverlay.css({ height: i.height(), position: "absolute" }), t.st.enableEscapeKey && i.on("keyup.mfp", function (e) {
           27 === e.keyCode && t.close();
         }), c.on("resize.mfp", function () {
           t.updateSize();
         }), t.st.closeOnContentClick || (r += " mfp-auto-cursor"), r && t.wrap.addClass(r);var m = t.wH = c.height(),
             g = {};if (t.fixedContentPos && t._hasScrollBar(m)) {
           var v = t._getScrollbarSize();v && (g.marginRight = v);
-        }t.fixedContentPos && (t.isIE7 ? e("body, html").css("overflow", "hidden") : g.overflow = "hidden");var y = t.st.mainClass;return t.isIE7 && (y += " mfp-ie7"), y && t._addClassToMFP(y), t.updateItemHTML(), h("BuildControls"), e("html").css(g), t.bgOverlay.add(t.wrap).prependTo(t.st.prependTo || e(document.body)), t._lastFocusedEl = document.activeElement, setTimeout(function () {
+        }t.fixedContentPos && (t.isIE7 ? e("body, html").css("overflow", "hidden") : g.overflow = "hidden");var y = t.st.mainClass;return t.isIE7 && (y += " mfp-ie7"), y && t._addClassToMFP(y), t.updateItemHTML(), f("BuildControls"), e("html").css(g), t.bgOverlay.add(t.wrap).prependTo(t.st.prependTo || e(document.body)), t._lastFocusedEl = document.activeElement, setTimeout(function () {
           t.content ? (t._addClassToMFP("mfp-ready"), t._setFocus()) : t.bgOverlay.addClass("mfp-ready"), i.on("focusin.mfp", t._onFocusIn);
-        }, 16), t.isOpen = !0, t.updateSize(m), h("Open"), n;
+        }, 16), t.isOpen = !0, t.updateSize(m), f("Open"), n;
       }t.updateItemHTML();
     }, close: function close() {
-      t.isOpen && (h("BeforeClose"), t.isOpen = !1, t.st.removalDelay && !t.isLowIE && t.supportsTransition ? (t._addClassToMFP("mfp-removing"), setTimeout(function () {
+      t.isOpen && (f("BeforeClose"), t.isOpen = !1, t.st.removalDelay && !t.isLowIE && t.supportsTransition ? (t._addClassToMFP("mfp-removing"), setTimeout(function () {
         t._close();
       }, t.st.removalDelay)) : t._close());
     }, _close: function _close() {
-      h("Close");var n = "mfp-removing mfp-ready ";if (t.bgOverlay.detach(), t.wrap.detach(), t.container.empty(), t.st.mainClass && (n += t.st.mainClass + " "), t._removeClassFromMFP(n), t.fixedContentPos) {
+      f("Close");var n = "mfp-removing mfp-ready ";if (t.bgOverlay.detach(), t.wrap.detach(), t.container.empty(), t.st.mainClass && (n += t.st.mainClass + " "), t._removeClassFromMFP(n), t.fixedContentPos) {
         var o = { marginRight: "" };t.isIE7 ? e("body, html").css("overflow", "") : o.overflow = "", e("html").css(o);
-      }i.off("keyup.mfp focusin.mfp"), t.ev.off(".mfp"), t.wrap.attr("class", "mfp-wrap").removeAttr("style"), t.bgOverlay.attr("class", "mfp-bg"), t.container.attr("class", "mfp-container"), !t.st.showCloseBtn || t.st.closeBtnInside && !0 !== t.currTemplate[t.currItem.type] || t.currTemplate.closeBtn && t.currTemplate.closeBtn.detach(), t.st.autoFocusLast && t._lastFocusedEl && e(t._lastFocusedEl).focus(), t.currItem = null, t.content = null, t.currTemplate = null, t.prevHeight = 0, h("AfterClose");
+      }i.off("keyup.mfp focusin.mfp"), t.ev.off(".mfp"), t.wrap.attr("class", "mfp-wrap").removeAttr("style"), t.bgOverlay.attr("class", "mfp-bg"), t.container.attr("class", "mfp-container"), !t.st.showCloseBtn || t.st.closeBtnInside && !0 !== t.currTemplate[t.currItem.type] || t.currTemplate.closeBtn && t.currTemplate.closeBtn.detach(), t.st.autoFocusLast && t._lastFocusedEl && e(t._lastFocusedEl).focus(), t.currItem = null, t.content = null, t.currTemplate = null, t.prevHeight = 0, f("AfterClose");
     }, updateSize: function updateSize(e) {
       if (t.isIOS) {
         var n = document.documentElement.clientWidth / window.innerWidth,
             i = window.innerHeight * n;t.wrap.css("height", i), t.wH = i;
-      } else t.wH = e || c.height();t.fixedContentPos || t.wrap.css("height", t.wH), h("Resize");
+      } else t.wH = e || c.height();t.fixedContentPos || t.wrap.css("height", t.wH), f("Resize");
     }, updateItemHTML: function updateItemHTML() {
-      var n = t.items[t.index];t.contentContainer.detach(), t.content && t.content.detach(), n.parsed || (n = t.parseEl(t.index));var i = n.type;if (h("BeforeChange", [t.currItem ? t.currItem.type : "", i]), t.currItem = n, !t.currTemplate[i]) {
-        var r = !!t.st[i] && t.st[i].markup;h("FirstMarkupParse", r), t.currTemplate[i] = !r || e(r);
-      }o && o !== n.type && t.container.removeClass("mfp-" + o + "-holder");var s = t["get" + i.charAt(0).toUpperCase() + i.slice(1)](n, t.currTemplate[i]);t.appendContent(s, i), n.preloaded = !0, h("Change", n), o = n.type, t.container.prepend(t.contentContainer), h("AfterChange");
+      var n = t.items[t.index];t.contentContainer.detach(), t.content && t.content.detach(), n.parsed || (n = t.parseEl(t.index));var i = n.type;if (f("BeforeChange", [t.currItem ? t.currItem.type : "", i]), t.currItem = n, !t.currTemplate[i]) {
+        var r = !!t.st[i] && t.st[i].markup;f("FirstMarkupParse", r), t.currTemplate[i] = !r || e(r);
+      }o && o !== n.type && t.container.removeClass("mfp-" + o + "-holder");var s = t["get" + i.charAt(0).toUpperCase() + i.slice(1)](n, t.currTemplate[i]);t.appendContent(s, i), n.preloaded = !0, f("Change", n), o = n.type, t.container.prepend(t.contentContainer), f("AfterChange");
     }, appendContent: function appendContent(e, n) {
-      t.content = e, e ? t.st.showCloseBtn && t.st.closeBtnInside && !0 === t.currTemplate[n] ? t.content.find(".mfp-close").length || t.content.append(f()) : t.content = e : t.content = "", h("BeforeAppend"), t.container.addClass("mfp-" + n + "-holder"), t.contentContainer.append(t.content);
+      t.content = e, e ? t.st.showCloseBtn && t.st.closeBtnInside && !0 === t.currTemplate[n] ? t.content.find(".mfp-close").length || t.content.append(h()) : t.content = e : t.content = "", f("BeforeAppend"), t.container.addClass("mfp-" + n + "-holder"), t.contentContainer.append(t.content);
     }, parseEl: function parseEl(n) {
       var i,
           o = t.items[n];if (o.tagName ? o = { el: e(o) } : (i = o.type, o = { data: o, src: o.src }), o.el) {
@@ -5090,7 +5090,7 @@ function launchGallery() {
             i = r[s];break;
           }
         }o.src = o.el.attr("data-mfp-src"), o.src || (o.src = o.el.attr("href"));
-      }return o.type = i || t.st.type || "inline", o.index = n, o.parsed = !0, t.items[n] = o, h("ElementParse", o), t.items[n];
+      }return o.type = i || t.st.type || "inline", o.index = n, o.parsed = !0, t.items[n] = o, f("ElementParse", o), t.items[n];
     }, addGroup: function addGroup(e, n) {
       var i = function i(_i) {
         _i.mfpEl = this, t._openClick(_i, e, n);
@@ -5103,7 +5103,7 @@ function launchGallery() {
       }
     }, updateStatus: function updateStatus(e, i) {
       if (t.preloader) {
-        n !== e && t.container.removeClass("mfp-s-" + n), i || "loading" !== e || (i = t.st.tLoading);var o = { status: e, text: i };h("UpdateStatus", o), e = o.status, i = o.text, t.preloader.html(i), t.preloader.find("a").on("click", function (e) {
+        n !== e && t.container.removeClass("mfp-s-" + n), i || "loading" !== e || (i = t.st.tLoading);var o = { status: e, text: i };f("UpdateStatus", o), e = o.status, i = o.text, t.preloader.html(i), t.preloader.find("a").on("click", function (e) {
           e.stopImmediatePropagation();
         }), t.container.addClass("mfp-s-" + e), n = e;
       }
@@ -5125,7 +5125,7 @@ function launchGallery() {
     }, _onFocusIn: function _onFocusIn(n) {
       if (n.target !== t.wrap[0] && !e.contains(t.wrap[0], n.target)) return t._setFocus(), !1;
     }, _parseMarkup: function _parseMarkup(t, n, i) {
-      var o;i.data && (n = e.extend(i.data, n)), h("MarkupParse", [t, n, i]), e.each(n, function (n, i) {
+      var o;i.data && (n = e.extend(i.data, n)), f("MarkupParse", [t, n, i]), e.each(n, function (n, i) {
         if (void 0 === i || !1 === i) return !0;if ((o = n.split("_")).length > 1) {
           var r = t.find(".mfp-" + o[0]);if (r.length > 0) {
             var s = o[1];"replaceWith" === s ? r[0] !== i[0] && r.replaceWith(i) : "img" === s ? r.is("img") ? r.attr("src", i) : r.replaceWith(e("<img>").attr("src", i).attr("class", r.attr("class"))) : r.attr(o[1], i);
@@ -5176,9 +5176,9 @@ function launchGallery() {
         t.types.push("ajax"), b = t.st.ajax.cursor, u("Close.ajax", w), u("BeforeChange.ajax", w);
       }, getAjax: function getAjax(n) {
         b && e(document.body).addClass(b), t.updateStatus("loading");var i = e.extend({ url: n.src, success: function success(i, o, r) {
-            var s = { data: i, xhr: r };h("ParseAjax", s), t.appendContent(e(s.data), "ajax"), n.finished = !0, _(), t._setFocus(), setTimeout(function () {
+            var s = { data: i, xhr: r };f("ParseAjax", s), t.appendContent(e(s.data), "ajax"), n.finished = !0, _(), t._setFocus(), setTimeout(function () {
               t.wrap.addClass("mfp-ready");
-            }, 16), t.updateStatus("ready"), h("AjaxContentAdded");
+            }, 16), t.updateStatus("ready"), f("AjaxContentAdded");
           }, error: function error() {
             _(), n.finished = n.loadError = !0, t.updateStatus("error", t.st.ajax.tError.replace("%url%", n.src));
           } }, t.st.ajax.settings);return t.req = e.ajax(i), "";
@@ -5194,7 +5194,7 @@ function launchGallery() {
           var n = 0;t.isLowIE && (n = parseInt(e.img.css("padding-top"), 10) + parseInt(e.img.css("padding-bottom"), 10)), e.img.css("max-height", t.wH - n);
         }
       }, _onImageHasSize: function _onImageHasSize(e) {
-        e.img && (e.hasSize = !0, E && clearInterval(E), e.isCheckingImgSize = !1, h("ImageHasSize", e), e.imgHidden && (t.content && t.content.removeClass("mfp-loading"), e.imgHidden = !1));
+        e.img && (e.hasSize = !0, E && clearInterval(E), e.isCheckingImgSize = !1, f("ImageHasSize", e), e.imgHidden && (t.content && t.content.removeClass("mfp-loading"), e.imgHidden = !1));
       }, findImageSize: function findImageSize(e) {
         var n = 0,
             i = e.img[0],
@@ -5206,7 +5206,7 @@ function launchGallery() {
       }, getImage: function getImage(n, i) {
         var o = 0,
             r = function r() {
-          n && (n.img[0].complete ? (n.img.off(".mfploader"), n === t.currItem && (t._onImageHasSize(n), t.updateStatus("ready")), n.hasSize = !0, n.loaded = !0, h("ImageLoadComplete")) : ++o < 200 ? setTimeout(r, 100) : s());
+          n && (n.img[0].complete ? (n.img.off(".mfploader"), n === t.currItem && (t._onImageHasSize(n), t.updateStatus("ready")), n.hasSize = !0, n.loaded = !0, f("ImageLoadComplete")) : ++o < 200 ? setTimeout(r, 100) : s());
         },
             s = function s() {
           n && (n.img.off(".mfploader"), n === t.currItem && (t._onImageHasSize(n), t.updateStatus("error", a.tError.replace("%url%", n.src))), n.hasSize = !0, n.loaded = !0, n.loadError = !0);
@@ -5241,7 +5241,7 @@ function launchGallery() {
               if (clearTimeout(o), t.content.css("visibility", "hidden"), !(e = t._getItemToZoom())) return void l();(r = a(e)).css(t._getOffset()), t.wrap.append(r), o = setTimeout(function () {
                 r.css(t._getOffset(!0)), o = setTimeout(function () {
                   l(), setTimeout(function () {
-                    r.remove(), e = r = null, h("ZoomAnimationEnded");
+                    r.remove(), e = r = null, f("ZoomAnimationEnded");
                   }, 16);
                 }, s);
               }, 16);
@@ -5333,10 +5333,10 @@ function launchGallery() {
         }
       }, _preloadItem: function _preloadItem(n) {
         if (n = S(n), !t.items[n].preloaded) {
-          var i = t.items[n];i.parsed || (i = t.parseEl(n)), h("LazyLoad", i), "image" === i.type && (i.img = e('<img class="mfp-img" />').on("load.mfploader", function () {
+          var i = t.items[n];i.parsed || (i = t.parseEl(n)), f("LazyLoad", i), "image" === i.type && (i.img = e('<img class="mfp-img" />').on("load.mfploader", function () {
             i.hasSize = !0;
           }).on("error.mfploader", function () {
-            i.hasSize = !0, i.loadError = !0, h("LazyLoadError", i);
+            i.hasSize = !0, i.loadError = !0, f("LazyLoadError", i);
           }).attr("src", i.src)), i.preloaded = !0;
         }
       } } });e.magnificPopup.registerModule("retina", { options: { replaceSrc: function replaceSrc(e) {
@@ -5386,8 +5386,8 @@ function launchGallery() {
           c,
           u,
           d,
-          h,
           f,
+          h,
           p,
           m,
           g,
@@ -5454,12 +5454,12 @@ function launchGallery() {
         i.reload();
       });
     }function z() {
-      var t = I.length;if (k.performanceTrick && u && (clearTimeout(d), h || (u.addClass("scrollax-performance"), h = !0), d = setTimeout(function () {
-        u.removeClass("scrollax-performance"), h = !1;
+      var t = I.length;if (k.performanceTrick && u && (clearTimeout(d), f || (u.addClass("scrollax-performance"), f = !0), d = setTimeout(function () {
+        u.removeClass("scrollax-performance"), f = !1;
       }, 100)), t) {
-        f = getOffset(e);for (var n = 0; n < t; n++) {
-          v = I[n], (g = _position(v.element, e))[p ? "right" : "bottom"] < 0 || g[p ? "left" : "top"] > f[p ? "width" : "height"] || (y = v.options, m = y.offset || k.offset || 0, _ = g[p ? "right" : "bottom"], w = g[p ? "width" : "height"], (b = (w - _ + m) / w) < 0 && (_ = g[p ? "left" : "top"], w = f[p ? "width" : "height"], b = (w - _ + m) / w - 1), b > 1 || b < -1 || W(v, b));
-        }B("scroll", f);
+        h = getOffset(e);for (var n = 0; n < t; n++) {
+          v = I[n], (g = _position(v.element, e))[p ? "right" : "bottom"] < 0 || g[p ? "left" : "top"] > h[p ? "width" : "height"] || (y = v.options, m = y.offset || k.offset || 0, _ = g[p ? "right" : "bottom"], w = g[p ? "width" : "height"], (b = (w - _ + m) / w) < 0 && (_ = g[p ? "left" : "top"], w = h[p ? "width" : "height"], b = (w - _ + m) / w - 1), b > 1 || b < -1 || W(v, b));
+        }B("scroll", h);
       }
     }function W(e, t) {
       var n = (E = e.parallaxElements).length;if (n) for (var i = 0; i < n; i++) {
@@ -5674,7 +5674,21 @@ function launchGallery() {
       n.flickity("next").flickity("stopPlayer");
     }));
   });
-}(jQuery), $(function () {
+}(jQuery), function () {
+  "use strict";
+  var e = document.querySelector("body > [data-global-search]"),
+      t = e.querySelector("input");function n() {
+    e.classList.remove("active"), document.activeElement.blur();
+  }document.querySelectorAll("[data-search-trigger]").forEach(function (t) {
+    t.addEventListener("click", function (t) {
+      t.preventDefault(), e.classList.add("active"), e.querySelector("input").focus();
+    });
+  }), e.addEventListener("mousedown", n), t.addEventListener("mousedown", function (e) {
+    e.stopPropagation();
+  }), document.addEventListener("keyup", function (e) {
+    27 === e.keyCode && n();
+  });
+}(), $(function () {
   $.Scrollax();
 });var wow = new WOW({ boxClass: "wow", animateClass: "animated", offset: 0, mobile: !1, live: !0, callback: function callback(e) {}, scrollContainer: null, resetAnimation: !0 });wow.init();var headings = document.querySelectorAll(".display-1:not(.is-unique), h2.text-uppercase:not(.is-unique)");function boldSecondWord(e) {
   var t = e.textContent.trim().split(" "),

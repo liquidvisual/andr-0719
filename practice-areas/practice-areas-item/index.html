@@ -49,6 +49,38 @@
         <!-- HEADER -->
         <header class="global-header">
 
+            <!-- HEADER TOP -->
+            <div class="global-header-top hidden-lg-down">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-end">
+
+                        <!-- SEARCH -->
+                        <a href="" class="mr-2" data-search-trigger>
+                            <i class="fa fa-search"></i>
+                        </a>
+
+                        <!-- SOCIAL MEDIA -->
+                        <div class="social-media">
+                            <a title="Facebook" href="http://www.facebook.com/andersonssolicitors" target="_blank" class="facebook">
+                                <div class="icon">
+                                    <i class="fa fa-facebook"></i>
+                                </div>
+                            </a>
+                            <a title="Twitter" href="https://twitter.com/#!/andersons_sols" target="_blank" class="twitter">
+                                <div class="icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                            </a>
+                            <a title="LinkedIn" href="https://au.linkedin.com/company/andersons-solicitors_2" target="_blank" class="linkedin">
+                                <div class="icon">
+                                    <i class="fa fa-linkedin"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- HEADER BODY -->
             <div class="global-header-body">
                 <div class="container">
@@ -456,6 +488,35 @@
                                                 <i class="fa fa-linkedin"></i>
                                             </div>
                                         </a>
+                                    </div>
+                                </li>
+
+                                <!-- SEARCH (OPTIONAL) -->
+                                <li class="is-off-canvas-only">
+
+                                    <!-- GLOBAL SEARCH -->
+                                    <div class="global-search" data-global-search>
+                                        <div class="container">
+
+                                            <!-- CLOSE -->
+                                            <button class="btn btn-close" data-dismiss="alert" aria-label="Close" title="Close">
+                                                <i class="fa fa-times-circle"></i>
+                                                <span class="text">esc</span>
+                                            </button>
+
+                                            <!-- FORM -->
+                                            <form class="global-search-form" action="/search/" method="get" novalidate>
+                                                <div class="input-group">
+                                                    <input class="form-control" name="q" type="search" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                                    <span class="global-search-info">Hit enter to search or ESC to close</span>
+                                                    <div class="input-group-append">
+                                                        <button type="submit" class="btn">
+                                                            <i class="fa fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -1027,6 +1088,35 @@
                                                             <i class="fa fa-linkedin"></i>
                                                         </div>
                                                     </a>
+                                                </div>
+                                            </li>
+
+                                            <!-- SEARCH (OPTIONAL) -->
+                                            <li class="is-off-canvas-only">
+
+                                                <!-- GLOBAL SEARCH -->
+                                                <div class="global-search" data-global-search>
+                                                    <div class="container">
+
+                                                        <!-- CLOSE -->
+                                                        <button class="btn btn-close" data-dismiss="alert" aria-label="Close" title="Close">
+                                                            <i class="fa fa-times-circle"></i>
+                                                            <span class="text">esc</span>
+                                                        </button>
+
+                                                        <!-- FORM -->
+                                                        <form class="global-search-form" action="/search/" method="get" novalidate>
+                                                            <div class="input-group">
+                                                                <input class="form-control" name="q" type="search" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                                                <span class="global-search-info">Hit enter to search or ESC to close</span>
+                                                                <div class="input-group-append">
+                                                                    <button type="submit" class="btn">
+                                                                        <i class="fa fa-search"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </li>
                                         </ul>
@@ -1681,8 +1771,62 @@
                     </a>
                 </div>
             </li>
+
+            <!-- SEARCH (OPTIONAL) -->
+            <li class="is-off-canvas-only">
+
+                <!-- GLOBAL SEARCH -->
+                <div class="global-search" data-global-search>
+                    <div class="container">
+
+                        <!-- CLOSE -->
+                        <button class="btn btn-close" data-dismiss="alert" aria-label="Close" title="Close">
+                            <i class="fa fa-times-circle"></i>
+                            <span class="text">esc</span>
+                        </button>
+
+                        <!-- FORM -->
+                        <form class="global-search-form" action="/search/" method="get" novalidate>
+                            <div class="input-group">
+                                <input class="form-control" name="q" type="search" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                <span class="global-search-info">Hit enter to search or ESC to close</span>
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
+
+    <!-- GLOBAL SEARCH -->
+    <div class="global-search" data-global-search>
+        <div class="container">
+
+            <!-- CLOSE -->
+            <button class="btn btn-close" data-dismiss="alert" aria-label="Close" title="Close">
+                <i class="fa fa-times-circle"></i>
+                <span class="text">esc</span>
+            </button>
+
+            <!-- FORM -->
+            <form class="global-search-form" action="/search/" method="get" novalidate>
+                <div class="input-group">
+                    <input class="form-control" name="q" type="search" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <span class="global-search-info">Hit enter to search or ESC to close</span>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!--[if lte IE 9]>
     <div class="lv-alert-bar">
