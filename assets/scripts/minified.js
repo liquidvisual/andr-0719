@@ -5612,7 +5612,6 @@ function launchGallery() {
     r._update(!0, e);
   });
 }(jQuery), launchGallery(), function () {
-  "use strict";
   var e,
       t = document.querySelector(".lv-page"),
       n = null;function i() {
@@ -5677,16 +5676,17 @@ function launchGallery() {
 }(jQuery), function () {
   "use strict";
   var e = document.querySelector("body > [data-global-search]"),
-      t = e.querySelector("input");function n() {
+      t = e.querySelector("input"),
+      n = document.querySelectorAll("[data-search-trigger]");function i() {
     e.classList.remove("active"), document.activeElement.blur();
-  }document.querySelectorAll("[data-search-trigger]").forEach(function (t) {
+  }window.NodeList && !NodeList.prototype.forEach && (NodeList.prototype.forEach = Array.prototype.forEach), n.forEach(function (t) {
     t.addEventListener("click", function (t) {
       t.preventDefault(), e.classList.add("active"), e.querySelector("input").focus();
     });
-  }), e.addEventListener("mousedown", n), t.addEventListener("mousedown", function (e) {
+  }), e.addEventListener("mousedown", i), t.addEventListener("mousedown", function (e) {
     e.stopPropagation();
   }), document.addEventListener("keyup", function (e) {
-    27 === e.keyCode && n();
+    27 === e.keyCode && i();
   });
 }(), $(function () {
   $.Scrollax();
