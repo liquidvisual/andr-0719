@@ -80,8 +80,11 @@
     }
 
     &.is-primary {
-        background: $primary;
         color: white;
+
+        @include media-breakpoint-up(md) {
+            background: $primary;
+        }
 
         .card {
             background: none;
@@ -257,7 +260,7 @@
 
 .section-about-us {
     &:before {
-        background-color: rgba($secondary, 0.84) !important;
+        background-color: rgba($secondary, 0.7) !important;
     //     @include media-breakpoint-up(lg) {
     //         display: none;
     //     }
@@ -283,8 +286,24 @@
         // &.is-tinted:before {
         //     height: 70%;
         // }
+    }
 
-        .wysiwyg p {
+    h2 {
+        @include media-breakpoint-up(md) {
+            position: relative;
+            top: rem-calc(10);
+        }
+    }
+
+    .wysiwyg {
+        @include media-breakpoint-up(md) {
+            background-color: rgba(black, 0.4);
+            padding: rem-calc(20);
+        }
+    }
+
+    .wysiwyg p {
+        @include media-breakpoint-up(lg) {
             font-size: rem-calc(20);
         }
     }

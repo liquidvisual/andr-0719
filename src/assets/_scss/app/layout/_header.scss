@@ -119,13 +119,15 @@ $header-body-xxl-height: 304px !default; //324px !default;
 .global-header-top {
 	display: flex;
 	align-items: center;
-	position: relative; // [LOCKED]
+	position: absolute; // [LOCKED]
+	// top: 0;
+	width: 100%;
 	height: $header-top-lg-height;
-	background: #152d40; //#242a2f; // body bg variable?
+	// background: grey;
 	font-size: rem-calc(16);
 	color: white; // [LOCKED] - for dropdown override
 	// transition: all ease 150ms;
-	// z-index: 2; // [LOCKED] - dropdown needs to move over top of nav
+	z-index: 2; // [LOCKED] - dropdown needs to move over top of nav
 
 	a {
 		font-weight: $font-weight-normal;
@@ -138,6 +140,10 @@ $header-body-xxl-height: 304px !default; //324px !default;
 			top: 1px;
 			font-size: rem-calc(19);
 		}
+	}
+
+	.fa-search {
+		color: $primary;
 	}
 
 	a:last-of-type {

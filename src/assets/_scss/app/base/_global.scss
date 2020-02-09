@@ -19,19 +19,19 @@
 	}
 
 	@include media-breakpoint-up(md) {
-	    padding-top: $header-body-md-height + $header-top-sm-height;
+	    padding-top: $header-body-md-height; // + $header-top-sm-height;
 	}
 
 	@include media-breakpoint-up(lg) {
-	    padding-top: $header-body-lg-height + $header-top-sm-height;
+	    padding-top: $header-body-lg-height; // + $header-top-sm-height;
 	}
 
 	@include media-breakpoint-up(xl) {
-	    padding-top: $header-body-xl-height + $header-top-sm-height;
+	    padding-top: $header-body-xl-height; // + $header-top-sm-height;
 	}
 
 	@include media-breakpoint-up(xxl) {
-	    padding-top: $header-body-xxl-height + $header-top-sm-height;
+	    padding-top: $header-body-xxl-height; // + $header-top-sm-height;
 	}
 }
 

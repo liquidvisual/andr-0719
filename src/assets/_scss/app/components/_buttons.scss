@@ -308,3 +308,7 @@ a:hover .btn-tile {
 .sidebar .btn-secondary {
     background: $primary;
 }
+
+.btn-search {
+    min-width: 0 !important;
+}
