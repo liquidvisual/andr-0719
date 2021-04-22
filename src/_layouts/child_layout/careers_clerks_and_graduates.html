@@ -1,0 +1,49 @@
+---
+layout: base__page
+---
+
+{% assign settings = site.data.settings %}
+
+<!-- BASIC TEXT SECTION -->
+<section class="section">
+    <div class="container">
+
+        <!-- WYSIWYG -->
+        <div class="wysiwyg mb-5">
+            {{ content | markdownify }}
+        </div>
+
+        <!-- IMPORTANT DATES -->
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+
+            <!-- HEADER -->
+            <h3 class="text-center mb-4">Important Dates</h3>
+
+            <!-- TABLE -->
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <td>Applications Open:</td>
+                        <td>1 May 2021</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th></th>
+                        <td>Applications Close:</td>
+                        <td>15 May 2021</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Offers Made:</td>
+                        <td>1 June 2021</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% include sections/section_contact.html %}

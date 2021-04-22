@@ -1,0 +1,70 @@
+---
+layout: base__page
+---
+
+{% assign settings = site.data.settings %}
+
+<!-- SECTION -->
+<section class="section">
+    <div class="container">
+
+        <!-- HEADING -->
+        <h2 class="mb-md-4">
+            Current Opportunities
+        </h2>
+
+        <!-- GREY BLOCKS -->
+        <ul class="mb-0 block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
+            {% for item in settings.offices['sa'] | limit: 3 %}
+                <li class="wow fadeIn">
+                    {% include components/content/contact_box.html %}
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</section>
+
+<!-- TEXT SECTION -->
+<section class="section pt-0">
+    <div class="container text-center">
+        <h3>Why Andersons? Learn <a href="/about/">about us</a>.</h3>
+    </div>
+</section>
+
+{% assign bg_image = include.bg_image | default: '/assets/img/content/backgrounds/about-homepage-bg.jpg' %}
+{% assign parallax_enabled = include.parallax_enabled | default: false %}
+
+<!-- IMAGE SECTION -->
+<section
+    class="section has-image-bg"
+    style="background-image: url({{ bg_image }}); background-position: top center">
+
+    {% if parallax_enabled %}
+        <!-- PARALLAX (OPTIONAL) -->
+        {% include components/hero/hero__parallax_plugin.html image=bg_image %}
+    {% endif %}
+
+    <div class="container text-md-center">
+        <div class="row">
+            <div class="col-md-9 col-lg-7 mx-auto wow fadeIn">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>

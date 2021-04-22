@@ -12,15 +12,6 @@
             }
         }
     },
-    "Our People": {
-        "url": "/our-people/",
-        "children_excluded_from_nav": false,
-        "children": {
-            "Camille McDonald": {
-                "url": "/our-people/our-people-item/",
-            }
-        }
-    },
     "Practice Areas": {
         "url": "/practice-areas/",
         "children_excluded_from_nav": false,
@@ -113,6 +104,27 @@
                 "description": "Text still to come.",
                 "children_excluded_from_nav": false,
                 "children": {}
+            }
+        }
+    },
+    "Our People": {
+        "url": "/our-people/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Camille McDonald": {
+                "url": "/our-people/our-people-item/",
+            }
+        }
+    },
+    "Careers": {
+        "url": "",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Clerks and Graduates": {
+                "url": "/careers/clerks-and-graduates/",
+            },
+            "Employment Opportunities": {
+                "url": "/careers/employment-opportunities/",
             }
         }
     },
